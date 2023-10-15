@@ -1,0 +1,81 @@
+.navbar-container{
+  position: fixed;
+  width: 100%;
+  background-color: #103DB7;
+  height: 60px;
+  padding: 0px 100px;
+  transition: 0.6s;
+  z-index: 100;
+}
+#nav-logo{
+  height: 40px;
+}
+.nav-links{
+  font-weight: 500;
+  display: flex;
+  color: #FFF;
+  gap: 40px;
+}
+.nav-link:hover{
+  border-bottom: solid 2px #F7F8FF;
+}
+.navbar-toggler{
+  display: none;
+}
+.nav-logo2{
+  display: none;
+}
+.burger-menu-container{
+  display: none;
+  transition: 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .navbar-container{
+    padding: 12px 30px;
+  }
+  .nav-links{
+    display: none;
+  }
+  .navbar-toggler{
+    display: block;
+    border: none;
+  }
+  .navbar-toggler-icon{
+    background-image: url(/src/assets/omWhiteBurgerMenu.png);
+  }
+  #nav-logo{
+    display: none;
+  }
+  .nav-logo2{
+    margin-top: 5px;
+    display: block;
+    background-image: url(/src/assets/OrganizeMe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 25px;
+  }
+  .burger-menu-container{
+    position: relative;
+    margin-top: 10px;
+    z-index: -3;
+    padding: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #103DB7;
+  }
+  .nav-link{
+    margin-left: auto;
+    padding-right: 50px;
+    text-align: right;
+    font-weight: 500;
+    color: #F7F8FF;
+  }
+  .nav-dropdown{
+    position: absolute;
+    margin-top: 178px;
+    margin-left: -42px;
+    width: 100%;
+  }
+}

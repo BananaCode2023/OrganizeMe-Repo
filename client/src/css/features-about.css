@@ -1,0 +1,144 @@
+.about-container {
+  padding-inline: 100px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.feature-container {
+  padding-inline: 100px;
+  padding-top: 150px;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.tag-line h1 {
+  font-family: Poppins;
+  /* font-size: 64px; */
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.tag-line p {
+  font-family: Poppins;
+  font-size: 20px;
+  text-align: center;
+}
+p.medium {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  color: #103d87;
+}
+p.bold {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: bold;
+}
+p.regular {
+  font-family: Poppins;
+  font-size: 20px;
+}
+.section-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section1 {
+  padding-top: 100px;
+  display: flex;
+}
+.section2 {
+  padding-top: 100px;
+  text-align: center;
+}
+.section3 {
+  padding-top: 100px;
+  text-align: right;
+  display: flex;
+}
+.section4 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+}
+.section-img {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+}
+.section-img-container {
+  display: flex;
+  justify-content: center;
+}
+/* Feature card */
+.feature {
+  text-align: center;
+}
+.card.bg {
+  background-color: transparent;
+  border: 1px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  color: #103d87;
+}
+.output {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+.card-body-about img{
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* media query for smal devices */
+@media screen and (max-width: 769px) {
+  .about-container {
+    padding-inline: 50px;
+  }
+  .feature-container {
+    padding-inline: 50px;
+  }
+  .section1, .section3, .section4 {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .section-img {
+    margin-inline: auto;
+  }
+}
+@media screen and (max-width: 426px) {
+  .about-container {
+    padding-inline: 20px;
+  }
+  .feature-container {
+    padding-inline: 20px;
+  }
+  .tag-line h1 {
+    font-size: 52px;
+  }
+  .section1, .section3, .section4 {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 376px) {
+  .about-container {
+    padding-inline: 20px;
+  }
+  .feature-container {
+    padding-inline: 20px;
+  }
+  .tag-line h1 {
+    font-size: 42px;
+  }
+  p.bold {
+    font-size: 28px;
+  }
+}

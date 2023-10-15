@@ -1,0 +1,65 @@
+.sidebar{
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  background-color: #ECF1F5;
+  padding: 20px 30px;
+}
+.sidebar-row1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile-container{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3px;
+}
+.profile-letter{
+  margin: auto;
+color: white;
+}
+.add-task-btn{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  padding-block: 3px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.sidebar-btns{
+  display: flex;
+  gap: 15px;
+  font-size: 30px;
+  margin-top: 20px;
+  align-items:baseline;
+  cursor: pointer;
+  color: #2323238f;
+}
+.fa-inbox{
+  color: #103D87;
+}
+.fa-magnifying-glass{
+  color: #232323;
+}
+.fa-calendar-days{
+  color: #F1511B;
+}
+.fa-calendar-day{
+  color: #298683;
+}
+.sidebar-hr{
+  border: solid #232323 1px;
+}
+.sidebar-row2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
