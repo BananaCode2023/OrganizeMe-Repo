@@ -1,3 +1,5 @@
+/* CSS for default screem */
+
 /* landingpage_sec1 */
 
 main{
@@ -45,10 +47,12 @@ main{
     width: 176px;
     height: 37px;
     border-color: #F7F7FC;
+    color: #F7F7FC;
     text-decoration: none;
 }
 .explore-btn:hover{
     background-color: #f7f7fc82;
+    color: #F7F7FC;
 }
 .started-btn{
     width: 176px;
@@ -120,6 +124,33 @@ Icon{
 
 /* CSS for other device */
 
+@media (max-width: 320px ){
+
+    .landingpage_sec1 p{
+        font-size: 25px !important;
+        font-weight: 600;
+    }
+
+    .explore-btn{
+        width: 130px;
+        height: 37px;
+    }
+    .explore-btn:hover{
+        background-color: #00000042;
+    }
+    .started-btn{
+        width: 130px;
+        height: 37px;
+        font-size: small;
+        margin-bottom: 10px !important;
+    }
+
+    .whitespace{
+        display: none;
+    }
+
+}
+
 /* Media query for smaller devices */
 @media (max-width: 767px) {
     body {
@@ -161,15 +192,17 @@ Icon{
     }
 
     .explore-btn{
-        color: #232323;
+        color: #232323 !important;
+        text-decoration: none;
         width: 130px;
         height: 37px;
         border-color: #2323238d;
-        background-color: #23232318;
         border-radius: 10px;
     }
     .explore-btn:hover{
         background-color: #00000042;
+        color: #F7F7FC !important;
+        
     }
     .started-btn{
         width: 130px;
@@ -202,7 +235,7 @@ Icon{
     .landingpage_sec3 .qoutes{
         color: #232323;
         font-family: Poppins;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 500;
     }
     .landingpage_sec3 p{

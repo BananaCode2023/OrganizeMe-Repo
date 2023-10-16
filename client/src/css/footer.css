@@ -42,15 +42,24 @@ footer li a{
     color: #232323;
 }
 
-.social-links li{
-    display: inline-block;
+.social-icons li{
     padding-right: 10px;
-    /* padding-bottom: 10px; */
 }
-.social-links{
+
+.social-media h5{
+    font-size: 24px;
+    text-align: start;
+}
+.social-icons{
+    display: flex;
     padding-left: 0%;
 }
 
+@media (max-width: 425px){
+    #inputEmail{
+        width: 180px !important;
+    }
+}
 
   /* Media query for smaller devices */
   @media (max-width: 767px) {
@@ -99,15 +108,18 @@ footer li a{
         color: #232323;
     }
     
-    .social-links li{
-        display: inline-block;
+    .social-icons li{
+        display: flex;
+        justify-content: center;
         padding-inline: 10px;
         padding-bottom: 5px;
     }
-    .social-links h5{
+    .social-media h5{
         font-size: 16px;
     }
-    .social-links{
+    .social-icons{
+        display: flex;
+        flex-direction: column;
         padding-left: 0%;
     }
   }
@@ -154,22 +166,29 @@ footer li a{
         color: #232323;
     }
     
-    .social-links li{
-        display: inline-block;
+    .social-icons li{
+        display: flex;
+        justify-content: center;
         padding-inline: 15px;
         padding-bottom: 5px;
     }
-    .social-links h5{
+    .social-media h5{
         font-size: 18px;
         text-align: center;
     }
-    .social-links{
+    .social-icons{
+        display: flex;
+        flex-direction: column;
         padding-left: 0%;
+    }
+
+    #inputEmail{
+        width: 180px;
     }
   }
   
   /* Media query for extra-large devices */
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1024px){
 
     footer{
         padding-inline: 100px;
@@ -212,16 +231,19 @@ footer li a{
         color: #232323;
     }
     
-    .social-links li{
+    .social-icons li{
         display: inline-block;
         padding-inline: 15px;
         padding-bottom: 5px;
     }
-    .social-links h5{
-        font-size: 18px;
+    .social-media h5{
+        font-size: 23px;
         text-align: center;
     }
     .social-links{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding-left: 0%;
     }
   }
