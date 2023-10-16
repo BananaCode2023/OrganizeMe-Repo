@@ -31,9 +31,9 @@ const Footer = () => {
                 <li><a href="">Faqs</a></li>
               </ul>
             </div>
-            <div className="col mb-5">
-                <ul className="social-links">
-                  <li><h5>Social Media</h5></li>
+            <div className="col mb-3 social-media">
+                <h5>Social Media</h5>
+                <ul className="social-icons">
                     <li><a href=""><img src="/Images/Icons/facebook.svg" alt="Facebook" /></a></li>
                     <li><a href=""><img src="/Images/Icons/twitter.svg" alt="XTwitter" /></a></li>
                     <li><a href=""><img src="/Images/Icons/instagram.svg" alt="Instagram" /></a></li>
@@ -46,7 +46,7 @@ const Footer = () => {
                   <li>notifications from OrganizeMe Team</li>
                   <li>
                     <form action="">
-                      <div className="submit-btn btn-group" role="group" >
+                      <div className="submit-btn btn-group pt-2" role="group" >
                         <input type="email" className="form-control" id="inputEmail" placeholder='&#9993; Email' />
                         <button type="submit" className="btn btn-success">Submit</button>
                       </div>

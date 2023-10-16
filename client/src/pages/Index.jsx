@@ -1,27 +1,9 @@
-// import React from 'react'
-// import Header from '../components/Header'
-
-// function Home() {
-//   return (
-//     <div>
-//       <Header />
-//       <br/>
-//       <br/>
-//       <br/>
-//       <br/>
-//       <center><h1>HOME PAGE ITO</h1></center>
-//     </div>
-//   )
-// }
-
-// export default Home
-
 
 import React from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../css/index.css'
-// icons for fontawosome
+// icons for fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'; 
 // icons for iconify
@@ -59,7 +41,7 @@ export default function Index () {
                         <div className="col">
                             <button type="button" className="btn btn-success mx-auto started-btn"><a href="">Get Started <FontAwesomeIcon icon={faArrowRight} style={{color: "#f4f7fa",}} /></a></button>
                             <i className='whitespace'>__</i>
-                            <button type="button" className="btn btn-bs-light-border-subtle mx-auto explore-btn"><a href="">Explore</a></button>
+                            <button type="button" className="btn btn-bs-light-border-subtle mx-auto explore-btn">Explore</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +75,7 @@ export default function Index () {
                     </div>
                 </div>
                 <div className="row mb5 pt-5 text-center landingpage_sec3" data-aos="fade-up"  data-aos-delay='1500'>
-                    <q className='qoutes'>In the symphony of life, let your<br/> tasks find harmony.</q>
+                    <q className='qoutes'>In the symphony of life, let your tasks find harmony.</q>
                     <p className='author'>-The Ben</p>
                 </div>
                 <div className="row mb-5">
