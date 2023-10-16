@@ -2,7 +2,7 @@ import {useContext} from "react";
 import {UserContext} from '../../context/userContext'
 import Sidebar from '../components/Sidebar'
 
-function Dashboard() {
+function Inbox() {
   const {user} = useContext(UserContext)
   return (
     <>
@@ -17,4 +17,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default Inbox

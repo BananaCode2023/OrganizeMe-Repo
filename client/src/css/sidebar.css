@@ -1,9 +1,26 @@
 .sidebar{
   position: fixed;
+  left: -220px;
   width: 300px;
   height: 100vh;
+  background-color: transparent;
+  padding: 20px 0;
+  transition: left 0.4s;
+}
+.sidebar a{
+  text-decoration: none;
+}
+.sidebar.close{
+  left: 0;
   background-color: #ECF1F5;
-  padding: 20px 30px;
+}
+.add-task-btn.close{
+  margin-left: -50px;
+}
+
+#sidebar-toggle{
+  border: none;
+  background-color: transparent;
 }
 .sidebar-row1{
   display: flex;
@@ -25,23 +42,28 @@
 color: white;
 }
 .add-task-btn{
-  width: 100%;
+  width: 85%;
+  margin: 20px 20px;
   height: 40px;
   border-radius: 10px;
   border: none;
   text-align: center;
   padding-block: 3px;
   font-size: 16px;
-  margin-top: 20px;
+  transition: 0.4s;
 }
 .sidebar-btns{
   display: flex;
   gap: 15px;
   font-size: 30px;
-  margin-top: 20px;
-  align-items:baseline;
+  align-items:center;
   cursor: pointer;
   color: #2323238f;
+  width: 100%;
+  padding: 5px 30px;
+}
+.sidebar-btns h5{
+  margin-top: 10px;
 }
 .fa-inbox{
   color: #103D87;
@@ -62,4 +84,17 @@ color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-inline: 30px;
+}
+.sidebar-hr.close{
+  position: relative;
+  left: -130px;
+}
+.sidebar-row2.close{
+  position: relative;
+  left: -150px;
+}
+
+.search-bar:hover, .inbox-bar:hover, .upcoming-bar:hover, .today-bar:hover, .filter-bar:hover{
+  background-color: #C5DCDE;
 }

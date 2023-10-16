@@ -7,7 +7,7 @@ import Login from './pages/Login'
 import axios from 'axios';
 import {Toaster} from 'react-hot-toast'
 import {UserContextProvider} from '../context/userContext'
-import Dashboard from './pages/Dashboard';
+import Inbox from './pages/Inbox';
 import About from './pages/About';
 import Features from './pages/features';
 import Index from './pages/Index';
@@ -25,7 +25,7 @@ function App() {
         <Route path='/' element= {<Index />}/>
         <Route path='/signup' element= {<Register />}/>
         <Route path='/login' element= {<Login />}/>
-        <Route path='/dashboard' element= {<Dashboard />}/>
+        <Route path='/inbox' element= {<Inbox />}/>
         <Route path='/about' element= {<About />}/>
         <Route path='/features' element= {<Features />}/>
       </Routes>
