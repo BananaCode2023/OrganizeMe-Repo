@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import About from './pages/About';
 import Features from './pages/features';
 import Index from './pages/Index';
+import Notifications from './pages/Notifications';
 
 axios.defaults.baseURL = 'http://localhost:8000';
 axios.defaults.withCredentials = true;
@@ -19,19 +20,20 @@ function App() {
 
   return (
     <>
-    <UserContextProvider>
-      <Toaster position='top-right' toastOptions={{duration: 2500}}/>
-      <Routes>
-        <Route path='/' element= {<Index />}/>
-        <Route path='/signup' element= {<Register />}/>
-        <Route path='/login' element= {<Login />}/>
-        <Route path='/dashboard' element= {<Dashboard />}/>
-        <Route path='/about' element= {<About />}/>
-        <Route path='/features' element= {<Features />}/>
-      </Routes>
-    </UserContextProvider>
+      <UserContextProvider>
+        <Toaster position="top-right" toastOptions={{ duration: 2500 }} />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/notifications" element={<Notifications />} />
+        </Routes>
+      </UserContextProvider>
     </>
-  )
+  );
 }
 
 export default App
