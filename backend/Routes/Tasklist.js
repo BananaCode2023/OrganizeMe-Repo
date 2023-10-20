@@ -5,6 +5,7 @@ const TasklistModel = require('../Models/Tasklist')
 
 const router = express.Router()
 
+// ROUTER FOR CREATING/ADDING TASK
 router.post('/create-task' , async (req,res) => {
   TaskModel.create({
     task_title: req.body.task_title,
@@ -17,6 +18,7 @@ router.post('/create-task' , async (req,res) => {
   .catch(err => console.log(err))
 })
 
+// ROUTER FOR GETTING THE SPECIFIC TASKLIST OF THE LOGGED IN USER
 router.get('/user-tasks/:id', async (req,res) => {
   const id = req.params.id
   try{
@@ -27,5 +29,17 @@ router.get('/user-tasks/:id', async (req,res) => {
     res.status(500).json(err)
   }
 })
+
+//ROUTER FOR DELETING A TASK OF THE LOGGED IN USER
+router.delete('/delete/:id', (req, res) => {
+  const {id} = req.params
+  TaskModel.findByIdAndDelete({_id: id})
+  .then(result => res.json(result))
+  .catch(err => res.json(err))
+})
+
+
+
+
 
 module.exports = router

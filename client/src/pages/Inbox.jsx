@@ -4,35 +4,18 @@ import Sidebar from '../components/Sidebar'
 import '../css/inbox.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams,useNavigate } from 'react-router-dom'
+import profIcon from '../assets/profile-icon.png'
+import {toast} from 'react-hot-toast'
+import EditTaskModal from "../components/EditTaskModal";
+
 
 
 //Maglagay ng websocket para autoupdate
 
-function Inbox() {
-  // const {user} = useContext(UserContext)
-  // const [tasklist, setTasklist] = useState([])
-
-
-
-  // useEffect(() => {
-  //   axios
-  //     .get('http://localhost:8000/tasklist/showTasks')
-  //     .then((res) => {
-  //       setTasklist(res.data.task_list)
-  //       // console.log(res.data.task_list)
-        
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //   })
-  // },[])
-  // const {id} = useParams()
+const Inbox = () => {
   const userId = window.localStorage.getItem("id")
-
   const [tasklist, setTasklist] = useState([])
-  // const [savedTasks, setSavedTasks] = useState([])
-
   useEffect(() => {
       axios
         .get('http://localhost:3333/tasklist/user-tasks/'+userId)
@@ -42,17 +25,55 @@ function Inbox() {
         .catch(err => console.log(err))
   },[])
 
+  const [username, setUsername] = useState([])
 
+  useEffect(() => {
+      axios
+        .get('http://localhost:3333/auth/username/'+userId)
+        .then(user => {
+          setUsername(user.data)
+        })
+        .catch(err => console.log(err))
+  }, [])
+
+  const deleteTask = (id) => {
+    toast('Deleted Task', {
+      icon: '🗑️',
+    });
+    axios
+      .delete('http://localhost:3333/tasklist/delete/'+id)
+      .then(result => {
+        setTimeout(() => {
+          location.reload();
+        }, 1000)
+      })
+      .catch(err => console.log(err))
+  }
+
+  const taskDone = (id) => {
+    toast('Congratulations on finishing this task', {
+      icon: '🥳',
+    });
+    axios
+      .delete('http://localhost:3333/tasklist/delete/'+id)
+      .then(result => {
+        setTimeout(() => {
+          location.reload();
+        }, 1000)
+      })
+      .catch(err => console.log(err))
+  }
 
   
   
-  
+ 
+
 
   return (
     <div className="inbox-page-container">
     <Sidebar 
-    // userimg = {!!user && (<h4>{user.username.charAt(0).toUpperCase()}</h4>)}
-    // username= {!!user && (<h5>{user.username}</h5>)}
+    userimg = {profIcon}
+    username = {username.username}
     />
 
     <main className="inbox-page">
@@ -61,22 +82,39 @@ function Inbox() {
         <h1>Inbox</h1>
       </div>
 
-      {/* <div id="list">
-        {tasklist.map((task) => (
-          <ul>
-            <li>{task.task_title}</li>
-            <li>{task.task_description}</li>
-          </ul>
-        ))}
-      </div> */}
 
-  
       {tasklist.map(task => (
-        <ul className="inbox-list">
-          <li>{task.task_title}</li>
+        <div>
+        <ul 
+        className="inbox-list" 
+        style={{display: 'flex', gap: '20px'}}
+        id="myList"
+        >
+          <li 
+          onClick={() => taskDone(task._id)}
+          style={{cursor: 'pointer'}}
+          >
+            <i class="fa-regular fa-circle"></i>
+          </li>
+
+          <div>
+          <li><strong>{task.task_title}</strong></li>
           <li>{task.task_description}</li>
+          </div>
+
+        
+          <li>
+            <i class="fa-regular fa-pen-to-square"></i>
+          </li>
+
+          <li onClick={() => deleteTask(task._id)}>
+            <i class="fa-regular fa-trash-can"></i>
+          </li>
         </ul>
+            <hr />
+            </div>
       ))}
+
       
       
     

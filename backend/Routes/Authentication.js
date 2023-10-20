@@ -2,7 +2,7 @@ const express = require("express");
 const UserModel = require("../Models/Users");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const {getProfile} = require('../Controllers/authController');
+// const {getProfile} = require('../Controllers/authController');
 
 const router = express.Router();
 
@@ -34,8 +34,21 @@ router.post("/login", async (req, res) => {
   return res.json({message: "successfully logged in", id: user._id})
 });
 
+router.get('/logout', (req,res) => {
+  res.clearCookie("token")
+  res.json({message: "Logged out"})
+})
 
-router.get('/profile', getProfile)
+router.get('/username/:id', async (req,res) => {
+  const id = req.params.id
+  try{
+    const user = await UserModel.findById({_id: id})
+    res.status(200).json(user)
+  }
+  catch(err){
+    res.status(500).json(err)
+  }
+})
 
 
 module.exports = router;

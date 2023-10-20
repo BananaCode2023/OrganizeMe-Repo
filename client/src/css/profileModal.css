@@ -1,0 +1,10 @@
+.profile-modal{
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px;
+  gap: 2px;
+  width: 95%;
+  margin-inline: auto;
+  border-radius: 5px;
+}

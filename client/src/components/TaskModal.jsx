@@ -3,9 +3,12 @@ import '../css/taskModal.css'
 import orgIcon from '../assets/orgicon.png'
 import starIcon from '../assets/staricon.png'
 import axios from 'axios'
-import { useState, useNavigate } from 'react';
+import { useState } from 'react';
+import {toast} from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom';
 
 function TaskModal({ closeModal }) {
+  const navigate = useNavigate()
 
   const [addTask, setAddTask] = useState({
     task_title: '',
@@ -18,17 +21,22 @@ function TaskModal({ closeModal }) {
     setAddTask({...addTask, [name]:value})
   }
 
+ 
+
   const handleSubmit = (event) => {
     event.preventDefault()
     axios
       .post('http://localhost:3333/tasklist/create-task', addTask)
       .then(result => {
-        // navigate('/')
-        console.log(result.data)
-        alert("tasklist created")
+      toast.success('Added Task')
+     
       })
       .catch(err => console.log(err))
+      setTimeout(() => {
+        location.reload();
+      }, 1000)
   }
+
 
   return (
     <div className="modal">
@@ -40,7 +48,7 @@ function TaskModal({ closeModal }) {
               <input 
               type="text" 
               name="task_title" 
-              id="task_title" 
+              id="task-title" 
               placeholder='TASK TITLE'
               onChange={handleAddTask}
               />
@@ -48,7 +56,7 @@ function TaskModal({ closeModal }) {
               <input 
               type="text" 
               name="task_description" 
-              id="task_description" 
+              id="task-input" 
               placeholder='Task Description'
               onChange={handleAddTask}
               />
@@ -57,15 +65,17 @@ function TaskModal({ closeModal }) {
         
           
           <div className='modal-btns'>
-            <button className='modal-btn org-when'>
+            <li className='modal-btn org-when'>
               <img src={orgIcon} style={{width: '12px', marginRight: '5px'}}/>
-              Organize When
-            </button>
-            <button className='modal-btn priority-btn'>
+              Today
+            </li>
+            <li className='modal-btn priority-btn'>
               <img src={starIcon} style={{width: '12px', marginRight: '5px'}}/>
               Priority
-            </button>
-            <button className='modal-btn'>Category</button>
+            </li>
+            <li className='modal-btn'>
+              Category
+            </li>
           </div>
 
           <hr />
