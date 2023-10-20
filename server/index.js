@@ -1,3 +1,4 @@
+//For login & signup process
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
@@ -14,7 +15,24 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended: false}))
 
+//route for login-signup
 app.use('/', require('./routes/authRoutes'))
+
+//route for tasklist
+app.use('/tasklist', require('./routes/tasklistRouter'))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const port = 8000;
 app.listen(port, () => console.log(`server is running on port ${port}`))

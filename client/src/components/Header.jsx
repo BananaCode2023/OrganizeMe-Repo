@@ -42,7 +42,7 @@ function Header() {
               <NavLink href="/about" id='about'>
                 About
               </NavLink>
-              <NavLink href='/login' id='login'>
+              <NavLink href='/auth/login' id='login'>
                 Login
               </NavLink>
             </div>
