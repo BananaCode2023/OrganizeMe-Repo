@@ -25,7 +25,7 @@ export default function Index () {
     return(
         <>
             <Header />
-            <main>
+            <main className='landing-page-main'>
                 <div className="row mb-5 landingpage_sec1">
                     <div className="row" >
                         <p>Simplifying Life One Task at a Time</p>

@@ -9,32 +9,47 @@ import googleLogo from '../assets/google-logo.png'
 import facebookLogo from '../assets/facebook-logo.png'
 
 function Register() {
-  const navigate = useNavigate();
-  const [data, setData] = useState({
-    username: '',
-    email: '',
-    password: ''
-  })
+  // const navigate = useNavigate();
+  // const [data, setData] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: ''
+  // })
 
-  const registerUser = async (e) => {
+  // const registerUser = async (e) => {
+  //   e.preventDefault()
+  //   const {username, email, password} = data
+  //   try{
+  //     const {data} = await axios.post('/register', {
+  //       username, email, password
+  //     })
+  //     if(data.error){
+  //       toast.error(data.error)
+  //     }
+  //     else{
+  //       setData({})
+  //       toast.success('Sign-up Successful. Please Login')
+  //       navigate('/login')
+  //     }
+  //   }
+  //   catch(error){
+  //     console.log(error)
+  //   }
+  // }
+  const navigate = useNavigate()
+
+  const[username, setUsername] = useState('')
+  const[email, setEmail] = useState('')
+  const[password, setPassword] = useState('')
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-    const {username, email, password} = data
-    try{
-      const {data} = await axios.post('/register', {
-        username, email, password
+    axios.post('http://localhost:3333/auth/register', {username, email, password})
+      .then(result => {
+        navigate('/auth/login')
+        console.log(result)
       })
-      if(data.error){
-        toast.error(data.error)
-      }
-      else{
-        setData({})
-        toast.success('Login Successful. Welcome!')
-        navigate('/login')
-      }
-    }
-    catch(error){
-      console.log(error)
-    }
+      .catch(err => console.log(err))
   }
 
   return (
@@ -44,14 +59,19 @@ function Register() {
           <a href="/"><img src={loginLogo} alt="organizeMe-logo" id='login-logo' /></a>
           <h2>Create an Account & Get Started</h2>
 
-          <form className='signup-form' onSubmit={registerUser}>
+          <form className='signup-form' 
+          // onSubmit={registerUser}
+          onSubmit={handleSubmit}
+          >
+
             <input 
             type="text" 
             name="username" 
             id="username"
             placeholder='Username'
-            value={data.username}
-            onChange={(e) => setData({...data, username: e.target.value})}
+            // value={data.username}
+            // onChange={(e) => setData({...data, username: e.target.value})}
+            onChange={(e) => setUsername(e.target.value)} 
             />
 
 
@@ -61,8 +81,9 @@ function Register() {
             name="email" 
             id="email" 
             placeholder='Email'
-            value={data.email}
-            onChange={(e) => setData({...data, email: e.target.value})} 
+            // value={data.email}
+            // onChange={(e) => setData({...data, email: e.target.value})} 
+            onChange={(e) => setEmail(e.target.value)} 
             />
 
             <input 
@@ -70,8 +91,9 @@ function Register() {
             name="password" 
             id="password" 
             placeholder='Password'
-            value={data.password}
-            onChange={(e) => setData({...data, password: e.target.value})} 
+            // value={data.password}
+            // onChange={(e) => setData({...data, password: e.target.value})} 
+            onChange={(e) => setPassword(e.target.value)} 
             />
             
             <button 
@@ -90,7 +112,7 @@ function Register() {
             <li><img src={facebookLogo} alt="google-logo" className='login-option-btns'/>Facebook</li>
           </ul>
 
-          <small><p>Already have an account? <a href="/login">Log in</a></p></small>
+          <small><p>Already have an account? <a href="/auth/login">Log in</a></p></small>
           
 
           <p className='login-signup-footer'><small>© 2023 OrganizeMe All Rights Reserved</small></p>
@@ -102,44 +124,6 @@ function Register() {
         </div>
       </main>
     </>
-
-
-    // <div>
-    //   <h1>SIGNUP</h1>
-    //   <form onSubmit={registerUser}>
-    //     <label>Username</label>
-    //     <input 
-    //     type="text" 
-    //     placeholder='enter username...'
-    //     value={data.username}
-    //     onChange={(e) => setData({...data, username: e.target.value})}
-    //     />
-
-    //     <label>Email</label>
-    //     <input 
-    //     type="email" 
-    //     placeholder='enter email...'
-    //     value={data.email}
-    //     onChange={(e) => setData({...data, email: e.target.value})}
-    //     />
-
-    //     <label>Password</label>
-    //     <input 
-    //     type="password" 
-    //     placeholder='enter password...'
-    //     value={data.password}
-    //     onChange={(e) => setData({...data, password: e.target.value})}
-    //     />
-
-    //     <button type='submit'>Submit</button>
-
-        
-
-       
-
-    //   </form>
-
-    // </div>
   )
 }
 
