@@ -1,0 +1,31 @@
+.notifications-container {
+  padding-inline: 100px;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.notifications {
+  font-family: Poppins;
+  font-size: 32px;
+}
+.notifications img {
+  width: 30px;
+}
+.row .justify-content-end img {
+  width: 100px;
+}
+.notif-image {
+  padding-top: 25px;
+}
+.notif-image img {
+  width: 500px;
+}
+.noif-bold {
+  padding-top: 25px;
+  font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
+}
+.notif-reg {
+  font-family: Poppins;
+  text-align: center;
+}
