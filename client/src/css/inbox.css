@@ -1,0 +1,16 @@
+.inbox-page{
+  padding: 50px 100px 0 400px;
+}
+.inbox-heading{
+  display: flex;
+  align-items: center;
+  color: #103D87;
+}
+.inbox-heading-icon{
+  font-size: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.inbox-list li{
+  list-style: none;
+}

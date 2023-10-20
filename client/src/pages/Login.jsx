@@ -3,7 +3,7 @@ import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom"
 import '../css/login.css'
-import Header from "../components/Header"
+// import Header from "../components/Header"
 
 import loginHeroImg from '../assets/login-hero-img.png'
 import loginLogo from '../assets/organizeMeLogo.png'
@@ -12,32 +12,47 @@ import facebookLogo from '../assets/facebook-logo.png'
 
 
 function Login() {
+  // const navigate = useNavigate()
+  // const [data,setData] = useState({
+  //   email: '',
+  //   password: ''
+  // })
+
+  // const loginUser = async (e) => {
+  //   e.preventDefault()
+  //     const {email, password} = data
+  //     try{
+  //       const {data} = await axios.post('/login', {
+  //         email,
+  //         password
+  //       });
+  //       if(data.error) {
+  //         toast.error(data.error)
+  //       }
+  //       else{
+  //         setData({});
+  //         navigate('/inbox')
+
+  //       }
+  //     }
+  //     catch(error){
+
+  //     }
+  // }
+  const[email, setEmail] = useState('')
+  const[password, setPassword] = useState('')
   const navigate = useNavigate()
-  const [data,setData] = useState({
-    email: '',
-    password: ''
-  })
 
-  const loginUser = async (e) => {
+  axios.defaults.withCredentials = true;
+  const handleSubmit = (e) => {
     e.preventDefault()
-      const {email, password} = data
-      try{
-        const {data} = await axios.post('/login', {
-          email,
-          password
-        });
-        if(data.error) {
-          toast.error(data.error)
-        }
-        else{
-          setData({});
-          navigate('/Dashboard')
-
-        }
-      }
-      catch(error){
-
-      }
+    axios.post('http://localhost:3333/auth/login', {email, password})
+      .then(result => {
+        window.localStorage.setItem("id", result.data.id)
+        navigate('/inbox')
+        console.log(result)
+      })
+      .catch(err => console.log(err))
   }
 
   return (
@@ -65,15 +80,19 @@ function Login() {
           </p>
           
 
-          <form className='login-form' onSubmit={loginUser}>
+          <form className='login-form' 
+          // onSubmit={loginUser}
+          onSubmit={handleSubmit}
+          >
             <input 
             type="email" 
             name="email" 
             id="email" 
             placeholder='✉️ Email' 
             className='login-input'
-            value={data.email}
-            onChange={(e) => setData({...data, email: e.target.value})}  
+            // value={data.email}
+            // onChange={(e) => setData({...data, email: e.target.value})}  
+            onChange={(e) => setEmail(e.target.value)} 
             />
 
             <input 
@@ -82,8 +101,9 @@ function Login() {
             id="password" 
             placeholder='🔐 Password' 
             className='login-input'
-            value={data.password}
-            onChange={(e) => setData({...data, password: e.target.value})}
+            // value={data.password}
+            // onChange={(e) => setData({...data, password: e.target.value})}
+            onChange={(e) => setPassword(e.target.value)} 
             />
 
             <div className='remember-me'>
@@ -98,36 +118,12 @@ function Login() {
             className='btn btn-success'>Login</button>
           </form>
 
-          <small><p>Don't have an account? <a href="/signup">Sign-up now!</a></p></small>
+          <small><p>Don't have an account? <a href="/auth/register">Sign-up now!</a></p></small>
 
           <p className='login-signup-footer'><small>© 2023 OrganizeMe All Rights Reserved</small></p>
         </div>
       </main>
     </>
-
-    // <div>
-    //   <h1>LOGIN</h1>
-    //   <form onSubmit={loginUser}>
-    //   <label>Email</label>
-    //     <input 
-    //     type="email" 
-    //     placeholder='enter email...'
-    //     value={data.email}
-    //     onChange={(e) => setData({...data, email: e.target.value})}
-    //     />
-
-    //     <label>Password</label>
-    //     <input 
-    //     type="password" 
-    //     placeholder='enter password...'
-    //     value={data.password}
-    //     onChange={(e) => setData({...data, password: e.target.value})}
-    //     />
-
-    //     <button type='submit'>Login</button>
-    //   </form>
-
-    // </div>
   )
 }
 
