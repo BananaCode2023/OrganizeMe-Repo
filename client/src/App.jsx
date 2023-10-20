@@ -11,7 +11,7 @@ import Inbox from './pages/Inbox';
 import About from './pages/About';
 import Features from './pages/features';
 import Index from './pages/Index';
-import EditTaskModal from './components/EditTaskModal';
+import Notifications from './pages/Notifications';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       </Routes>
     {/* </UserContextProvider> */}
     </>
-  )
+  );
 }
 
 export default App
