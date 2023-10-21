@@ -31,16 +31,13 @@
 .modal-btn{
   font-size: 10px;
   padding: 2px 10px;
-  border: 1px solid #616161;
+  border: 1px solid;
   border-radius: 6px;
 }
 .modal-cancel-btn{
   padding: 0 15px;
   border: 1px solid;
   border-radius: 6px;
-}
-.modal-cancel-btn:hover{
-  background-color: #dddddd;
 }
 .modal-add-btn{
   padding: 0 15px;
@@ -59,9 +56,6 @@
   color: #FFA500;
   border: 1px #FFA500 solid;
 }
-.modal-btn{
-  opacity: 0.7;
-}
-.modal-btn:hover{
-  opacity: 1;
+.task-input:hover{
+  
 }

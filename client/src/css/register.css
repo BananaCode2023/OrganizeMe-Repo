@@ -82,7 +82,7 @@
   font-size: 20px;
 }
 .signup-col2 img{
-  width: 60%;
+  width: 50%;
 }
 @media only screen and (max-height: 680px) {
   .signup-col1, .signup-col2{

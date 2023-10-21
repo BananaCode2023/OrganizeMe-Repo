@@ -1,9 +1,6 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import '../css/sidebar.css';
 import TaskModal from './TaskModal';
-import {Link , useNavigate} from 'react-router-dom'
-import axios from 'axios'
-
 
 
 function Sidebar(props) {
@@ -24,7 +21,6 @@ function Sidebar(props) {
     setIsModalOpen(false);
   };
 
-  
 
 
   return (
@@ -32,19 +28,12 @@ function Sidebar(props) {
     <aside className={`sidebar ${showBar ? '' : 'close'}` }>
 
         <div className='sidebar-row1'>
-
-
-              {/* <div className='profile-container'>
-                <h5 className='profile-letter'>{props.userimg}</h5>
-              </div>
-              {props.username} */}
+          <div className='profile-container'>
+            <h5 className='profile-letter'>{props.userimg}</h5>
+          </div>
           
-
-          
-
-          <i class={`
-          fa-regular 
-          fa-bell ${showBar ? 'close' : ''}`}></i>
+          {props.username}
+          <i class="fa-regular fa-bell"></i>
           <button  
             onClick={toggleSideBar} 
             id='sidebar-toggle'>
@@ -66,34 +55,34 @@ function Sidebar(props) {
 
         <div className='sidebar-btns search-bar'>
           <i class="fa-solid fa-magnifying-glass"></i>
-          <h6>SEARCH</h6>
+          <h5>SEARCH</h5>
         </div>
 
         <a href="/inbox">
           <div className='sidebar-btns inbox-bar'>
             <i class="fa-solid fa-inbox"></i>
-            <h6>INBOX</h6>
+            <h5>INBOX</h5>
           </div>
         </a>
 
         <a href="/upcoming">
           <div className='sidebar-btns upcoming-bar'>
             <i class="fa-solid fa-calendar-days"></i>
-            <h6>UPCOMING</h6>
+            <h5>UPCOMING</h5>
           </div>
         </a>
 
         <a href="/today">
           <div className='sidebar-btns today-bar'>
           <i class="fa-solid fa-calendar-day"></i>
-            <h6>TODAY</h6>
+            <h5>TODAY</h5>
           </div>
         </a>
 
         <a href="/filters_labels">
           <div className='sidebar-btns filter-bar'>
           <i class="fa-solid fa-tags"></i>
-            <h6>Filters & Labels</h6>
+            <h5>Filters & Labels</h5>
           </div>
         </a>
 

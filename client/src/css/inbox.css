@@ -1,0 +1,17 @@
+body{
+    background-image: url('/client/Images/Flat illustrations/Today\ 1.png');
+}
+
+.DashBoard-Box{
+    padding-top: 70px;
+}
+
+.Inbox_Header{
+    color: #103D87;
+    font-family: DM Sans     ;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
