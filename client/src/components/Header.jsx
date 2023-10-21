@@ -52,7 +52,7 @@ function Header() {
               <Nav className="burger-menu" navbar>
                 <div className='burger-menu-container'>
                   <NavItem>
-                    <NavLink href='' id='feat'>
+                    <NavLink href='/features' id='feat'>
                       Features
                     </NavLink>
                   </NavItem>
@@ -62,7 +62,7 @@ function Header() {
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href='' id='login'>
+                    <NavLink href='/auth/login' id='login'>
                       Login
                     </NavLink>
                   </NavItem>

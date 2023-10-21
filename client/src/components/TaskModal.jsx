@@ -8,7 +8,6 @@ import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
 
 function TaskModal({ closeModal }) {
-  const navigate = useNavigate()
 
   const [addTask, setAddTask] = useState({
     task_title: '',
@@ -16,25 +15,31 @@ function TaskModal({ closeModal }) {
     userId: window.localStorage.getItem("id")
   })
 
-  const handleAddTask = (event) => {
-    const {name,value} = event.target
+  const [addToday, setAddToday] = useState({today: ''})
+  const [addPriority, setAddPriority] = useState({priority: ''})
+
+  const handleAddTask = (e) => {
+    const {name,value} = e.target
     setAddTask({...addTask, [name]:value})
+    setAddToday({...addToday, [name]:value})
+    setAddPriority({...addPriority, [name]:value})
   }
 
  
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+ 
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
     axios
       .post('http://localhost:3333/tasklist/create-task', addTask)
       .then(result => {
-      toast.success('Added Task')
-     
+        toast.success('Added Task')
+        setTimeout(() => {
+          location.reload();
+        }, 1000)
       })
       .catch(err => console.log(err))
-      setTimeout(() => {
-        location.reload();
-      }, 1000)
   }
 
 
@@ -65,17 +70,29 @@ function TaskModal({ closeModal }) {
         
           
           <div className='modal-btns'>
-            <li className='modal-btn org-when'>
-              <img src={orgIcon} style={{width: '12px', marginRight: '5px'}}/>
-              Today
-            </li>
-            <li className='modal-btn priority-btn'>
-              <img src={starIcon} style={{width: '12px', marginRight: '5px'}}/>
-              Priority
-            </li>
-            <li className='modal-btn'>
-              Category
-            </li>
+            <input 
+            type="button" 
+            className='modal-btn org-when' 
+            name='today' 
+            value='📆today' 
+            onClick={handleAddTask} 
+            />
+
+            <input 
+            type="button" 
+            className='modal-btn priority-btn'
+            name='priority'
+            value='⭐priority'
+            onClick={handleAddTask}
+            />
+            <select name="category" className='modal-btn'>
+              <option>Categories</option>
+              <option name='category' value="">Personal</option>
+              <option value="">Health</option>
+              <option value="">Education</option>
+              <option value="">Fitness</option>
+              <option value="">Work</option>
+            </select>
           </div>
 
           <hr />

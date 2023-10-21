@@ -12,33 +12,7 @@ import facebookLogo from '../assets/facebook-logo.png'
 
 
 function Login() {
-  // const navigate = useNavigate()
-  // const [data,setData] = useState({
-  //   email: '',
-  //   password: ''
-  // })
-
-  // const loginUser = async (e) => {
-  //   e.preventDefault()
-  //     const {email, password} = data
-  //     try{
-  //       const {data} = await axios.post('/login', {
-  //         email,
-  //         password
-  //       });
-  //       if(data.error) {
-  //         toast.error(data.error)
-  //       }
-  //       else{
-  //         setData({});
-  //         navigate('/inbox')
-
-  //       }
-  //     }
-  //     catch(error){
-
-  //     }
-  // }
+  
   const[email, setEmail] = useState('')
   const[password, setPassword] = useState('')
   const navigate = useNavigate()
@@ -52,6 +26,7 @@ function Login() {
         navigate('/inbox')
         console.log(result)
       })
+      toast.success('Successfully Logged-In')
       .catch(err => console.log(err))
   }
 

@@ -6,13 +6,16 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import axios from 'axios';
 import {Toaster} from 'react-hot-toast'
-// import {UserContextProvider} from '../context/userContext'
 import Inbox from './pages/Inbox';
 import About from './pages/About';
 import Features from './pages/features';
 import Index from './pages/Index';
 import Notifications from './pages/Notifications';
+import Priorities from './pages/Priorities';
+import Today2 from './pages/Today2';
 
+// axios.defaults.baseURL = 'http://localhost:8000';
+// axios.defaults.withCredentials = true;
 
 function App() {
 
@@ -27,6 +30,8 @@ function App() {
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
+        <Route path="/priorities" element={<Priorities />} />
+        <Route path="/today2" element={<Today2 />} />
         <Route path="/notifications" element={<Notifications />} />
       </Routes>
       {/* </UserContextProvider> */}

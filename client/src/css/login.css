@@ -10,7 +10,7 @@
   );
 }
 .login-col1{
-  padding-top: 100px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
   font-size: 20px;
 }
 .login-col2{
-  padding-top: 100px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

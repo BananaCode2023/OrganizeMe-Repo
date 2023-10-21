@@ -12,8 +12,16 @@ const TaskSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true
+  },
+  today: {
+    type: String
+  },
+  priority: {
+    type: String
+  },
+  category: {
+    type: String
   }
-
 })
 
 const TasklistModel = mongoose.model("tasklists", TaskSchema)

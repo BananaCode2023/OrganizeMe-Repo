@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import "../css/features-about.css";
 import featureImg1 from "../assets/Health-amico.png";
 import featureImg2 from "../assets/Fitness-amico.png";

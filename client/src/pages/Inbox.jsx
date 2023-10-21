@@ -1,13 +1,12 @@
 import { useContext } from "react";
 // import {UserContext} from '../../context/userContext'
-import Sidebar from "../components/Sidebar";
-import "../css/inbox.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import profIcon from "../assets/profile-icon.png";
-import { toast } from "react-hot-toast";
-import EditTaskModal from "../components/EditTaskModal";
+import Sidebar from '../components/Sidebar'
+import '../css/inbox.css'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { Link, useParams,useNavigate } from 'react-router-dom'
+import profIcon from '../assets/profile-icon.png'
+import {toast} from 'react-hot-toast'
 
 //Maglagay ng websocket para autoupdate
 
@@ -59,8 +58,9 @@ const Inbox = () => {
           location.reload();
         }, 1000);
       })
-      .catch((err) => console.log(err));
-  };
+      .catch(err => console.log(err))
+  }
+
 
   return (
     <div className="inbox-page-container">
@@ -78,34 +78,13 @@ const Inbox = () => {
 
         {tasklist.map((task) => (
           <div>
-            <ul
-              className="inbox-list"
-              style={{ display: "flex", gap: "20px" }}
-              id="myList"
-            >
-              <li
-                onClick={() => taskDone(task._id)}
-                style={{ cursor: "pointer" }}
-              >
-                <i class="fa-regular fa-circle"></i>
-              </li>
-
-              <div>
-                <li>
-                  <strong>{task.task_title}</strong>
-                </li>
-                <li>{task.task_description}</li>
-              </div>
-
-              <li>
-                <i class="fa-regular fa-pen-to-square"></i>
-              </li>
-
-              <li onClick={() => deleteTask(task._id)}>
-                <i class="fa-regular fa-trash-can"></i>
-              </li>
-            </ul>
-            <hr className="list-hr" />
+          <li><strong>{task.task_title}</strong></li>
+          <li>{task.task_description}</li>
+          <div style={{display: 'flex', gap: '5px'}}>
+            <li>{task.today}</li>
+            <li>{task.priority}</li>
+          </div>
+          
           </div>
         ))}
       </main>
