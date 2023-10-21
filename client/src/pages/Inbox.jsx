@@ -1,5 +1,3 @@
-import {useContext} from "react";
-import {UserContext} from '../../context/userContext'
 import Sidebar from '../components/Sidebar'
 import '../css/inbox.css'
 import axios from 'axios'

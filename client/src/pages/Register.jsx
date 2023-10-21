@@ -9,12 +9,22 @@ import googleLogo from '../assets/google-logo.png'
 import facebookLogo from '../assets/facebook-logo.png'
 
 function Register() {
-  const navigate = useNavigate();
-  const [data, setData] = useState({
-    username: '',
-    email: '',
-    password: ''
-  })
+   const navigate = useNavigate()
+
+  const[username, setUsername] = useState('')
+  const[email, setEmail] = useState('')
+  const[password, setPassword] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:3333/auth/register', {username, email, password})
+      .then(result => {
+        navigate('/auth/login')
+        console.log(result)
+        toast.success('Thank you for signing up. Please Log-in')
+      })
+      .catch(err => console.log(err))
+  }
 
   const registerUser = async (e) => {
     e.preventDefault()
@@ -90,7 +100,7 @@ function Register() {
             <li><img src={facebookLogo} alt="google-logo" className='login-option-btns'/>Facebook</li>
           </ul>
 
-          <small><p>Already have an account? <a href="/login">Log in</a></p></small>
+          <small><p>Already have an account? <a href="/auth/login">Log in</a></p></small>
           
 
           <p className='login-signup-footer'><small>© 2023 OrganizeMe All Rights Reserved</small></p>

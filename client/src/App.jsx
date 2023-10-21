@@ -15,8 +15,8 @@ import Notifications from './pages/Notifications';
 import Priorities from './pages/Priorities';
 import Today2 from './pages/Today2';
 
-axios.defaults.baseURL = 'http://localhost:8000';
-axios.defaults.withCredentials = true;
+// axios.defaults.baseURL = 'http://localhost:8000';
+// axios.defaults.withCredentials = true;
 
 function App() {
 
