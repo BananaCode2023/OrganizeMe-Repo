@@ -64,7 +64,8 @@
   border: 1px #FFA500 solid;
 }
 .modal-btn{
-  opacity: 0.7;
+  background-color: #FFF;
+  opacity: 0.5;
 }
 .modal-btn:hover{
   opacity: 1;

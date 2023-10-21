@@ -9,33 +9,7 @@ import googleLogo from '../assets/google-logo.png'
 import facebookLogo from '../assets/facebook-logo.png'
 
 function Register() {
-  // const navigate = useNavigate();
-  // const [data, setData] = useState({
-  //   username: '',
-  //   email: '',
-  //   password: ''
-  // })
 
-  // const registerUser = async (e) => {
-  //   e.preventDefault()
-  //   const {username, email, password} = data
-  //   try{
-  //     const {data} = await axios.post('/register', {
-  //       username, email, password
-  //     })
-  //     if(data.error){
-  //       toast.error(data.error)
-  //     }
-  //     else{
-  //       setData({})
-  //       toast.success('Sign-up Successful. Please Login')
-  //       navigate('/login')
-  //     }
-  //   }
-  //   catch(error){
-  //     console.log(error)
-  //   }
-  // }
   const navigate = useNavigate()
 
   const[username, setUsername] = useState('')
@@ -48,6 +22,7 @@ function Register() {
       .then(result => {
         navigate('/auth/login')
         console.log(result)
+        toast.success('Thank you for signing up. Please Log-in')
       })
       .catch(err => console.log(err))
   }
@@ -60,7 +35,6 @@ function Register() {
           <h2>Create an Account & Get Started</h2>
 
           <form className='signup-form' 
-          // onSubmit={registerUser}
           onSubmit={handleSubmit}
           >
 
@@ -69,8 +43,6 @@ function Register() {
             name="username" 
             id="username"
             placeholder='Username'
-            // value={data.username}
-            // onChange={(e) => setData({...data, username: e.target.value})}
             onChange={(e) => setUsername(e.target.value)} 
             />
 
@@ -81,8 +53,6 @@ function Register() {
             name="email" 
             id="email" 
             placeholder='Email'
-            // value={data.email}
-            // onChange={(e) => setData({...data, email: e.target.value})} 
             onChange={(e) => setEmail(e.target.value)} 
             />
 
@@ -91,8 +61,6 @@ function Register() {
             name="password" 
             id="password" 
             placeholder='Password'
-            // value={data.password}
-            // onChange={(e) => setData({...data, password: e.target.value})} 
             onChange={(e) => setPassword(e.target.value)} 
             />
             
