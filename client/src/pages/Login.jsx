@@ -11,11 +11,22 @@ import facebookLogo from '../assets/facebook-logo.png'
 
 
 function Login() {
+  const[email, setEmail] = useState('')
+  const[password, setPassword] = useState('')
   const navigate = useNavigate()
-  const [data,setData] = useState({
-    email: '',
-    password: ''
-  })
+
+  axios.defaults.withCredentials = true;
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:3333/auth/login', {email, password})
+      .then(result => {
+        window.localStorage.setItem("id", result.data.id)
+        navigate('/inbox')
+        console.log(result)
+      })
+      toast.success('Successfully Logged-In')
+      .catch(err => console.log(err))
+  }
 
   const loginUser = async (e) => {
     e.preventDefault()
@@ -64,7 +75,7 @@ function Login() {
           </p>
           
 
-          <form className='login-form' onSubmit={loginUser}>
+          <form className='login-form' onSubmit={handleSubmit}>
             <input 
             type="email" 
             name="email" 
