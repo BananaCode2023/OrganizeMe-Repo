@@ -45,9 +45,9 @@ function TaskModal({ closeModal }) {
 
 
   return (
-  <div className="modal">
-    <form onSubmit={handleSubmit}>
-      <div className="modal-content">
+    <div className="modal">
+      <form onSubmit={handleSubmit}>
+        <div className="modal-content">
         
           <div className='task-input'>
             
@@ -70,7 +70,7 @@ function TaskModal({ closeModal }) {
           </div>
         
           
-          {/* <div className='modal-btns'>
+          <div className='modal-btns'>
             <input 
             type="button" 
             className='modal-btn org-when' 
@@ -101,33 +101,12 @@ function TaskModal({ closeModal }) {
           <div className='modal-add-cancel-btns'> 
             <button className="close-modal modal-cancel-btn" onClick={closeModal}>Cancel</button>
             <button className="btn btn-success modal-add-btn" type='submit'>Add Task</button>
-          </div> */}
+          </div>
         
-        
-        
-        <div className='modal-btns'>
-          <button className='modal-btn org-when'>
-            <img src={orgIcon} style={{width: '12px', marginRight: '5px'}}/>
-            Organize When
-          </button>
-          <button className='modal-btn priority-btn'>
-            <img src={starIcon} style={{width: '12px', marginRight: '5px'}}/>
-            Priority
-          </button>
-          <button className='modal-btn'>Category</button>
         </div>
-
-        <hr />
-
-        <div className='modal-add-cancel-btns'> 
-          <button className="close-modal modal-cancel-btn" onClick={closeModal}>Cancel</button>
-          <button className="btn btn-success modal-add-btn">Add Task</button>
-        </div>
-      </div>
-       
-    </form>
-  </div>
-  )
+      </form>
+    </div>
+  );
 }
 
 export default TaskModal;

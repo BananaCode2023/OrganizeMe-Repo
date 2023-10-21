@@ -34,7 +34,7 @@ export default function Index () {
     return(
         <>
             <Header />
-            <main>
+            <main className='main'>
                 <div className="row pb-5 landingpage_sec1">
                     <div className="row" >
                         <p>Simplifying Life One Task at a Time</p>
