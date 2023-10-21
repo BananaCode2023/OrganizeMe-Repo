@@ -60,6 +60,10 @@
   color: #FFA500;
   border: 1px #FFA500 solid;
 }
-.task-input:hover{
-  
+.modal-btn{
+  background-color: #FFF;
+  opacity: 0.5;
+}
+.modal-btn:hover{
+  opacity: 1;
 }

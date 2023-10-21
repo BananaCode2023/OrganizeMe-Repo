@@ -12,6 +12,8 @@ import About from './pages/About';
 import Features from './pages/features';
 import Index from './pages/Index';
 import Notifications from './pages/Notifications';
+import Priorities from './pages/Priorities';
+import Today2 from './pages/Today2';
 
 axios.defaults.baseURL = 'http://localhost:8000';
 axios.defaults.withCredentials = true;
@@ -29,9 +31,10 @@ function App() {
         <Route path='/inbox' element= {<Inbox />}/>
         <Route path='/about' element= {<About />}/>
         <Route path='/features' element= {<Features />}/>
-        <Route path='/tasklists/edit/:id' element= {EditTaskModal}/>
+        <Route path='/priorities' element= {<Priorities />}/>
+        <Route path='/today2' element={<Today2/>}/>
       </Routes>
-    </UserContextProvider>
+    {/* </UserContextProvider> */}
     </>
   );
 }

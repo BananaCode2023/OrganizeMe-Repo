@@ -44,14 +44,16 @@ function Register() {
           <a href="/"><img src={loginLogo} alt="organizeMe-logo" id='login-logo' /></a>
           <h2>Create an Account & Get Started</h2>
 
-          <form className='signup-form' onSubmit={registerUser}>
+          <form className='signup-form' 
+          onSubmit={handleSubmit}
+          >
+
             <input 
             type="text" 
             name="username" 
             id="username"
             placeholder='Username'
-            value={data.username}
-            onChange={(e) => setData({...data, username: e.target.value})}
+            onChange={(e) => setUsername(e.target.value)} 
             />
 
 
@@ -61,8 +63,7 @@ function Register() {
             name="email" 
             id="email" 
             placeholder='Email'
-            value={data.email}
-            onChange={(e) => setData({...data, email: e.target.value})} 
+            onChange={(e) => setEmail(e.target.value)} 
             />
 
             <input 
@@ -70,8 +71,7 @@ function Register() {
             name="password" 
             id="password" 
             placeholder='Password'
-            value={data.password}
-            onChange={(e) => setData({...data, password: e.target.value})} 
+            onChange={(e) => setPassword(e.target.value)} 
             />
             
             <button 

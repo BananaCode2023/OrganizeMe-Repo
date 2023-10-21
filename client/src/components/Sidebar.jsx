@@ -33,10 +33,6 @@ function Sidebar(props) {
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
   }
-  
-  const getId = () => {
-    
-  }
 
   return (
     <>
@@ -94,14 +90,14 @@ function Sidebar(props) {
           </div>
         </a>
 
-        <a href="/upcoming">
+        <a href="/priorities">
           <div className='sidebar-btns upcoming-bar'>
             <i class="fa-solid fa-star"></i>
             <h6>PRIORITIES</h6>
           </div>
         </a>
 
-        <a href="/today">
+        <a href="/today2">
           <div className='sidebar-btns today-bar'>
           <i class="fa-solid fa-calendar-day"></i>
             <h5>TODAY</h5>

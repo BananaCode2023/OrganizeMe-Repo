@@ -1,7 +1,7 @@
 import {useContext} from "react";
-import {UserContext} from '../../context/userContext'
+// import {UserContext} from '../../context/userContext'
 import Sidebar from '../components/Sidebar'
-import '../css/inbox.css'
+import '../css/priorities.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
@@ -12,20 +12,11 @@ import {toast} from 'react-hot-toast'
 
 //Maglagay ng websocket para autoupdate
 
-const Inbox = () => {
+const Today2 = () => {
   const userId = window.localStorage.getItem("id")
-  const [tasklist, setTasklist] = useState([])
-  useEffect(() => {
-      axios
-        .get('http://localhost:3333/tasklist/user-tasks/'+userId)
-        .then(userTasks => {
-          setTasklist(userTasks.data)
-        })
-        .catch(err => console.log(err))
-  },[])
 
+  //For getting the username of the currently logged in user
   const [username, setUsername] = useState([])
-
   useEffect(() => {
       axios
         .get('http://localhost:3333/auth/username/'+userId)
@@ -34,6 +25,19 @@ const Inbox = () => {
         })
         .catch(err => console.log(err))
   }, [])
+  
+  //For getting the tasklist of the logged in user
+  const [tasklist, setTasklist] = useState([])
+  useEffect(() => {
+      axios
+        .get('http://localhost:3333/tasklist/today/'+userId)
+        .then(userTasks => {
+          setTasklist(userTasks.data)
+        })
+        .catch(err => console.log(err))
+  },[])
+
+  
 
   const deleteTask = (id) => {
     toast('Deleted Task', {
@@ -63,29 +67,24 @@ const Inbox = () => {
       .catch(err => console.log(err))
   }
 
-
   return (
-    <>
-      {/* <h1>Dashboard</h1>
-      <h1>Ito yung part nung sa user app na</h1>
-      {!!user && (<h2>Hi {user.username}!</h2>)} */}
-
+    <div className="priorities-page-container">
     <Sidebar 
     userimg = {profIcon}
     username = {username.username}
     />
 
-    <main className="inbox-page">
-      <div className="inbox-heading">
-        <i class="fa-solid fa-inbox inbox-heading-icon"></i>
-        <h1>Inbox</h1>
+    <main className="priorities-page">
+      <div className="priorities-heading">
+        <i class="fa-solid fa-calendar-day priorities-heading-icon"></i>
+        <h1>Today</h1>
       </div>
 
 
       {tasklist.map(task => (
         <div>
         <ul 
-        className="inbox-list" 
+        className="priorities-list" 
         style={{display: 'flex', gap: '20px'}}
         id="myList"
         >
@@ -126,8 +125,8 @@ const Inbox = () => {
 
     </main>
 
-    </>
+    </div>
   )
 }
 
-export default Inbox
+export default Today2

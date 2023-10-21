@@ -1,11 +1,11 @@
 import React, { useState, useEffect} from 'react';
 // React Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row';
-import Accordion from 'react-bootstrap/Accordion';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-import Card from 'react-bootstrap/Card'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Container from 'react-bootstrap/Container'
+// import Row from 'react-bootstrap/Row';
+// import Accordion from 'react-bootstrap/Accordion';
+// import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+// import Card from 'react-bootstrap/Card'
 import '../css/today.css';
 // Sidebar/Context
 import {useContext} from "react";
