@@ -91,9 +91,9 @@ function Sidebar(props) {
         </a>
 
         <a href="/priorities">
-          <div className='sidebar-btns upcoming-bar'>
+          <div className='sidebar-btns -bar'>
             <i class="fa-solid fa-star"></i>
-            <h6>PRIORITIES</h6>
+            <h5>PRIORITIES</h5>
           </div>
         </a>
 

@@ -40,7 +40,6 @@ function TaskModal({ closeModal }) {
         }, 1000)
       })
       .catch(err => console.log(err))
-      toast.error('Please add Task Title')
   }
 
 
