@@ -70,7 +70,7 @@ function TaskModal({ closeModal }) {
           </div>
         
           
-          <div className='modal-btns'>
+          {/* <div className='modal-btns'>
             <input 
             type="button" 
             className='modal-btn org-when' 
@@ -101,7 +101,7 @@ function TaskModal({ closeModal }) {
           <div className='modal-add-cancel-btns'> 
             <button className="close-modal modal-cancel-btn" onClick={closeModal}>Cancel</button>
             <button className="btn btn-success modal-add-btn" type='submit'>Add Task</button>
-          </div>
+          </div> */}
         
         
         

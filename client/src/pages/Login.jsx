@@ -3,6 +3,7 @@ import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom"
 import '../css/login.css'
+// import Header from "../components/Header"
 
 import loginHeroImg from '../assets/login-hero-img.png'
 import loginLogo from '../assets/organizeMeLogo.png'
@@ -11,6 +12,7 @@ import facebookLogo from '../assets/facebook-logo.png'
 
 
 function Login() {
+  
   const[email, setEmail] = useState('')
   const[password, setPassword] = useState('')
   const navigate = useNavigate()
@@ -26,28 +28,6 @@ function Login() {
       })
       toast.success('Successfully Logged-In')
       .catch(err => console.log(err))
-  }
-
-  const loginUser = async (e) => {
-    e.preventDefault()
-      const {email, password} = data
-      try{
-        const {data} = await axios.post('/login', {
-          email,
-          password
-        });
-        if(data.error) {
-          toast.error(data.error)
-        }
-        else{
-          setData({});
-          navigate('/Dashboard')
-
-        }
-      }
-      catch(error){
-
-      }
   }
 
   return (
@@ -75,15 +55,19 @@ function Login() {
           </p>
           
 
-          <form className='login-form' onSubmit={handleSubmit}>
+          <form className='login-form' 
+          // onSubmit={loginUser}
+          onSubmit={handleSubmit}
+          >
             <input 
             type="email" 
             name="email" 
             id="email" 
             placeholder='✉️ Email' 
             className='login-input'
-            value={data.email}
-            onChange={(e) => setData({...data, email: e.target.value})}  
+            // value={data.email}
+            // onChange={(e) => setData({...data, email: e.target.value})}  
+            onChange={(e) => setEmail(e.target.value)} 
             />
 
             <input 
@@ -92,8 +76,9 @@ function Login() {
             id="password" 
             placeholder='🔐 Password' 
             className='login-input'
-            value={data.password}
-            onChange={(e) => setData({...data, password: e.target.value})}
+            // value={data.password}
+            // onChange={(e) => setData({...data, password: e.target.value})}
+            onChange={(e) => setPassword(e.target.value)} 
             />
 
             <div className='remember-me'>
@@ -114,30 +99,6 @@ function Login() {
         </div>
       </main>
     </>
-
-    // <div>
-    //   <h1>LOGIN</h1>
-    //   <form onSubmit={loginUser}>
-    //   <label>Email</label>
-    //     <input 
-    //     type="email" 
-    //     placeholder='enter email...'
-    //     value={data.email}
-    //     onChange={(e) => setData({...data, email: e.target.value})}
-    //     />
-
-    //     <label>Password</label>
-    //     <input 
-    //     type="password" 
-    //     placeholder='enter password...'
-    //     value={data.password}
-    //     onChange={(e) => setData({...data, password: e.target.value})}
-    //     />
-
-    //     <button type='submit'>Login</button>
-    //   </form>
-
-    // </div>
   )
 }
 
