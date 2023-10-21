@@ -2,7 +2,7 @@
   position: fixed;
   left: -220px;
   width: 300px;
-  height: 100vh;
+  height: 100%;
   background-color: transparent;
   padding: 20px 0;
   transition: left 0.4s;
@@ -71,8 +71,9 @@ color: white;
 .fa-magnifying-glass{
   color: #232323;
 }
-.fa-calendar-days{
+.fa-star{
   color: #F1511B;
+  margin-left: -5px;
 }
 .fa-calendar-day{
   color: #298683;
@@ -97,4 +98,21 @@ color: white;
 
 .search-bar:hover, .inbox-bar:hover, .upcoming-bar:hover, .today-bar:hover, .filter-bar:hover{
   background-color: #C5DCDE;
+}
+
+.dummy-profIcon{
+  width: 30px;
+}
+.profile-btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 180px;
+  border: none;
+  padding: 5px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.profile-btn:hover{
+  background-color: #7799cf34;
 }
