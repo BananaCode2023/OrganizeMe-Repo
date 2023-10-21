@@ -97,7 +97,7 @@ function Login() {
             className='btn btn-success'>Login</button>
           </form>
 
-          <small><p>Don't have an account? <a href="/signup">Sign-up now!</a></p></small>
+          <small><p>Don't have an account? <a href="/auth/register">Sign-up now!</a></p></small>
 
           <p className='login-signup-footer'><small>© 2023 OrganizeMe All Rights Reserved</small></p>
         </div>

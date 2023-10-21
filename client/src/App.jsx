@@ -26,8 +26,8 @@ function App() {
       <Toaster position='top-center' toastOptions={{duration: 1500}}/>
       <Routes>
         <Route path='/' element= {<Index />}/>
-        <Route path='/signup' element= {<Register />}/>
-        <Route path='/login' element= {<Login />}/>
+        <Route path='/auth/register' element= {<Register />}/>
+        <Route path='/auth/login' element= {<Login />}/>
         <Route path='/inbox' element= {<Inbox />}/>
         <Route path='/about' element= {<About />}/>
         <Route path='/features' element= {<Features />}/>
