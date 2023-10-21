@@ -1,12 +1,12 @@
 /* CSS for default screem */
 
-/* landingpage_sec1 */
+/* landingpage_sec1 */  
 
-.landing-page-main{
-    padding-top: 80px;
+main{
+    padding-top: 100px;
     padding-inline: 100px;
     padding-bottom: 180px;
-    background-image: url('/Images/bg-landingpage_sec1.png');
+    background-image: url('/Images/bg-landingpage_sec1.png'); 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -26,7 +26,7 @@
     color: #F7F7FC;
     text-align: center;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -62,23 +62,164 @@
     color: #ffffff00;
 }
 
-/* section */
-section{
-    margin-inline: 100px;
-    margin-bottom: 80px;
+/* Testimonial */
+.scroll_testimonial{
+    background: linear-gradient(180deg, #F7F8FF 49.03%, #103D87 49.04%);
 }
 
+
+.review{
+    /* display: inline-block; */
+    padding: 30px;
+    border-radius: 20px;
+    background: #e9efff;
+    width: 340px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    /* padding: 16px; */
+    /* background-color: #F7F7FC; */
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      to right,
+      #DFE8FF,#dfe8ff12 40px,
+      #dfe8ff12 calc(100% - 40px),#DFE8FF
+    );
+  }
+  
+  /* Animation Class */
+  .scroll-wrapper {
+    display: flex;
+    -webkit-animation: marquee 40s linear infinite;
+    animation: marquee 40s linear infinite;
+    gap: 20px;
+  }
+
+@-webkit-keyframes marquee{
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
+.testimonial_header{
+    padding-left: 100px;
+    color: #232323;
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px; /* 125% */
+    letter-spacing: -0.72px;
+}
+
+.rating{
+    font-size: 24px;
+    color: #f39c12;
+    /* padding-bottom: 10px; */
+
+}
+
+.comment{
+    color: #232323;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 20px;
+    padding-top: 10px;
+}
+.customer{
+    text-align: end;
+    color: #232323;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.Featured{
+    padding-inline: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Featured p{
+    color: #dfe8ffca;
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.48px;
+}
+
+
+/* section */
+section{
+    background-color: #F7F8FF;
+    padding-inline: 100px;
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+
+
 /* landingpage_sec2 */
+.landingpage_sec2{
+    padding-left: 20px;
+}
+.landingpage_sec2 p{
+    align-items: center;
+}
+
 Icon{
     max-width: 100%;
     height: auto;
     color: #103db6;
+}
+.ImageSample{
+    max-width: 350px;
+    height: auto;
 }
 
 .responsive-image{
     max-width: 100%;
     height: auto;
 }
+
+.responsive-image1{
+    max-width: 80%;
+    height: auto;
+}
+
 .side-image{
     display: flex;
     justify-content:space-around;
@@ -99,10 +240,16 @@ Icon{
 .landingpage_sec3 p{
     color: rgba(35, 35, 35, 0.80);
     font-family: DM Sans;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.RoadMap{
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
 }
 
 .main_subtitle{
@@ -122,14 +269,63 @@ Icon{
     line-height: normal;
 }
 
+.accordion-body{
+    background-color: #ffffff;
+    font-family: DM Sans;
+}
+.accordion-button{
+    background-color: whitesmoke;
+    font-family: Poppins;
+    color: #103D87;
+    font-size: 20px;
+    font-weight: 500;
+}
+.accordion-button:focus{
+    background-color: #103db6;
+    font-family: Poppins;
+    color: #DFE8FF;
+    font-size: 20px;
+    font-weight: 700;
+}
+.accordion-button::after{
+    background-color: #263238;
+    border-radius: 100px;
+}
+
 /* CSS for other device */
 
 @media (max-width: 320px ){
 
+    .review{
+        width: 150px;
+        height: 220px;
+        
+    }
+
+    section{
+        padding-inline: 30px !important;
+    }
+
+    .rating{
+        font-size: 18px !important;
+    }
+    .customer{
+        font-size: 12px !important;
+    }
+
+    .Featured{
+        padding-inline: 0px !important;
+    }
+    .Featured p{
+        display: none;
+        font-size: 10px !important;
+    }
     .landingpage_sec1 p{
         font-size: 25px !important;
         font-weight: 600;
     }
+
+
 
     .explore-btn{
         width: 130px;
@@ -149,7 +345,28 @@ Icon{
         display: none;
     }
 
+    .testimonial_header{
+        padding-left: 20px !important;
+        color: #232323;
+        font-family: Poppins;
+        font-size: 18px !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px; /* 125% */
+        letter-spacing: -0.72px;
+    }
+
 }
+
+@media (max-width: 425px){
+    .testimonial_header{
+        padding-left: 30px !important   ;
+    }
+
+    .container::after{
+        display: none;
+    }
+  }
 
 /* Media query for smaller devices */
 @media (max-width: 767px) {
@@ -163,9 +380,68 @@ Icon{
         padding-bottom: 0px;
     }
 
+    .testimonial-box{
+        display: flex;
+        padding-left: 0px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .review{
+        padding: 15px;
+        width: 200px;
+        
+    }
+    
+    .testimonial_header{
+        padding-top: 50px;
+        padding-bottom: 0px;
+        padding-left: 80px;
+        color: #232323;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px; /* 125% */
+        letter-spacing: -0.72px;
+    }
+
+    .Featured{
+        padding-inline: 30px;
+    }
+    .Featured p{
+        padding-left: 30px;
+        font-size: 12px;
+    }
+    
+    .rating{
+        font-size: 24px;
+        color: #f39c12;
+    }
+    
+    .comment{
+        color: #232323;
+        font-family: DM Sans;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px;
+    }
+    .customer{
+        text-align: end;
+        color: #232323;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 10px;
+    }
+
     section{
-        margin-inline: 30px;
-        margin-bottom: 60px;
+        padding-top: 60px;
+        padding-inline: 30px;
+        padding-bottom: 60px;
     }
 
     .landingpage_sec1 p{
@@ -178,7 +454,7 @@ Icon{
         text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.15);
         font-size: 13px;
         font-weight: 500;
-        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .landingpage_main{
@@ -261,6 +537,7 @@ Icon{
     }
   }
   
+
   /* Media query for larger devices */
   @media (min-width: 768px) and (max-width: 1023px) {
     body {
@@ -273,9 +550,58 @@ Icon{
         padding-bottom: 50px;
     }
 
+    .testimonial-box{
+        display: flex;
+        padding-left: 0px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    
+    .review{
+        width: 280px;
+        height: auto;
+    }
+    
+    .testimonial_header{
+        padding-left: 80px;
+        color: #232323;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px; /* 125% */
+        letter-spacing: -0.72px;
+    }
+    
+    .rating{
+        font-size: 24px;
+        color: #f39c12;
+    }
+    
+    .comment{
+        color: #263238;
+        font-family: DM Sans;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .customer{
+        text-align: end;
+        color: #232323;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    
+
     section{
-        margin-inline: 100px;
-        margin-bottom: 100px;
+        padding-inline: 100px;
+        padding-bottom: 100px;
     }
 
     .landingpage_sec1 p{
@@ -288,7 +614,7 @@ Icon{
         text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.15);
         font-size: 20px;
         font-weight: 500;
-        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .landingpage_main{
@@ -339,7 +665,7 @@ Icon{
         color: rgba(35, 35, 35, 0.80);
         font-family: DM Sans;
         font-size: 18px;
-        font-weight: 500;;
+        font-weight: 500;
     }
     
     .main_subtitle{
@@ -366,10 +692,10 @@ Icon{
         padding-inline: 100px;
         padding-bottom: 150px;
     }
-
+    
     section{
-        margin-left: 120px;
-        margin-bottom: 80px;
+        padding-inline: 100px;
+        padding-bottom: 80px;
     }
 
     .landingpage_sec1 p{
@@ -379,7 +705,7 @@ Icon{
 
     .landingpage_sec1 span{
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 400;
     }
 
@@ -412,6 +738,7 @@ Icon{
         max-width: 70%;
         height: auto;
     }
+    
     .side-image{
         display: flex;
         justify-content:center;
@@ -427,7 +754,7 @@ Icon{
     .landingpage_sec3 p{
         color: rgba(35, 35, 35, 0.80);
         font-family: DM Sans;
-        font-size: 25px;
+        font-size: 21px;
         font-weight: 500;;
     }
     

@@ -1,16 +1,17 @@
-.inbox-page{
-  padding: 50px 100px 0 400px;
+body{
+    background-image: url('/client/Images/Flat illustrations/Today\ 1.png');
 }
-.inbox-heading{
-  display: flex;
-  align-items: center;
-  color: #103D87;
+
+.DashBoard-Box{
+    padding-top: 70px;
 }
-.inbox-heading-icon{
-  font-size: 40px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.inbox-list li{
-  list-style: none;
+
+.Inbox_Header{
+    color: #103D87;
+    font-family: DM Sans     ;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
 }
