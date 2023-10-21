@@ -3,13 +3,6 @@
   max-width: 1440px;
   margin-inline: auto;
 }
-.notifications {
-  font-family: Poppins;
-  font-size: 32px;
-}
-.notifications img {
-  width: 30px;
-}
 .row .justify-content-end img {
   width: 100px;
 }
@@ -28,4 +21,24 @@
 .notif-reg {
   font-family: Poppins;
   text-align: center;
+}
+.notif-bell{
+  display: flex;
+  align-items: center;
+  color: #242424;
+}
+.notif-bell-icon{
+  font-size: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.sort-by{
+  display: flex;
+  align-items: center;
+  color: #242424;
+}
+.sort-by-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }

@@ -99,7 +99,7 @@ color: white;
   left: -150px;
 }
 
-.search-bar:hover, .inbox-bar:hover, .upcoming-bar:hover, .today-bar:hover, .filter-bar:hover{
+.search-bar:hover, .inbox-bar:hover, .upcoming-bar:hover, .today-bar:hover, .filter-bar:hover, .profile-btn:hover{
   background-color: #C5DCDE;
 }
 
@@ -116,6 +116,7 @@ color: white;
   transition: 0.3s;
   border-radius: 5px;
 }
-.profile-btn:hover{
-  background-color: #7799cf34;
+.bell-btn{
+  border: none;
+  color: #232323;
 }

@@ -2,23 +2,25 @@ import React from "react";
 import "../css/notifications.css";
 import notify from "../assets/Notify-amico.png";
 import notifBell from "../assets/notif-bell.png";
-import sortBy from "../assets/Sort-by.png";
 
 const Notifications = () => {
   return (
     <>
       <div className="notifications-container">
-        <div className="row">
-          <div className="col notifications">
-            <img src={notifBell} alt="Notification Bell" />
-            Notifications
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-1">
-              <img src={sortBy} alt="sort by" />
+        <div className="notif-bell">
+          <i class="fa-regular fa-bell notif-bell-icon"></i>
+          <h1>Notification</h1>
+        </div>
+        <div className="sort-by justify-content-end">
+          <i class="fa-solid fa-sliders sort-by-icon"></i>
+          <h5>Sort By</h5>
+        </div>
+        {/* <div className="row justify-content-end">
+            <div className="col-2 sort-by">
+              <i className="fa-solid fa-sliders"> Sort By</i>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="notif-image">
           <img src={notify} className="rounded mx-auto d-block" />
           <p className="noif-bold">Your notification feed is empty</p>

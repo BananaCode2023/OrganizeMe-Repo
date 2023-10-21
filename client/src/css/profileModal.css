@@ -1,10 +1,18 @@
 .profile-modal{
-  height: 40px;
   display: flex;
   flex-direction: column;
-  padding: 5px 5px;
-  gap: 2px;
-  width: 95%;
-  margin-inline: auto;
-  border-radius: 5px;
+  background-color: white;
+}
+.profile-modal button{
+  padding: 5px;
+  border: none;
+  background-color: white;
+}
+.profile-modal button:hover{
+  background-color: #C5DCDE;
+}
+hr {
+  width: 75%;
+  align-self: center;
+  background-color: white;
 }

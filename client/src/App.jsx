@@ -18,18 +18,18 @@ function App() {
 
   return (
     <>
-    {/* <UserContextProvider> */}
-      <Toaster position='top-center' toastOptions={{duration: 1500}}/>
+      {/* <UserContextProvider> */}
+      <Toaster position="top-center" toastOptions={{ duration: 1500 }} />
       <Routes>
-        <Route path='/' element= {<Index />}/>
-        <Route path='/auth/register' element= {<Register />}/>
-        <Route path='/auth/login' element= {<Login />}/>
-        <Route path='/inbox' element= {<Inbox />}/>
-        <Route path='/about' element= {<About />}/>
-        <Route path='/features' element= {<Features />}/>
-        <Route path='/tasklists/edit/:id' element= {EditTaskModal}/>
+        <Route path="/" element={<Index />} />
+        <Route path="/auth/register" element={<Register />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/notifications" element={<Notifications />} />
       </Routes>
-    {/* </UserContextProvider> */}
+      {/* </UserContextProvider> */}
     </>
   );
 }
