@@ -1,3 +1,5 @@
+import {useContext} from "react";
+// import {UserContext} from '../../context/userContext'
 import Sidebar from '../components/Sidebar'
 import '../css/inbox.css'
 import axios from 'axios'
@@ -63,11 +65,7 @@ const Inbox = () => {
 
 
   return (
-    <>
-      {/* <h1>Dashboard</h1>
-      <h1>Ito yung part nung sa user app na</h1>
-      {!!user && (<h2>Hi {user.username}!</h2>)} */}
-
+    <div className="inbox-page-container">
     <Sidebar 
     userimg = {profIcon}
     username = {username.username}
@@ -124,7 +122,7 @@ const Inbox = () => {
 
     </main>
 
-    </>
+    </div>
   )
 }
 
