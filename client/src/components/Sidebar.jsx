@@ -40,13 +40,7 @@ function Sidebar(props) {
   };
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
-<<<<<<< HEAD
-  };
-
-  const getId = () => {};
-=======
   }
->>>>>>> 0427938102f3fa1aa0b5b48af6c2224d85838120
 
   return (
     <>

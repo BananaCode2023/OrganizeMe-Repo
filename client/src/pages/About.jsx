@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-// import Footer from "./common/footer";
+import Footer from "../components/Footer";
 import "../css/features-about.css";
 import section1Img from "../assets/Team-amico.png";
 import partner1 from "../assets/partner1.png";
@@ -79,7 +79,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
