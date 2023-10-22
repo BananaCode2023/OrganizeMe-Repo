@@ -2,10 +2,31 @@ import React from "react";
 import "../css/notifications.css";
 import notify from "../assets/Notify-amico.png";
 import notifBell from "../assets/notif-bell.png";
+import Sidebar from "../components/Sidebar"
+import profIcon from '../assets/profile-icon.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Notifications = () => {
+  const userId = window.localStorage.getItem("id")
+  const [username, setUsername] = useState([])
+
+  useEffect(() => {
+      axios
+        .get('http://localhost:3333/auth/username/'+userId)
+        .then(user => {
+          setUsername(user.data)
+        })
+        .catch(err => console.log(err))
+  }, [])
+
+
   return (
     <>
+    <Sidebar 
+    userimg = {profIcon}
+    username = {username.username}
+    />
       <div className="notifications-container">
         <div className="notif-bell">
           <i class="fa-regular fa-bell notif-bell-icon"></i>

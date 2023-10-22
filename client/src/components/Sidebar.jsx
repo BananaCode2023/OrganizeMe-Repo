@@ -30,6 +30,22 @@ function Sidebar(props) {
     setIsProfileModalOpen(false);
   }
 
+  // const searchProduct = (event) => {
+  //   let new_filtered_product = []
+
+  //   product_data.map(
+  //     (product) => {
+  //       if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) { 
+  //         new_filtered_product.push(product)
+  //       }
+  //     }
+  //   )
+  //   console.log(new_filtered_product)
+  //   setFilteredProduct(new_filtered_product)
+  // }
+
+  
+
   return (
     <>
       <aside className={`sidebar ${showBar ? "" : "close"}`}>

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
 import profIcon from '../assets/profile-icon.png'
 import {toast} from 'react-hot-toast'
-
+import EditModal from "../components/EditModal";
 
 
 //Maglagay ng websocket para autoupdate
@@ -67,6 +67,15 @@ const Today2 = () => {
       .catch(err => console.log(err))
   }
 
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const openEditModal = (taskId) => {
+    setIsEditModalOpen(true)
+      window.localStorage.setItem('taskId', taskId)
+  }
+  const closeEditModal = () => {
+    setIsEditModalOpen(false)
+  }
+
   return (
     <div className="priorities-page-container">
     <Sidebar 
@@ -80,7 +89,7 @@ const Today2 = () => {
         <h1>Today</h1>
       </div>
 
-
+      {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
       {tasklist.map(task => (
         <div>
         <ul 
@@ -106,7 +115,7 @@ const Today2 = () => {
           </div>
 
         
-          <li>
+          <li onClick={() => openEditModal(task._id)}>
             <i class="fa-regular fa-pen-to-square"></i>
           </li>
 

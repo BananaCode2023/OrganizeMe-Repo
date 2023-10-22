@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
 import profIcon from '../assets/profile-icon.png'
 import {toast} from 'react-hot-toast'
+import EditModal from "../components/EditModal";
 
 
 
@@ -144,9 +145,16 @@ const Categories = () => {
       .catch(err => console.log(err))
   }
 
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const openEditModal = (taskId) => {
+    setIsEditModalOpen(true)
+      window.localStorage.setItem('taskId', taskId)
+  }
+  const closeEditModal = () => {
+    setIsEditModalOpen(false)
+  }
 
   
-
   return (
     <div className="categories-page-container">
     <Sidebar 
@@ -160,6 +168,7 @@ const Categories = () => {
         <h1>Categories</h1>
       </div>
 
+      {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
       <h6 className="category-title">Personal Care</h6>
       <hr />
         {personalTasklist.map(task => (
@@ -186,7 +195,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -224,7 +233,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -262,7 +271,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -300,7 +309,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -338,7 +347,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -376,7 +385,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -414,7 +423,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
@@ -452,7 +461,7 @@ const Categories = () => {
             </div>
 
           
-            <li>
+            <li onClick={() => openEditModal(task._id)}>
               <i class="fa-regular fa-pen-to-square"></i>
             </li>
 
