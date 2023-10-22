@@ -1,16 +1,28 @@
-.inbox-page{
+.inbox-page {
   padding: 50px 100px 0 400px;
+  position: relative;
+  z-index: -1;
 }
-.inbox-heading{
+.inbox-heading {
   display: flex;
   align-items: center;
-  color: #103D87;
+  color: #103d87;
 }
-.inbox-heading-icon{
+.inbox-heading-icon {
   font-size: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.inbox-list li{
+.inbox-list li {
   list-style: none;
+}
+.inbox-list-container{
+  display: flex;
+  justify-content: space-between;
+}
+.inbox-col1{
+  display: flex;
+}
+.inbox-col2{
+  display: flex;
 }

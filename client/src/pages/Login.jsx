@@ -44,10 +44,9 @@ function Login() {
           <h2>Login to your Account</h2>
           <p className='login-heading-text'>Welcome back! Select method to log in:</p>
 
-          <ul>
-            <li><img src={googleLogo} alt="google-logo" className='login-option-btns'/>Google</li>
-            <li><img src={facebookLogo} alt="google-logo" className='login-option-btns'/>Facebook</li>
-          </ul>
+          
+            <li className="login-option" ><img src={googleLogo} alt="google-logo" className='login-option-btns'/>Google</li>
+          
 
           <hr className='or-line'/>
           <p className='or-text'>

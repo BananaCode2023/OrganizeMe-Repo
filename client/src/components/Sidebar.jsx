@@ -54,7 +54,7 @@ function Sidebar(props) {
             ></i>
           </a>
           <button onClick={toggleSideBar} id="sidebar-toggle">
-            <i class="fa-regular fa-window-maximize fa-rotate-90"></i>
+            <i class="fa-regular fa-window-maximize fa-rotate-90 toggle-btn"></i>
           </button>
         </div>
         {isProfileModalOpen && (
@@ -91,15 +91,15 @@ function Sidebar(props) {
         </a>
 
         <a href="/today2">
-          <div className='sidebar-btns today-bar'>
-          <i class="fa-solid fa-calendar-day"></i>
+          <div className="sidebar-btns today-bar">
+            <i class="fa-solid fa-calendar-day"></i>
             <h5>TODAY</h5>
           </div>
         </a>
 
         <a href="/filters_labels">
-          <div className='sidebar-btns filter-bar'>
-          <i class="fa-solid fa-tags"></i>
+          <div className="sidebar-btns filter-bar">
+            <i class="fa-solid fa-tags"></i>
             <h5>Filters & Labels</h5>
           </div>
         </a>
