@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   position: fixed;
   left: -220px;
   width: 300px;
@@ -7,30 +7,30 @@
   padding: 20px 0;
   transition: left 0.4s;
 }
-.sidebar a{
+.sidebar a {
   text-decoration: none;
 }
-.sidebar.close{
+.sidebar.close {
   left: 0;
-  background-color: #ECF1F5;
+  background-color: #ecf1f5;
 }
-.add-task-btn.close{
+.add-task-btn.close {
   margin-left: -50px;
 }
-.fa-bell.close{
+.fa-bell.close {
   margin-left: -100px;
 }
 
-#sidebar-toggle{
+#sidebar-toggle {
   border: none;
   background-color: transparent;
 }
-.sidebar-row1{
+.sidebar-row1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.profile-container{
+.profile-container {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -40,11 +40,11 @@
   align-items: center;
   padding-block: 3px;
 }
-.profile-letter{
+.profile-letter {
   margin: auto;
-color: white;
+  color: white;
 }
-.add-task-btn{
+.add-task-btn {
   width: 85%;
   margin: 20px 20px;
   height: 40px;
@@ -55,58 +55,65 @@ color: white;
   font-size: 16px;
   transition: 0.4s;
 }
-.sidebar-btns{
+.sidebar-btns {
   display: flex;
   gap: 15px;
   font-size: 30px;
-  align-items:center;
+  align-items: center;
   cursor: pointer;
   color: #2323238f;
   width: 100%;
   padding: 5px 30px;
 }
-.sidebar-btns h6{
+.sidebar-btns h6 {
   margin-top: 10px;
 }
-.fa-inbox{
-  color: #103D87;
+.fa-inbox {
+  color: #103d87;
 }
-.fa-magnifying-glass{
+.fa-magnifying-glass {
   color: #232323;
 }
-.fa-star{
-  color: #FFA500;
+.fa-star {
+  color: #ffa500;
   margin-left: -5px;
 }
-.fa-calendar-day{
+.fa-calendar-day {
   color: #298683;
 }
-.sidebar-hr{
+.sidebar-hr {
   border: solid #232323 1px;
 }
-.sidebar-row2{
+.sidebar-row2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 30px;
 }
-.sidebar-hr.close{
+.sidebar-hr.close {
   position: relative;
   left: -130px;
 }
-.sidebar-row2.close{
+.sidebar-row2.close {
   position: relative;
   left: -150px;
 }
 
-.search-bar:hover, .inbox-bar:hover, .upcoming-bar:hover, .today-bar:hover, .filter-bar:hover, .profile-btn:hover{
-  background-color: #C5DCDE;
+.search-bar:hover,
+.inbox-bar:hover,
+.upcoming-bar:hover,
+.today-bar:hover,
+.filter-bar:hover,
+.profile-btn:hover,
+.bell-btn:hover,
+.toggle-btn:hover {
+  background-color: #c5dcde;
 }
 
-.dummy-profIcon{
+.dummy-profIcon {
   width: 30px;
 }
-.profile-btn{
+.profile-btn {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -116,7 +123,13 @@ color: white;
   transition: 0.3s;
   border-radius: 5px;
 }
-.bell-btn{
+.bell-btn {
   border: none;
   color: #232323;
+  padding: 5px;
+  border-radius: 5px;
+}
+.toggle-btn {
+  border-radius: 5px;
+  padding: 5px;
 }

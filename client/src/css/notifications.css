@@ -3,9 +3,6 @@
   max-width: 1440px;
   margin-inline: auto;
 }
-.row .justify-content-end img {
-  width: 100px;
-}
 .notif-image {
   padding-top: 25px;
 }
@@ -35,7 +32,7 @@
 .sort-by{
   display: flex;
   align-items: center;
-  color: #242424;
+  color: #2323238f;
 }
 .sort-by-icon {
   font-size: 20px;
