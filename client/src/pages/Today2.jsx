@@ -84,8 +84,7 @@ const Today2 = () => {
 
       {tasklist.map(task => (
         <div>
-            <div className='row' 
-                className="priorities-list" 
+            <div className='row priorities-list' 
                 style={{display: 'flex', gap: '20px'}}
                 id="myList"
               >
