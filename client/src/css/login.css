@@ -71,11 +71,14 @@
   padding: 0 20px;
   margin-top: -30px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 .or-line{
   border: solid 1px #555555;
   width: 325px;
   opacity: 1;
+  z-index: 1;
 }
 .login-form{
   display: flex;

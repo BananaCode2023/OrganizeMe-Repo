@@ -13,15 +13,13 @@ import Index from './pages/Index';
 import Notifications from './pages/Notifications';
 import Priorities from './pages/Priorities';
 import Today2 from './pages/Today2';
+import Categories from './pages/Categories';
 
-// axios.defaults.baseURL = 'http://localhost:8000';
-// axios.defaults.withCredentials = true;
 
 function App() {
 
   return (
     <>
-      {/* <UserContextProvider> */}
       <Toaster position="top-center" toastOptions={{ duration: 1500 }} />
       <Routes>
         <Route path="/" element={<Index />} />
@@ -32,9 +30,9 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/priorities" element={<Priorities />} />
         <Route path="/today2" element={<Today2 />} />
+        <Route path="/categories" element={<Categories />} />
         <Route path="/notifications" element={<Notifications />} />
       </Routes>
-      {/* </UserContextProvider> */}
     </>
   );
 }

@@ -1,7 +1,5 @@
 .inbox-page {
   padding: 50px 100px 0 400px;
-  position: relative;
-  z-index: -1;
 }
 .inbox-heading {
   display: flex;
@@ -25,4 +23,8 @@
 }
 .inbox-col2{
   display: flex;
+}
+hr{
+  position: relative;
+  z-index: -1;
 }

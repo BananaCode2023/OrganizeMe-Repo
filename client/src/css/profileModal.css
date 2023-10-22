@@ -12,8 +12,10 @@
 .profile-modal button:hover{
   background-color: #C5DCDE;
 }
-hr {
-  width: 75%;
-  align-self: center;
-  background-color: white;
+.prof-hr{
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin-inline: auto;
+  opacity: 1;
 }

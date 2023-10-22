@@ -1,7 +1,3 @@
-.priorities-page {
-    position: relative;
-    z-index: -1;
-}
 .Today_header{
     display: flex;
     gap: 10px;

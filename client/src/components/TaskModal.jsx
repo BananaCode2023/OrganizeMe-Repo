@@ -14,15 +14,16 @@ function TaskModal({ closeModal }) {
     task_description: '',
     userId: window.localStorage.getItem("id")
   })
-
   const [addToday, setAddToday] = useState({today: ''})
   const [addPriority, setAddPriority] = useState({priority: ''})
+  const [addCategory, setAddCategory] = useState({category: ''})
 
   const handleAddTask = (e) => {
     const {name,value} = e.target
     setAddTask({...addTask, [name]:value})
     setAddToday({...addToday, [name]:value})
     setAddPriority({...addPriority, [name]:value})
+    setAddCategory({...addCategory,[name]:value})
   }
 
  
@@ -85,13 +86,69 @@ function TaskModal({ closeModal }) {
             value='⭐priority'
             onClick={handleAddTask}
             />
-            <select name="category" className='modal-btn'>
-              <option>Categories</option>
-              <option name='category' value="">Personal</option>
-              <option value="">Health</option>
-              <option value="">Education</option>
-              <option value="">Fitness</option>
-              <option value="">Work</option>
+            
+            <select 
+            name="category" 
+            onChange={handleAddTask} 
+            className='modal-btn'
+            >
+            
+              <option>💭 Categories</option>
+              <option 
+              name='category' 
+              value="🧘🏻‍♀ Personal Care"
+              >
+                🧘🏻‍♀ Personal Care
+              </option>
+
+              <option 
+              name='category' 
+              value="⚕️ Health"
+              >
+                ⚕️ Health
+              </option>
+
+              <option 
+              name='category' 
+              value="👫🏼 Relationship"
+              >
+                👫🏼 Relationship
+              </option>
+
+              <option 
+              name='category' 
+              value="👨🏻‍👩🏻‍👧🏻 Family"
+              >
+                👨🏻‍👩🏻‍👧🏻 Family
+              </option>
+
+              <option 
+              name='category' 
+              value="🎓 Education"
+              >
+                🎓 Education
+              </option>
+
+              <option 
+              name='category' 
+              value="🏋🏻‍♂️ Fitness"
+              >
+                🏋🏻‍♂️ Fitness
+              </option>
+
+              <option 
+              name='category' 
+              value="💼 Work"
+              >
+                💼 Work
+              </option>
+
+              <option 
+              name='category'
+              value="🤔 Others"
+              >
+                🤔 Others
+              </option>
             </select>
           </div>
 

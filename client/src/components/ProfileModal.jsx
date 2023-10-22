@@ -23,7 +23,7 @@ function ProfileModal({ closeProfileModal }) {
       </div>
 
       <div className="profile-modal pb-3">
-        <hr />
+        <hr className="prof-hr"/>
         {window.localStorage.length ? (
           <button onClick={handleLogout}>
             logout
