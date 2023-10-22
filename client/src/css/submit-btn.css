@@ -1,0 +1,80 @@
+
+.modal-overlay{
+    z-index: 9999;
+    background-color: #103cb63d;
+}
+
+.modal-dialog {
+    max-width: 75%;
+    height: 8vh;
+}
+
+
+.modal-content{
+    background-color: #F7F7FC;
+    width: 350px;
+    height: 350px;
+}
+
+.modalHeader{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;   
+    padding-bottom: 0;
+    color: rgb(35, 101, 60);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+
+
+.inputTitle{
+    border: none;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: 232323;
+    width: 100%;
+    padding-top: 5px;
+    height: 40px;
+    
+}
+
+.modal-btn{
+    border: none;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+@media (max-width: 320px ){
+
+}
+
+@media (max-width: 767px){
+
+    .modal-dialog {
+        max-width: 200%;
+        height: 8vh;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+    .modal-dialog {
+        max-width: 100%;
+        height: 8vh;
+        background-color: aqua;
+    }
+}
+
+@media (max-width: 1024px){
+    
+    .modal-dialog {
+        max-width: 100%;
+        height: 8vh;
+    }
+
+    
+
+}

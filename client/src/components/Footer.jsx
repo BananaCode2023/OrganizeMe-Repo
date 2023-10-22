@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../css/footer.css';
+import Submit_btn from '../components/Submit-btn'
 
 
 const Footer = () => {
@@ -48,7 +49,7 @@ const Footer = () => {
                     <form action="">
                       <div className="submit-btn btn-group pt-2" role="group" >
                         <input type="email" className="form-control" id="inputEmail" placeholder='&#9993; Email' />
-                        <button type="submit" className="btn btn-success">Submit</button>
+                        <Submit_btn />
                       </div>
                     </form>
                   </li>

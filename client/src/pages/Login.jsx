@@ -63,7 +63,7 @@ function Login() {
             type="email" 
             name="email" 
             id="email" 
-            placeholder='✉️ Email' 
+            placeholder='&#9993; Email' 
             className='login-input'
             // value={data.email}
             // onChange={(e) => setData({...data, email: e.target.value})}  
@@ -74,7 +74,7 @@ function Login() {
             type="password" 
             name="password" 
             id="password" 
-            placeholder='🔐 Password' 
+            placeholder='&#128273; Password' 
             className='login-input'
             // value={data.password}
             // onChange={(e) => setData({...data, password: e.target.value})}

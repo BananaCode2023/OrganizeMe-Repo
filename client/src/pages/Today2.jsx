@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
 import profIcon from '../assets/profile-icon.png'
 import {toast} from 'react-hot-toast'
+import '../css/today2.css'
 
 
 
@@ -75,53 +76,50 @@ const Today2 = () => {
     />
 
     <main className="priorities-page">
-      <div className="priorities-heading">
-        <i class="fa-solid fa-calendar-day priorities-heading-icon"></i>
+      <div className="priorities-heading mb-4">
+        <i className="fa-solid fa-calendar-day priorities-heading-icon"></i>
         <h1>Today</h1>
       </div>
 
 
       {tasklist.map(task => (
         <div>
-        <ul 
-        className="priorities-list" 
-        style={{display: 'flex', gap: '20px'}}
-        id="myList"
-        >
-          <li 
-          onClick={() => taskDone(task._id)}
-          style={{cursor: 'pointer'}}
-          >
-            <i class="fa-regular fa-circle"></i>
-          </li>
-
-          <div>
-          <li><strong>{task.task_title}</strong></li>
-          <li>{task.task_description}</li>
-          <div style={{display: 'flex', gap: '5px'}}>
-            <li>{task.today}</li>
-            <li>{task.priority}</li>
-          </div>
-          
-          </div>
-
-        
-          <li>
-            <i class="fa-regular fa-pen-to-square"></i>
-          </li>
-
-          <li onClick={() => deleteTask(task._id)}>
-            <i class="fa-regular fa-trash-can"></i>
-          </li>
-        </ul>
+            <div className='row' 
+                className="priorities-list" 
+                style={{display: 'flex', gap: '20px'}}
+                id="myList"
+              >
+              <div className="col-10 Today_header">
+                  <span 
+                  onClick={() => taskDone(task._id)}
+                  style={{cursor: 'pointer'}}
+                  >
+                  <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
+                </span>
+                <p><h4>{task.task_title}</h4></p>
+              </div>
+              <div className="col Today_icons">
+                <span>
+                  <i className="fa-regular fa-pen-to-square"></i>
+                </span>
+                <span onClick={() => deleteTask(task._id)}>
+                  <i className="fa-regular fa-trash-can"></i>
+                </span>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col Today_section">
+                <p>{task.task_description}</p>
+                <div className="Today_section2">
+                <span>{task.today}</span>
+                <span>{task.priority}Priority</span>
+                </div>
+              </div>
             <hr />
             </div>
+            
+      </div>
       ))}
-
-      
-      
-    
-      
 
     </main>
 

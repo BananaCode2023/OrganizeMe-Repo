@@ -1,0 +1,21 @@
+
+.Today_header{
+    display: flex;
+    gap: 10px;
+}
+
+.Today_section{
+    padding-left: 50px;
+}
+.Today_section p{
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+.Today_section2{
+    display: flex;
+    gap: 20px;
+}
+.Today_icons{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -4,12 +4,15 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../css/index.css'
 import Accordion from 'react-bootstrap/Accordion';
+import Stack from 'react-bootstrap/esm/Stack';
 import KodeGo from '../assets/KodeGo.png'
 import Figma from '../assets/figma logo.png'
 import Github from '../assets/Github.png'
 import Google from '../assets/Google.png'
 import Youtube from '../assets/Youtube.png'
 import RoadMap from '../assets/personal goals checklist.gif'
+import Explore1 from '../assets/Around the world-pana 1.png'
+import Explore2 from '../assets/Around the world-pana (1) 1.png'
 
 // icons for fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -36,7 +39,7 @@ export default function Index () {
             <Header />
             <main className='main'>
                 <div className="row pb-5 landingpage_sec1">
-                    <div className="row" >
+                    <div className="">
                         <p>Simplifying Life One Task at a Time</p>
                     </div>
                     <div className="row mb-3 landingpage_main" >
@@ -48,7 +51,7 @@ export default function Index () {
                     </div> 
                     <div className="row text-center">
                         <div className="col">
-                            <button type="button" className="btn btn-success mx-auto started-btn"><a href="/Register">Get Started <FontAwesomeIcon icon={faArrowRight} style={{color: "#f4f7fa",}} /></a></button>
+                            <button type="button" className="btn btn-success mx-auto started-btn"><a href="/auth/Register">Get Started <FontAwesomeIcon icon={faArrowRight} style={{color: "#f4f7fa",}} /></a></button>
                             <i className='whitespace'>__</i>
                             <button type="button" className="btn btn-bs-light-border-subtle mx-auto explore-btn"><a href="/features">Explore</a></button>
                         </div>
@@ -234,8 +237,18 @@ export default function Index () {
                         </div>
                     </div>
                 </div>
-                <div className="row mb-5 text-center">
-                    <h5>Unlock more possibilities! Dive into our features now. Click here to explore: <a href='/features'>Explore Features</a>.</h5>
+                <div className="row mb-5 pt-5 text-center explore-more">
+                    <Stack>
+                        <div>
+                            <img src={Explore1} className='explore-image' alt="ExploreMore" />
+                        </div>
+                        <div  className='explore-text'>
+                            <p>Unlock more possibilities! Dive into our features now. Click here to explore: <a href='/features'>Explore Features</a>.</p>  
+                        </div>
+                        <div>
+                            <img src={Explore2} className='explore-image' alt="ExloreMore" />
+                        </div>
+                    </Stack>
                 </div>
             </section>
 

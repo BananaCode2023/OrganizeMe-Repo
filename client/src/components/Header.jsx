@@ -1,21 +1,23 @@
-import {Link} from "react-router-dom"
+
+import '../css/header.css';
+// import {Link} from "react-router-dom"
 import {useState} from 'react';
-import { MDBIcon } from "mdb-react-ui-kit";
+// import { MDBIcon } from "mdb-react-ui-kit";
 import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
+    // NavbarBrand,
     Nav,
-    NavItem,
+    // NavItem,
     NavLink,
-    Dropdown,
-    DropdownToggle,
-    DropdownItem,
-    DropdownMenu,
-    UncontrolledDropdown
+    // Dropdown,
+    // DropdownToggle,
+    // DropdownItem,
+    // DropdownMenu,
+    // UncontrolledDropdown
   } from 'reactstrap';
-import '../css/header.css';
+
 import omWhiteLogo from '../assets/omWhiteLogo.png'
 
 function Header() {
@@ -51,21 +53,15 @@ function Header() {
             <Collapse isOpen={isOpen} navbar className='nav-dropdown'>
               <Nav className="burger-menu" navbar>
                 <div className='burger-menu-container'>
-                  <NavItem>
-                    <NavLink href='/features' id='feat'>
-                      Features
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/about' id='about'>
-                      About
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/auth/login' id='login'>
-                      Login
-                    </NavLink>
-                  </NavItem>
+                  <NavLink href='/features' id='feat'>
+                  Features
+                </NavLink>
+                <NavLink href="/about" id='about'>
+                  About
+                </NavLink>
+                <NavLink href='/auth/login' id='login'>
+                  Login
+                </NavLink>
                 </div>
               </Nav>
             </Collapse>

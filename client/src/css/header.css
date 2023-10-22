@@ -18,8 +18,6 @@
 }
 .nav-link::after{
   content : '';
-  /*   border : 1px solid green; */
-  /*   position  : static; */
     display: block;   
     height : 3px;
     width : 0%;
@@ -72,12 +70,12 @@
   .burger-menu-container{
     position: relative;
     margin-top: 10px;
-    z-index: -3;
+    z-index: 3;
     padding: 0 0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    background-color: #103DB7;
+    background-color: #0e35a2cf;
   }
   .nav-link{
     margin-left: auto;

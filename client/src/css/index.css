@@ -3,23 +3,24 @@
 /* landingpage_sec1 */  
 
 .main{
-    padding-top: 100px;
+    padding-top: 30px;
     padding-inline: 100px;
-    padding-bottom: 180px;
+    padding-bottom: 280px;
     background-image: url('/Images/bg-landingpage_sec1.png'); 
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .landingpage_sec1 p{
+    padding-top: 30px;
     color: #F7F8FF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-family: Poppins;
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
-    letter-spacing: -0.55px;
+    letter-spacing: -0.55px;    
     padding-bottom: 0%;
 }
 .landingpage_sec1 span{
@@ -33,13 +34,13 @@
     letter-spacing: -0.2px;
 }
 .landingpage_main{
-    padding-inline: 120px;
+    padding-inline: 100px;
     display: flex;
     justify-content: center;
 }
 .landingpage_main img{
-    padding-top: 0% ;
-    max-width: 80%;
+    padding-top: 0%;
+    width: 640px;
     height: auto;  
 }
 
@@ -232,7 +233,7 @@ Icon{
     color: #232323;
     text-align: center;
     font-family: Poppins;
-    font-size: 44px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -292,9 +293,35 @@ Icon{
     border-radius: 100px;
 }
 
+.explore-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-image{
+    width: 350px;
+    height: auto;
+}
+.explore-text{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-family: DM Sans;
+    font-weight: 540; 
+
+}
+a{
+    text-decoration: none;
+}
+
 /* CSS for other device */
 
 @media (max-width: 320px ){
+
+    main{
+        padding-top: 60px !important;
+    }
 
     .review{
         width: 150px;
@@ -359,12 +386,40 @@ Icon{
 }
 
 @media (max-width: 425px){
+    main{
+        padding-top: 40px !important;
+        padding-inline: 30px !important;
+        padding-bottom: 0px !important;
+    }
+
     .testimonial_header{
-        padding-left: 30px !important   ;
+        padding-left: 30px !important;
     }
 
     .container::after{
         display: none;
+    }
+
+    .started-btn{
+        width: 120px !important;
+        height: 37px;
+        font-size: small;
+        /* margin-bottom: 10px !important; */
+    }
+
+    .explore-btn{
+        width: 130px;
+        height: 37px;
+        background-color: #dfe8ff54;
+    }
+
+
+    .explore-btn{
+        width: 130px;
+        height: 37px;
+    }
+    .explore-btn:hover{
+        background-color: #00000042;
     }
   }
 
@@ -470,10 +525,11 @@ Icon{
     .explore-btn{
         color: #232323 !important;
         text-decoration: none;
-        width: 130px;
+        width: 120px;
         height: 37px;
-        border-color: #2323238d;
+        border-color: #2323235e;
         border-radius: 10px;
+        background-color: #23232364;
     }
     .explore-btn:hover{
         background-color: #00000042;
@@ -481,12 +537,12 @@ Icon{
         
     }
     .started-btn{
-        width: 130px;
+        width: 120px;
         height: 37px;
         font-size: small;
         border-radius: 10px;
     }
-    .whitespace{
+    .whitespace{ 
         color: #ffffff00;
     }
     
@@ -511,7 +567,7 @@ Icon{
     .landingpage_sec3 .qoutes{
         color: #232323;
         font-family: Poppins;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
     }
     .landingpage_sec3 p{
@@ -534,6 +590,17 @@ Icon{
         font-size: 15px;
         font-weight: 400;
         text-align: justify;
+    }
+
+    .explore-image{
+        width: 250px;
+        height: auto;
+    }
+    .explore-text{
+        font-size: 13px;
+        font-family: DM Sans;
+        font-weight: 540; 
+    
     }
   }
   
@@ -623,7 +690,7 @@ Icon{
         justify-content: center;
     }
     .landingpage_main img{
-        max-width: 100%;
+        max-width: 80%;
         height: auto;  
     }
 
@@ -631,8 +698,8 @@ Icon{
         color: #232323;
         width: 150px;
         height: 37px;
-        border-color: #2323238d;
-        background-color: #23232318;
+        /* border-color: #2323238d; */
+        /* background-color: #23232300; */
         border-radius: 5px;
     }
     .explore-btn:hover{
@@ -658,7 +725,7 @@ Icon{
     .landingpage_sec3 .qoutes{
         color: #232323;
         font-family: Poppins;
-        font-size: 25px;
+        font-size: 24px;
         font-weight: 500;
     }
     .landingpage_sec3 p{
@@ -682,13 +749,24 @@ Icon{
         font-weight: 400;
         text-align: justify;
     }
+
+    .explore-image{
+        width: 300px;
+        height: auto;
+    }
+    .explore-text{
+        font-size: 18px;
+        font-family: DM Sans;
+        font-weight: 530; 
+    
+    }
   }
   
   /* Media query for extra-large devices */
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1024px) {
 
     main{
-        padding-top: 80px;
+        padding-top: 20px;
         padding-inline: 100px;
         padding-bottom: 150px;
     }
@@ -699,22 +777,24 @@ Icon{
     }
 
     .landingpage_sec1 p{
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 600;
     }
 
     .landingpage_sec1 span{
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 400;
     }
 
     .landingpage_main{
         padding-inline: 80px;
         display: flex;
+        justify-content: center;
     }
     .landingpage_main img{
-        max-width: 80%;
+        padding-top: 0%;
+        width: 460px;
         height: auto;  
     }
 
@@ -748,7 +828,7 @@ Icon{
     .landingpage_sec3 .qoutes{
         color: #232323;
         font-family: Poppins;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 500;
     }
     .landingpage_sec3 p{
@@ -767,5 +847,15 @@ Icon{
         color: rgba(35, 35, 35, 0.50);
         font-size: 25px;
         font-weight: 400;
+    }
+
+    .explore-image{
+        width: 330px;
+        height: auto;
+    }
+    .explore-text{
+        font-size: 18px;
+        font-family: DM Sans;
+        font-weight: 550;        
     }
   } 

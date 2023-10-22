@@ -72,7 +72,7 @@ function Register() {
             type="email" 
             name="email" 
             id="email" 
-            placeholder='Email'
+            placeholder='&#9993; Email'
             onChange={(e) => setEmail(e.target.value)} 
             />
 
@@ -80,7 +80,7 @@ function Register() {
             type="password" 
             name="password" 
             id="password" 
-            placeholder='Password'
+            placeholder='&#128273; Password'
             onChange={(e) => setPassword(e.target.value)} 
             />
             
