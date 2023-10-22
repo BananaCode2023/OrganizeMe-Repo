@@ -23,6 +23,7 @@
   padding: 10px 15px;
   border: 1px solid #888;
   width: 400px;
+  height: auto;
 }
 .modal-btns{
   display: flex;
