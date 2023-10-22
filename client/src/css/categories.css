@@ -1,0 +1,28 @@
+.category-title{
+margin-top: 20px;
+font-weight: 700;
+}
+.categories-page{
+  padding: 50px 100px 0 400px;
+}
+.categories-heading{
+  display: flex;
+  align-items: center;
+  color: #FFA500;
+}
+.categories-heading-icon{
+  font-size: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.categories-list li{
+  list-style: none;
+}
+.task-desc{
+  font-size: 14px;
+  opacity: 0.7;
+}
+.task-categ{
+  font-size: 12px;
+}
+

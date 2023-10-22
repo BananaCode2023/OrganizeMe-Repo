@@ -99,7 +99,6 @@ const Priorities = () => {
           <li><strong>{task.task_title}</strong></li>
           <li>{task.task_description}</li>
           <div style={{display: 'flex', gap: '5px'}}>
-            <li>{task.today}</li>
             <li>{task.priority}</li>
           </div>
           

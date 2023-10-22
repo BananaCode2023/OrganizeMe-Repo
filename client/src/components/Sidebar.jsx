@@ -97,10 +97,10 @@ function Sidebar(props) {
           </div>
         </a>
 
-        <a href="/filters_labels">
+        <a href="/categories">
           <div className='sidebar-btns filter-bar'>
-          <i class="fa-solid fa-tags"></i>
-            <h5>Filters & Labels</h5>
+          <i className="fa-solid fa-layer-group"></i>
+            <h5>Categories</h5>
           </div>
         </a>
 

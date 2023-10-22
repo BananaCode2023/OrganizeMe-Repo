@@ -25,18 +25,17 @@ const Footer = () => {
             <div className="col">
               <ul>
                 <li><h5>Quick Links</h5></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Sign Up</a></li>
-                <li><a href="">Faqs</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/auth/register">Sign Up</a></li>
               </ul>
             </div>
             <div className="col mb-3 social-media">
                 <h5>Social Media</h5>
                 <ul className="social-icons">
-                    <li><a href=""><img src="/Images/Icons/facebook.svg" alt="Facebook" /></a></li>
-                    <li><a href=""><img src="/Images/Icons/twitter.svg" alt="XTwitter" /></a></li>
-                    <li><a href=""><img src="/Images/Icons/instagram.svg" alt="Instagram" /></a></li>
+                    <li><a href="https://www.facebook.com/"><img src="/Images/Icons/facebook.svg" alt="Facebook" /></a></li>
+                    <li><a href="https://twitter.com/"><img src="/Images/Icons/twitter.svg" alt="XTwitter" /></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="/Images/Icons/instagram.svg" alt="Instagram" /></a></li>
                 </ul>
             </div>
             <div className="col">
