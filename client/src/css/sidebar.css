@@ -98,16 +98,24 @@
   position: relative;
   left: -150px;
 }
-
+.fa-layer-group {
+  color: #f1511b;
+}
 .search-bar:hover,
 .inbox-bar:hover,
 .upcoming-bar:hover,
 .today-bar:hover,
-.filter-bar:hover,
+.category-bar:hover,
 .profile-btn:hover,
 .bell-btn:hover,
-.toggle-btn:hover {
+.toggle-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
   background-color: #c5dcde;
+}
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 1;
 }
 
 .dummy-profIcon {
@@ -132,4 +140,14 @@
 .toggle-btn {
   border-radius: 5px;
   padding: 5px;
+}
+.edit-btn {
+  border-radius: 5px;
+  padding: 5px;
+  opacity: 0.5;
+}
+.delete-btn {
+  border-radius: 5px;
+  padding: 5px;
+  opacity: 0.5;
 }

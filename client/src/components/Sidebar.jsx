@@ -28,14 +28,14 @@ function Sidebar(props) {
   };
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
-  }
+  };
 
   // const searchProduct = (event) => {
   //   let new_filtered_product = []
 
   //   product_data.map(
   //     (product) => {
-  //       if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) { 
+  //       if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) {
   //         new_filtered_product.push(product)
   //       }
   //     }
@@ -43,8 +43,6 @@ function Sidebar(props) {
   //   console.log(new_filtered_product)
   //   setFilteredProduct(new_filtered_product)
   // }
-
-  
 
   return (
     <>
@@ -99,13 +97,6 @@ function Sidebar(props) {
           </div>
         </a>
 
-        <a href="/priorities">
-          <div className="sidebar-btns upcoming-bar">
-            <i class="fa-solid fa-star"></i>
-            <h5>PRIORITIES</h5>
-          </div>
-        </a>
-
         <a href="/today2">
           <div className="sidebar-btns today-bar">
             <i class="fa-solid fa-calendar-day"></i>
@@ -113,9 +104,16 @@ function Sidebar(props) {
           </div>
         </a>
 
+        <a href="/priorities">
+          <div className="sidebar-btns upcoming-bar">
+            <i class="fa-solid fa-star"></i>
+            <h5>PRIORITIES</h5>
+          </div>
+        </a>
+
         <a href="/categories">
-          <div className='sidebar-btns filter-bar'>
-          <i className="fa-solid fa-layer-group"></i>
+          <div className="sidebar-btns category-bar">
+            <i className="fa-solid fa-layer-group"></i>
             <h5>Categories</h5>
           </div>
         </a>

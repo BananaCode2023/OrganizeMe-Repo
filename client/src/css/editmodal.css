@@ -1,5 +1,5 @@
 .editModal-container{
-  position: absolute;
+  position: fixed;
   background-color: rgba(16, 0, 79, 0.126);
   height: 100%;
   width: 100%;

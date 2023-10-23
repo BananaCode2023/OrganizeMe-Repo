@@ -14,17 +14,17 @@
 .inbox-list li {
   list-style: none;
 }
-.inbox-list-container{
+.inbox-list-container {
   display: flex;
   justify-content: space-between;
 }
-.inbox-col1{
+.inbox-col1 {
   display: flex;
 }
-.inbox-col2{
+.inbox-col2 {
   display: flex;
 }
-hr{
+hr {
   position: relative;
   z-index: -1;
 }

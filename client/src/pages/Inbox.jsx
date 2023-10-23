@@ -1,15 +1,13 @@
 import { useContext } from "react";
 // import {UserContext} from '../../context/userContext'
-import Sidebar from '../components/Sidebar'
-import '../css/inbox.css'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { Link, useParams,useNavigate } from 'react-router-dom'
-import profIcon from '../assets/profile-icon.png'
-import {toast} from 'react-hot-toast'
+import Sidebar from "../components/Sidebar";
+import "../css/inbox.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import profIcon from "../assets/profile-icon.png";
+import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
-
-
 
 //Maglagay ng websocket para autoupdate
 
@@ -61,88 +59,90 @@ const Inbox = () => {
           location.reload();
         }, 1000);
       })
-      .catch(err => console.log(err))
-  }
+      .catch((err) => console.log(err));
+  };
 
-    const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const openEditModal = (taskId) => {
-    setIsEditModalOpen(true)
-      window.localStorage.setItem('taskId', taskId)
-  }
+    setIsEditModalOpen(true);
+    window.localStorage.setItem("taskId", taskId);
+  };
   const closeEditModal = () => {
-    setIsEditModalOpen(false)
-  }
-
+    setIsEditModalOpen(false);
+  };
 
   return (
     <div className="inbox-page-container">
       <Sidebar userimg={profIcon} username={username.username} />
 
-    <main className="inbox-page">
-      <div className="inbox-heading">
-        <i class="fa-solid fa-inbox inbox-heading-icon"></i>
-        <h1>Inbox</h1>
-      </div>
+      <main className="inbox-page">
+        <div className="inbox-heading">
+          <i class="fa-solid fa-inbox inbox-heading-icon"></i>
+          <h1>Inbox</h1>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-2 sort-by">
+            <i class="fa-solid fa-sliders sort-by-icon"></i>
+            <h5>Sort By</h5>
+          </div>
+        </div>
 
-      {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
-      {tasklist.map(task => (
-        <div>
-        <ul 
-        className="inbox-list" 
-        style={{display: 'flex', gap: '20px'}}
-        id="myList"
-        >
-          <li 
-          onClick={() => taskDone(task._id)}
-          style={{cursor: 'pointer'}}
-          >
-            <i class="fa-regular fa-circle"></i>
-          </li>
-
+        {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
+        {tasklist.map((task) => (
           <div>
-          <li><strong>{task.task_title}</strong></li>
-          <li>{task.task_description}</li>
-          <div style={{display: 'flex', gap: '5px'}}>
-            <li>{task.today}</li>
-            <li>{task.priority}</li>
-            <li>{task.category}</li>
-          </div>
-          
-          </div>
-
-              {/*         
-                        <li onClick={() => openEditModal(task._id)}>
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </li> */}
-              {/* 
-                              <div>
-                                <li>
-                                  <strong>{task.task_title}</strong>
-                                </li>
-                                <li>{task.task_description}</li>
-                                <div style={{ display: "flex", gap: "5px" }}>
-                                  <li>{task.today}</li>
-                                  <li>{task.priority}</li>
-                                </div>
-                              </div>
-                            </div> */}
-
-              <div className="inbox-col2">
-                <li onClick={() => openEditModal(task._id)}>
-                  <i class="fa-regular fa-pen-to-square"></i>
-                </li>
-
-                <li onClick={() => deleteTask(task._id)}>
-                  <i class="fa-regular fa-trash-can"></i>
-                </li>
+            <div
+              className="row priorities-list"
+              style={{ display: "flex", gap: "20px" }}
+              id="myList"
+            >
+              <div className="col-10 Today_header">
+                <span onClick={() => taskDone(task._id)}>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="radioNoLabel"
+                    id="radioNoLabel1"
+                    value=""
+                    aria-label="..."
+                    style={{ cursor: "pointer" }}
+                  ></input>
+                </span>
+                <div>
+                  <div>
+                    <li>{task.task_title}</li>
+                    <li className="task-desc">
+                      <small>{task.task_description}</small>
+                    </li>
+                    <div style={{ display: "flex", gap: "5px" }}>
+                      <li className="task-categ">
+                        <small>{task.category}</small>
+                        <small>{task.today}</small>
+                        <small>{task.priority}</small>
+                      </li>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-        </ul>
-        <hr />
+              <div className="col Today_icons">
+                <span
+                  onClick={() => openEditModal(task._id)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                </span>
+                <span
+                  onClick={() => deleteTask(task._id)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <i className="fa-regular fa-trash-can delete-btn"></i>
+                </span>
+              </div>
+              <hr />
+            </div>
           </div>
         ))}
-    </main>
-  </div>
+      </main>
+    </div>
   );
 };
 
