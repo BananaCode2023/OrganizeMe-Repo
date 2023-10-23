@@ -27,7 +27,7 @@ const Notifications = () => {
       <main className="notifications-page">
         <div className="col notifications-heading">
           <i class="fa-regular fa-bell notif-bell-icon"></i>
-          <h1>Notification</h1>
+          <h1>Notifications</h1>
         </div>
         <div class="col sort-by">
             <i class="fa-solid fa-sliders sort-by-icon"></i>

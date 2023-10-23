@@ -1,9 +1,11 @@
 const express = require('express')
 const cors = require('cors')
-const mongoose = require('mongoose')
+const {mongoose} = require('mongoose')
 const userRouter = require('./Routes/Authentication')
 const tasklistRouter = require('./Routes/Tasklist')
 const cookieParser = require('cookie-parser')
+const dotenv = require('dotenv').config()
+
 
 const app = express()
 
@@ -17,8 +19,10 @@ app.use('/auth', userRouter)
 app.use('/tasklist', tasklistRouter )
 app.use(cookieParser())
 
-mongoose.connect('mongodb+srv://peterjohnreyes0326:OrganizeMe123@cluster0.afcph1e.mongodb.net/?retryWrites=true&w=majority')
 
+mongoose.connect(process.env.MONGO_URL)
+.then(() => console.log('Connected to the Database'))
+.catch((err) => console.log('Database not connected', err))
 
 app.listen(3333, () => {
   console.log("OrganizeMe Server Started")

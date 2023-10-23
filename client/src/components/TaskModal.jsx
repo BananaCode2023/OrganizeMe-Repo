@@ -3,11 +3,17 @@ import '../css/taskModal.css'
 import orgIcon from '../assets/orgicon.png'
 import starIcon from '../assets/staricon.png'
 import axios from 'axios'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
 
 function TaskModal({ closeModal }) {
+
+  
+  const [isTodayButtonPressed, setTodayButtonPressed] = useState(false);
+  const [isPriorityButtonPressed, setPriorityButtonPressed] = useState(false);
+  const [isCategoryButtonPressed, setCategoryButtonPressed] = useState(false);
+
 
   const [addTask, setAddTask] = useState({
     task_title: '',
@@ -18,6 +24,7 @@ function TaskModal({ closeModal }) {
   const [addPriority, setAddPriority] = useState({priority: ''})
   const [addCategory, setAddCategory] = useState({category: ''})
 
+
   const handleAddTask = (e) => {
     const {name,value} = e.target
     setAddTask({...addTask, [name]:value})
@@ -26,8 +33,32 @@ function TaskModal({ closeModal }) {
     setAddCategory({...addCategory,[name]:value})
   }
 
- 
+  const handleAddTask1 = (e) => {
+    const {name,value} = e.target
+    setAddTask({...addTask, [name]:value})
+    setTodayButtonPressed(!isTodayButtonPressed);
+    setAddToday({...addToday, [name]:value})
+    setAddPriority({...addPriority, [name]:value})
+    setAddCategory({...addCategory,[name]:value})
+  }
 
+  const handleAddTask2 = (e) => {
+    const {name,value} = e.target
+    setAddTask({...addTask, [name]:value})
+    setAddToday({...addToday, [name]:value})
+    setPriorityButtonPressed(!isPriorityButtonPressed);
+    setAddPriority({...addPriority, [name]:value})
+    setAddCategory({...addCategory,[name]:value})
+  }
+
+  const handleAddTask3 = (e) => {
+    const {name,value} = e.target
+    setAddTask({...addTask, [name]:value})
+    setAddToday({...addToday, [name]:value})
+    setAddPriority({...addPriority, [name]:value})
+    setCategoryButtonPressed(!isCategoryButtonPressed);
+    setAddCategory({...addCategory,[name]:value})
+  }
  
 
   const handleSubmit = (e) => {
@@ -73,24 +104,24 @@ function TaskModal({ closeModal }) {
           <div className='modal-btns'>
             <input 
             type="button" 
-            className='modal-btn org-when' 
+            className={`modal-btn org-when ${isTodayButtonPressed ? 'pressed1' : ''}`} 
             name='today' 
             value='📆today' 
-            onClick={handleAddTask} 
+            onClick={handleAddTask1}
             />
 
             <input 
             type="button" 
-            className='modal-btn priority-btn'
+            className={`modal-btn priority-btn ${isPriorityButtonPressed ? 'pressed2' : ''}`}
             name='priority'
             value='⭐priority'
-            onClick={handleAddTask}
+            onClick={handleAddTask2}
             />
             
             <select 
             name="category" 
-            onChange={handleAddTask} 
-            className='modal-btn'
+            onChange={handleAddTask3} 
+            className={`modal-btn category-btn ${isCategoryButtonPressed ? 'pressed3' : ''}`}
             >
             
               <option>💭 Categories</option>
@@ -152,7 +183,7 @@ function TaskModal({ closeModal }) {
             </select>
           </div>
 
-          <hr />
+          <hr className='task-modal-hr'/>
 
           <div className='modal-add-cancel-btns'> 
             <button className="close-modal modal-cancel-btn" onClick={closeModal}>Cancel</button>

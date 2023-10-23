@@ -65,6 +65,7 @@
   color: #2323238f;
   width: 100%;
   padding: 5px 30px;
+  transition: 0.15s;
 }
 .sidebar-btns h6 {
   margin-top: 10px;
@@ -101,6 +102,11 @@
 .sidebar-row2.close {
   position: relative;
   left: -150px;
+}
+.premium-container.close{
+  position: relative;
+  left: -120px;
+  transition: left 1s;
 }
 .fa-layer-group {
   color: #f1511b;
@@ -154,4 +160,30 @@
   border-radius: 5px;
   padding: 5px;
   opacity: 0.5;
+}
+.premium-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.premium-container h5{
+  width: 260px;
+  font-size: 22px;
+}
+.get-premium-btn{
+  color: #ffffff;
+  padding: 8px 20px;
+  width: 260px;
+  border-radius: 10px;
+  border: none;
+  background-color: #103d87;
+  transition: 0.3s;
+}
+.get-premium-btn:hover{
+  background-color: #042761;
+}
+.fa-medal{
+  margin-right: 10px;
 }

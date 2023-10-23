@@ -6,7 +6,7 @@ import '../css/login.css'
 // import Header from "../components/Header"
 
 import loginHeroImg from '../assets/login-hero-img.png'
-import loginLogo from '../assets/organizeMeLogo.png'
+import loginLogo from '../assets/newLogo.png'
 import googleLogo from '../assets/google-logo.png'
 import facebookLogo from '../assets/facebook-logo.png'
 

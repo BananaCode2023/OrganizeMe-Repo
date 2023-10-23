@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="row mb-5 pt-5 footer-top">
             <q>Optimize your day with OrganizeMe! Seamlessly integrate our best productivity app. Your tasks, our technology – organizing made  effortless!</q>
             <div className='text-center'>
-              <button type="button" className="btn btn-success mx-auto free-btn"><a href="">Get started for free</a></button>
+              <button type="button" className="btn btn-success mx-auto free-btn"><a href="/auth/register">Get started for free</a></button>
             </div>
           </div>
           {/* footer-bottom */}

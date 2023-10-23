@@ -65,14 +65,14 @@ const About = () => {
             </div>
             <div className="card bg">
               <div className="card-body-about">
-                <img src={partner2} alt="JP IMG" />
-                <p>John Patrick DeClaro</p>
+                <img src={partner3} alt="JP IMG" />
+                <p>Roben Matimtim</p>
               </div>
             </div>
             <div className="card bg">
               <div className="card-body-about">
-                <img src={partner3} alt="BEN IMG" />
-                <p>Roben Matimtim</p>
+                <img src={partner2} alt="BEN IMG" />
+                <p>John Patrick DeClaro</p>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom"
 import '../css/register.css'
 import signupHeroImg from '../assets/signup-hero-img.png'
-import loginLogo from '../assets/organizeMeLogo.png'
+import signupLogo from '../assets/newLogo.png'
 import googleLogo from '../assets/google-logo.png'
 import facebookLogo from '../assets/facebook-logo.png'
 
@@ -51,7 +51,7 @@ function Register() {
     <>
       <main className='signup-page'>        
         <div className='signup-col1'>
-          <a href="/"><img src={loginLogo} alt="organizeMe-logo" id='login-logo' /></a>
+          <a href="/"><img src={signupLogo} alt="organizeMe-logo" id='login-logo' /></a>
           <h2>Create an Account & Get Started</h2>
 
           <form className='signup-form' 
