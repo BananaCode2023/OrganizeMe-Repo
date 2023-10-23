@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ProfileModal from "./ProfileModal";
 import Stack from "react-bootstrap/esm/Stack";
+import SearchModal from "./SearchModal";
 
 function Sidebar(props) {
   const [showBar, hideBar] = useState(false);
@@ -29,21 +30,15 @@ function Sidebar(props) {
   };
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
-  };
-
-  // const searchProduct = (event) => {
-  //   let new_filtered_product = []
-
-  //   product_data.map(
-  //     (product) => {
-  //       if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) {
-  //         new_filtered_product.push(product)
-  //       }
-  //     }
-  //   )
-  //   console.log(new_filtered_product)
-  //   setFilteredProduct(new_filtered_product)
-  // }
+  }
+  
+  const [isSearchModalOpen, setIsSearchModalOpen] =useState(false)
+  const openSearchModal = () => {
+    setIsSearchModalOpen(true)
+  }
+  const closeSearchModal = () => {
+    setIsSearchModalOpen(false)
+  }
 
   return (
     <>
@@ -87,8 +82,12 @@ function Sidebar(props) {
         {isModalOpen && <TaskModal closeModal={closeModal} />}
         
         <Stack gap={2} className="pt-2">
-          <div className="sidebar-btns search-bar">
-          <i className="fa-solid fa-magnifying-glass"></i>
+        {isSearchModalOpen && (
+          <SearchModal closeSearchModal={closeSearchModal} />
+        )}
+
+        <div className="sidebar-btns search-bar" onClick={openSearchModal}>
+          <i class="fa-solid fa-magnifying-glass"></i>
           <h5>Search</h5>
         </div>
 
@@ -109,7 +108,7 @@ function Sidebar(props) {
         <a href="/priorities">
           <div className="sidebar-btns upcoming-bar">
             <i class="fa-solid fa-star"></i>
-            <h5>PRIORITIES</h5>
+            <h5>Priorities</h5>
           </div>
         </a>
 
