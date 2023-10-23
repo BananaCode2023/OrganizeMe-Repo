@@ -6,8 +6,6 @@ import profIcon from "../assets/profile-icon.png";
 import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
 
-//Maglagay ng websocket para autoupdate
-
 const Inbox = () => {
   const userId = window.localStorage.getItem("id");
   const [tasklist, setTasklist] = useState([]);

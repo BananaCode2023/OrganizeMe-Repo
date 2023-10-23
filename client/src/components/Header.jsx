@@ -1,15 +1,13 @@
-import '../css/header.css';
+import "../css/header.css";
 import { useState } from "react";
 import {
-    Button,
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    Nav,
-    NavLink,
-  } from 'reactstrap';
-
-
+  Button,
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavLink,
+} from "reactstrap";
 
 import omWhiteLogo from "../assets/omWhiteLogo.png";
 
@@ -40,7 +38,11 @@ function Header() {
         </div>
 
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar className="nav-dropdown">
+        <Collapse
+          isOpen={isOpen}
+          navbar
+          // className="nav-dropdown"
+        >
           <Nav className="burger-menu" navbar>
             <div className="burger-menu-container">
               <NavLink href="/features" id="feat">
@@ -53,14 +55,18 @@ function Header() {
                 Login
               </NavLink>
               <NavLink>
-               <Button type="button" className="btn btn-success mx-auto started-btn1"><a href="/auth/Register">Start for free </a></Button>
+                <Button
+                  type="button"
+                  className="btn btn-success mx-auto started-btn1"
+                >
+                  <a href="/auth/Register">Start for free </a>
+                </Button>
               </NavLink>
             </div>
           </Nav>
         </Collapse>
       </Navbar>
-      </>
-
+    </>
   );
 }
 

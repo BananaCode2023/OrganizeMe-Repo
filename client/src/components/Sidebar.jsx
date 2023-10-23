@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../css/sidebar.css";
 import TaskModal from "./TaskModal";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import ProfileModal from "./ProfileModal";
 import Stack from "react-bootstrap/esm/Stack";
 import SearchModal from "./SearchModal";
@@ -121,17 +119,14 @@ function Sidebar(props) {
 
           <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
         </Stack>
-        
+
         <div className={`premium-container ${showBar ? "close" : ""}`}>
           <h5>Satisfied? Get More Awesome Features</h5>
-          <button 
-          className="get-premium-btn"
-          >
+          <button className="get-premium-btn">
             <i class="fa-solid fa-medal"></i>
             Get Premium!
           </button>
         </div>
-        
       </aside>
     </>
   );

@@ -1,4 +1,8 @@
-
+.features-page{
+  padding: 100px 40px 50px;
+  max-width: 1680px;
+  margin-inline: auto;
+}
 .about-container {
   padding-inline: 100px;
   padding-top: 150px;
@@ -6,15 +10,13 @@
   max-width: 1440px;
   margin-inline: auto;
 }
-/* .feature-container {
-  padding-inline: 100px;
-  padding-top: 150px;
-  max-width: 1440px;
-  margin-inline: auto;
-} */
+.Feature_header h1{
+  font-size: 45px;
+  font-weight: 700;
+  font-family: 'Poppins';
+}
 .tag-line h1 {
   font-family: Poppins;
-  /* font-size: 64px; */
   font-weight: bold;
   text-align: center;
   width: 90%;
@@ -58,16 +60,6 @@ q.regular {
   padding-top: 100px;
   text-align: center;
 }
-/* .section3 {
-  padding-top: 100px;
-  text-align: right;
-  display: flex;
-}
-.section4 {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  display: flex;
-} */
 .section-img {
   max-width: 550px;
   width: 100%;
@@ -77,10 +69,6 @@ q.regular {
   display: flex;
   justify-content: center;
 }
-/* Feature card */
-/* .feature {
-  text-align: center;
-} */
 .card.bg {
   background-color: transparent;
   border: 1px;
@@ -107,9 +95,6 @@ q.regular {
   .about-container {
     padding-inline: 50px;
   }
-  /* .feature-container {
-    padding-inline: 50px;
-  } */
   .section1 {
     text-align: center;
     flex-wrap: wrap;

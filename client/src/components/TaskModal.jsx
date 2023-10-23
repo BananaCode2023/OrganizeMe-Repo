@@ -1,19 +1,13 @@
-import React from 'react';
-import '../css/taskModal.css'
-import orgIcon from '../assets/orgicon.png'
-import starIcon from '../assets/staricon.png'
-import axios from 'axios'
-import { useState, useEffect } from 'react';
-import {toast} from 'react-hot-toast'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "../css/taskModal.css";
+import axios from "axios";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 function TaskModal({ closeModal }) {
-
-  
   const [isTodayButtonPressed, setTodayButtonPressed] = useState(false);
   const [isPriorityButtonPressed, setPriorityButtonPressed] = useState(false);
   const [isCategoryButtonPressed, setCategoryButtonPressed] = useState(false);
-
 
   const [addTask, setAddTask] = useState({
     task_title: "",
@@ -24,42 +18,40 @@ function TaskModal({ closeModal }) {
   const [addPriority, setAddPriority] = useState({ priority: "" });
   const [addCategory, setAddCategory] = useState({ category: "" });
 
-
   const handleAddTask = (e) => {
-    const {name,value} = e.target
-    setAddTask({...addTask, [name]:value})
-    setAddToday({...addToday, [name]:value})
-    setAddPriority({...addPriority, [name]:value})
-    setAddCategory({...addCategory,[name]:value})
-  }
+    const { name, value } = e.target;
+    setAddTask({ ...addTask, [name]: value });
+    setAddToday({ ...addToday, [name]: value });
+    setAddPriority({ ...addPriority, [name]: value });
+    setAddCategory({ ...addCategory, [name]: value });
+  };
 
   const handleAddTask1 = (e) => {
-    const {name,value} = e.target
-    setAddTask({...addTask, [name]:value})
+    const { name, value } = e.target;
+    setAddTask({ ...addTask, [name]: value });
     setTodayButtonPressed(!isTodayButtonPressed);
-    setAddToday({...addToday, [name]:value})
-    setAddPriority({...addPriority, [name]:value})
-    setAddCategory({...addCategory,[name]:value})
-  }
+    setAddToday({ ...addToday, [name]: value });
+    setAddPriority({ ...addPriority, [name]: value });
+    setAddCategory({ ...addCategory, [name]: value });
+  };
 
   const handleAddTask2 = (e) => {
-    const {name,value} = e.target
-    setAddTask({...addTask, [name]:value})
-    setAddToday({...addToday, [name]:value})
+    const { name, value } = e.target;
+    setAddTask({ ...addTask, [name]: value });
+    setAddToday({ ...addToday, [name]: value });
     setPriorityButtonPressed(!isPriorityButtonPressed);
-    setAddPriority({...addPriority, [name]:value})
-    setAddCategory({...addCategory,[name]:value})
-  }
+    setAddPriority({ ...addPriority, [name]: value });
+    setAddCategory({ ...addCategory, [name]: value });
+  };
 
   const handleAddTask3 = (e) => {
-    const {name,value} = e.target
-    setAddTask({...addTask, [name]:value})
-    setAddToday({...addToday, [name]:value})
-    setAddPriority({...addPriority, [name]:value})
+    const { name, value } = e.target;
+    setAddTask({ ...addTask, [name]: value });
+    setAddToday({ ...addToday, [name]: value });
+    setAddPriority({ ...addPriority, [name]: value });
     setCategoryButtonPressed(!isCategoryButtonPressed);
-    setAddCategory({...addCategory,[name]:value})
-  }
- 
+    setAddCategory({ ...addCategory, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +69,7 @@ function TaskModal({ closeModal }) {
   return (
     <div className="modal">
       <form onSubmit={handleSubmit}>
-        <div className="modal-content">
+        <div className="task-modal-content">
           <div className="task-input">
             <input
               type="text"
@@ -95,29 +87,34 @@ function TaskModal({ closeModal }) {
               onChange={handleAddTask}
             />
           </div>
-        
-          
-          <div className='modal-btns'>
-            <input 
-            type="button" 
-            className={`modal-btn org-when ${isTodayButtonPressed ? 'pressed1' : ''}`} 
-            name='today' 
-            value='📆today' 
-            onClick={handleAddTask1}
+
+          <div className="modal-btns">
+            <input
+              type="button"
+              className={`task-modal-btn org-when ${
+                isTodayButtonPressed ? "pressed1" : ""
+              }`}
+              name="today"
+              value="📆today"
+              onClick={handleAddTask1}
             />
 
-            <input 
-            type="button" 
-            className={`modal-btn priority-btn ${isPriorityButtonPressed ? 'pressed2' : ''}`}
-            name='priority'
-            value='⭐priority'
-            onClick={handleAddTask2}
+            <input
+              type="button"
+              className={`task-modal-btn priority-btn ${
+                isPriorityButtonPressed ? "pressed2" : ""
+              }`}
+              name="priority"
+              value="⭐priority"
+              onClick={handleAddTask2}
             />
-            
-            <select 
-            name="category" 
-            onChange={handleAddTask3} 
-            className={`modal-btn category-btn ${isCategoryButtonPressed ? 'pressed3' : ''}`}
+
+            <select
+              name="category"
+              onChange={handleAddTask3}
+              className={`task-modal-btn category-btn ${
+                isCategoryButtonPressed ? "pressed3" : ""
+              }`}
             >
               <option>💭 Categories</option>
               <option name="category" value="🧘🏻‍♀ Personal Care">
@@ -154,7 +151,7 @@ function TaskModal({ closeModal }) {
             </select>
           </div>
 
-          <hr className='task-modal-hr'/>
+          <hr className="task-modal-hr" />
 
           <div className="modal-add-cancel-btns">
             <button

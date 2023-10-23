@@ -118,7 +118,7 @@
 }
 .error {
   font-size: 12px;
-  margin-top: -25px;
+  margin-top: -20px;
   color: rgb(207, 23, 23);
 }
 @media only screen and (max-height: 680px) {

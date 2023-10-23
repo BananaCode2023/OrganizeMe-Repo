@@ -16,45 +16,49 @@
   background-color: transparent;
   border: none;
   outline: none;
+  
 }
 
-.modal-content {
+.task-modal-content {
   background-color: #fff;
   margin: 130px 0 0 340px;
   padding: 10px 15px;
   border: 1px solid #888;
   width: 400px;
   height: auto!important;
+  border-radius: 10px;
 }
 .modal-btns {
   display: flex;
   gap: 10px;
 }
-.modal-btn.pressed1{
+
+.task-modal-btn.pressed1{
   background-color: #13b3ad39;
   color: #2b2b2b;
   border: 1px #298683 solid;
   opacity: 1;
 }
-.modal-btn.pressed2{
+.task-modal-btn.pressed2{
   background-color: #fafa003f;
   opacity: 1;
   color: #2b2b2b;
   border: 1px #FFA500 solid;
 }
-.modal-btn.pressed3{
+.task-modal-btn.pressed3{
   background-color: #a4a4a420;
   opacity: 1;
 }
-.modal-btns li{
-  list-style: none;
-  cursor: pointer;
-}
-.modal-btn {
+
+.task-modal-btn {
   font-size: 10px;
-  padding: 2px 10px;
+  padding: 3px 15px;
   border: 1px solid;
   border-radius: 6px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  opacity: 0.7;
 }
 .modal-cancel-btn {
   padding: 0 15px;
@@ -74,23 +78,19 @@
   justify-content: flex-end;
   gap: 15px;
 }
-/* .org-when{
-  color: #298683;
-  border: 1px #298683 solid;
-} */
 .org-when{
   color: #757575;
-  border: 1px #757575 solid;
+  border: 1px #757575 solid !important;
 }
 .priority-btn{
   color: #757575;
-  border: 1px #757575 solid;
+  border: 1px #757575 solid !important;
 }
-.modal-btn {
-  background-color: #fff;
-  opacity: 0.5;
+.category-btn{
+  color: #757575;
+  border: 1px #757575 solid !important;
 }
-.modal-btn:hover {
+.task-modal-btn:hover {
   opacity: 1;
 }
 .task-modal-hr{

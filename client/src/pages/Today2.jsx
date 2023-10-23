@@ -1,4 +1,3 @@
-
 import Sidebar from "../components/Sidebar";
 import "../css/priorities.css";
 import axios from "axios";

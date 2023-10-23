@@ -1,11 +1,8 @@
 import "../css/searchModal.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { toast } from "react-hot-toast";
-// import EditModal from "../components/EditModal";
 
 function SearchModal({ closeSearchModal }) {
-
   const userId = window.localStorage.getItem("id");
   const [tasklist, setTasklist] = useState([]);
 

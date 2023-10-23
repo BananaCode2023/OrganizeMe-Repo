@@ -1,17 +1,16 @@
-import './App.css'
-import {Routes, Route} from 'react-router-dom';
-import Register from './pages/Register'
-import Login from './pages/Login'
-import {Toaster} from 'react-hot-toast'
-import Inbox from './pages/Inbox';
-import About from './pages/About';
-import Features from './pages/features';
-import Index from './pages/Index';
-import Notifications from './pages/Notifications';
-import Priorities from './pages/Priorities';
-import Today2 from './pages/Today2';
-import Categories from './pages/Categories';
-
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import { Toaster } from "react-hot-toast";
+import Inbox from "./pages/Inbox";
+import About from "./pages/About";
+import Features from "./pages/features";
+import Index from "./pages/Index";
+import Notifications from "./pages/Notifications";
+import Priorities from "./pages/Priorities";
+import Today2 from "./pages/Today2";
+import Categories from "./pages/Categories";
 
 function App() {
   return (

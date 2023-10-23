@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/notifications.css";
 import notify from "../assets/Notify-amico.png";
-import notifBell from "../assets/notif-bell.png";
 import Sidebar from "../components/Sidebar";
 import profIcon from "../assets/profile-icon.png";
 import { useEffect, useState } from "react";

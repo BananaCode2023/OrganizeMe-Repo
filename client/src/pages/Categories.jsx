@@ -6,8 +6,6 @@ import profIcon from "../assets/profile-icon.png";
 import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
 
-//Maglagay ng websocket para autoupdate
-
 const Categories = () => {
   const userId = window.localStorage.getItem("id");
 
@@ -165,58 +163,66 @@ const Categories = () => {
           <i className="fa-solid fa-layer-group categories-heading-icon"></i>
           <h1>Categories</h1>
         </div>
-        
+
         <div className="toggle-btns-container container-fluid">
-          <button onClick={() => setShowPersonal(!showPersonal)}
-          className={`categ-btn ${showPersonal ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowPersonal(!showPersonal)}
+            className={`categ-btn ${showPersonal ? "toggled" : ""}`}
           >
             Personal Care
-            <div className='task-count'>{personalTasklist.length}</div>
+            <div className="task-count">{personalTasklist.length}</div>
           </button>
-          <button onClick={() => setShowHealth(!showHealth)}
-           className={`categ-btn ${showHealth ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowHealth(!showHealth)}
+            className={`categ-btn ${showHealth ? "toggled" : ""}`}
           >
             Health
-            <div className='task-count'>{healthTasklist.length}</div>
+            <div className="task-count">{healthTasklist.length}</div>
           </button>
-          <button onClick={() => setShowRelationship(!showRelationship)}
-          className={`categ-btn ${showRelationship ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowRelationship(!showRelationship)}
+            className={`categ-btn ${showRelationship ? "toggled" : ""}`}
           >
             Relationship
-            <div className='task-count'>{relationshipTasklist.length}</div>
+            <div className="task-count">{relationshipTasklist.length}</div>
           </button>
-          <button onClick={() => setShowFamily(!showFamily)}
-          className={`categ-btn ${showFamily ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowFamily(!showFamily)}
+            className={`categ-btn ${showFamily ? "toggled" : ""}`}
           >
             Family
-            <div className='task-count'>{familyTasklist.length}</div>
+            <div className="task-count">{familyTasklist.length}</div>
           </button>
-          <button onClick={() => setShowEducation(!showEducation)}
-          className={`categ-btn ${showEducation ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowEducation(!showEducation)}
+            className={`categ-btn ${showEducation ? "toggled" : ""}`}
           >
             Education
-            <div className='task-count'>{educationTasklist.length}</div>
+            <div className="task-count">{educationTasklist.length}</div>
           </button>
-          <button onClick={() => setShowFitness(!showFitness)}
-          className={`categ-btn ${showFitness ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowFitness(!showFitness)}
+            className={`categ-btn ${showFitness ? "toggled" : ""}`}
           >
             Fitness
-            <div className='task-count'>{fitnessTasklist.length}</div>
+            <div className="task-count">{fitnessTasklist.length}</div>
           </button>
-          <button onClick={() => setShowWork(!showWork)}
-          className={`categ-btn ${showWork ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowWork(!showWork)}
+            className={`categ-btn ${showWork ? "toggled" : ""}`}
           >
             Work
-            <div className='task-count'>{workTasklist.length}</div>
+            <div className="task-count">{workTasklist.length}</div>
           </button>
-          <button onClick={() => setShowOthers(!showOthers)}
-          className={`categ-btn ${showOthers ? 'toggled' : ''}`}
+          <button
+            onClick={() => setShowOthers(!showOthers)}
+            className={`categ-btn ${showOthers ? "toggled" : ""}`}
           >
             Others
-            <div className='task-count'>{otherTasklist.length}</div>
+            <div className="task-count">{otherTasklist.length}</div>
           </button>
         </div>
-        
+
         {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
         {showPersonal && (
           <div>
@@ -224,54 +230,54 @@ const Categories = () => {
             <hr />
             {personalTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
@@ -282,170 +288,170 @@ const Categories = () => {
             <hr />
             {healthTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
-        
+
         {showRelationship && (
           <div>
             <h6 className="category-title">Relationship</h6>
             <hr />
             {relationshipTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
-        )}      
-        
+        )}
+
         {showFamily && (
           <div>
             <h6 className="category-title">Family</h6>
             <hr />
             {familyTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
@@ -456,54 +462,54 @@ const Categories = () => {
             <hr />
             {educationTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
@@ -514,54 +520,54 @@ const Categories = () => {
             <hr />
             {fitnessTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
@@ -572,54 +578,54 @@ const Categories = () => {
             <hr />
             {workTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
@@ -630,62 +636,60 @@ const Categories = () => {
             <hr />
             {otherTasklist.map((task) => (
               <div>
-              <div
-                className="row priorities-list"
-                style={{ display: "flex", gap: "20px" }}
-                id="myList"
-              >
-                <div className="col-10 Today_header">
-                  <span onClick={() => taskDone(task._id)}>
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="radioNoLabel"
-                      id="radioNoLabel1"
-                      value=""
-                      aria-label="..."
-                      style={{ cursor: "pointer" }}
-                    ></input>
-                  </span>
-                  <div>
+                <div
+                  className="row priorities-list"
+                  style={{ display: "flex", gap: "20px" }}
+                  id="myList"
+                >
+                  <div className="col-10 Today_header">
+                    <span onClick={() => taskDone(task._id)}>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioNoLabel"
+                        id="radioNoLabel1"
+                        value=""
+                        aria-label="..."
+                        style={{ cursor: "pointer" }}
+                      ></input>
+                    </span>
                     <div>
-                      <li>{task.task_title}</li>
-                      <li className="task-desc">
-                        <small>{task.task_description}</small>
-                      </li>
-                      <div style={{ display: "flex", gap: "5px" }}>
-                        <li className="task-categ">
-                          <small>{task.category}</small>
+                      <div>
+                        <li>{task.task_title}</li>
+                        <li className="task-desc">
+                          <small>{task.task_description}</small>
                         </li>
+                        <div style={{ display: "flex", gap: "5px" }}>
+                          <li className="task-categ">
+                            <small>{task.category}</small>
+                          </li>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div className="col Today_icons">
+                    <span
+                      onClick={() => openEditModal(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-pen-to-square edit-btn"></i>
+                    </span>
+                    <span
+                      onClick={() => deleteTask(task._id)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <i className="fa-regular fa-trash-can delete-btn"></i>
+                    </span>
+                  </div>
+                  <hr />
                 </div>
-                <div className="col Today_icons">
-                  <span
-                    onClick={() => openEditModal(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-pen-to-square edit-btn"></i>
-                  </span>
-                  <span
-                    onClick={() => deleteTask(task._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <i className="fa-regular fa-trash-can delete-btn"></i>
-                  </span>
-                </div>
-                <hr />
               </div>
-            </div>
             ))}
           </div>
         )}
-        
       </main>
     </div>
   );
 };
 
 export default Categories;
-

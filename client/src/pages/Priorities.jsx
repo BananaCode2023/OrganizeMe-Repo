@@ -1,15 +1,10 @@
-import { useContext } from "react";
-// import {UserContext} from '../../context/userContext'
 import Sidebar from "../components/Sidebar";
 import "../css/priorities.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
 import profIcon from "../assets/profile-icon.png";
 import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
-
-//Maglagay ng websocket para autoupdate
 
 const Priorities = () => {
   const userId = window.localStorage.getItem("id");

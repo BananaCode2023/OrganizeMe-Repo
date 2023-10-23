@@ -111,6 +111,9 @@
 .fa-layer-group {
   color: #f1511b;
 }
+.category-bar i{
+  margin-left: -5px;
+}
 .search-bar:hover,
 .inbox-bar:hover,
 .upcoming-bar:hover,

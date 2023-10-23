@@ -2,7 +2,6 @@ const express = require("express");
 const UserModel = require("../Models/Users");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// const {getProfile} = require('../Controllers/authController');
 
 const router = express.Router();
 
@@ -24,15 +23,15 @@ router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const user = await UserModel.findOne({ email });
   if (!user) {
-    return res.json({ message: "wrong email" });
+    return res.status(401).json({ message: "Wrong email or password" });
   }
   const validPassword = await bcrypt.compare(password, user.password);
   if (!validPassword) {
-    return res.json({ message: "wrong password" });
+    return res.status(401).json({ message: "Wrong email or password" });
   }
   const token = jwt.sign({ id: user._id }, "secret");
   res.cookie("token", token)
-  return res.json({message: "successfully logged in", id: user._id})
+  return res.json({ message: "Successfully logged in", id: user._id });
 });
 
 //router for logging out

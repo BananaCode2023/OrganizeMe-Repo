@@ -6,30 +6,14 @@ import Stack from "react-bootstrap/Stack";
 import { Icon } from "@iconify/react";
 
 const SubscribeModal = () => {
-
   // Modal Animation
   const [show, setShow] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isValid, setIsValid] = useState(true);
 
   const handleClose = () => {
     setShow(false);
-    setIsValid(true); 
+    setIsValid(true);
   };
   const handleShow = () => setShow(true);
-
-  // Validation process
-  const handleSubmit = () => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    const isValidEmail = email.match(emailRegex);
-
-    if (isValidEmail) {
-      console.log("Email is valid:", email);
-      handleClose();
-    } else {
-      setIsValid(false);
-    }
-  };
 
   return (
     <>
@@ -44,7 +28,6 @@ const SubscribeModal = () => {
         contentClassName="modal-content"
         dialogClassName="modal-dialog"
         backdrop="static"
-        // style={z-indexedDB}
       >
         <Modal.Body>
           <Stack closeButton>
@@ -60,22 +43,8 @@ const SubscribeModal = () => {
                   Your email has been confirmed, we will update you shortly.{" "}
                 </b>
               </p>
-            </div>
-
-            <div className="modal-btn">
-              <div>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              {!isValid && (
-                <p className="text-danger">Please enter a valid email address</p>
-              )}
-              <button onClick={handleSubmit} type="button" className="btn btn-success">
-                Okay
+              <button onClick={handleClose} className="btn btn-success">
+                Close
               </button>
             </div>
           </Stack>

@@ -5,10 +5,11 @@
 .main {
   padding-top: 30px;
   padding-inline: 100px;
-  padding-bottom: 280px;
+  padding-bottom: 400px;
   background-image: url("/Images/bg-landingpage_sec1.png");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .landingpage_sec1 p {
@@ -184,7 +185,7 @@
 }
 
 /* section */
-section {
+.explore-more {
   background-color: #f7f8ff;
   padding-inline: 100px;
   padding-top: 200px;
@@ -304,6 +305,7 @@ Icon {
 .explore-text {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 25px;
   font-family: DM Sans;
   font-weight: 540;
@@ -495,7 +497,7 @@ a {
   }
 
   .landingpage_sec1 span {
-    color: #232323;
+    color: #ffffff;
     text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.15);
     font-size: 13px;
     font-weight: 500;
@@ -661,7 +663,7 @@ a {
   }
 
   .landingpage_sec1 span {
-    color: #232323;
+    color: #ffffff;
     text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.15);
     font-size: 20px;
     font-weight: 500;

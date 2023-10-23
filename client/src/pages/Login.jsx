@@ -1,11 +1,11 @@
-import { useState } from "react"
-import axios from 'axios'
-import {toast} from 'react-hot-toast'
-import { useNavigate } from "react-router-dom"
-import '../css/login.css'
-import loginHeroImg from '../assets/login-hero-img.png'
-import loginLogo from '../assets/newLogo.png'
-import googleLogo from '../assets/google-logo.png'
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import "../css/login.css";
+import loginHeroImg from "../assets/login-hero-img.png";
+import loginLogo from "../assets/newLogo.png";
+import googleLogo from "../assets/google-logo.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -40,11 +40,12 @@ function Login() {
           window.localStorage.setItem("id", result.data.id);
           navigate("/inbox");
           console.log(result);
+          toast.success("Successfully Logged-In");
         })
-        .catch((error) => {
-          toast.error("Login failed: " + error.message);
+        .catch((err) => {
+          toast.error("wrong email or password please input correct details");
+          console.log(err);
         });
-      toast.success("Successfully Logged-In").catch((err) => console.log(err));
     }
   };
 
