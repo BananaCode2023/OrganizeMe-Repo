@@ -32,7 +32,7 @@ router.put('/edit-task/:id', async(req,res) => {
         })
       }
       const {id} = req.params
-
+//to find the id of the task chosen and update it in the database
       const result = await TaskModel.findByIdAndUpdate(id, req.body);
       if(!result){
         return res.status(404).json({message: 'Task not found'})

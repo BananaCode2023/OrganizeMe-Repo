@@ -8,7 +8,6 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import Inbox from "./pages/Inbox";
 import About from "./pages/About";
-import Features from "./pages/features";
 import Index from "./pages/Index";
 import Notifications from "./pages/Notifications";
 import Priorities from "./pages/Priorities";

@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 
 const router = express.Router();
 
-
+//router for signing up
 router.post('/register', async (req,res) => {
   const { username, email, password } = req.body;
   const user = await UserModel.findOne({ email });
@@ -19,6 +19,7 @@ router.post('/register', async (req,res) => {
   return res.json({ message: "account is saved" });
 });
 
+//router for logging in
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const user = await UserModel.findOne({ email });
@@ -34,11 +35,13 @@ router.post("/login", async (req, res) => {
   return res.json({message: "successfully logged in", id: user._id})
 });
 
+//router for logging out
 router.get('/logout', (req,res) => {
   res.clearCookie("token")
   res.json({message: "Logged out"})
 })
 
+//router for getting the username of the logged in user for the shown tasklist
 router.get('/username/:id', async (req,res) => {
   const id = req.params.id
   try{

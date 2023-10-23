@@ -4,6 +4,7 @@ import "../css/footer.css";
 import Submit_btn from "../components/Submit-btn";
 
 const Footer = () => {
+
   return (
     <>
       <footer>
