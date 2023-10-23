@@ -57,6 +57,7 @@
 }
 .sidebar-btns {
   display: flex;
+  /* justify-content: space-evenly; */
   gap: 15px;
   font-size: 30px;
   align-items: center;
@@ -80,6 +81,9 @@
 }
 .fa-calendar-day {
   color: #298683;
+}
+.fa-layer-group{
+  color: #2323237a;
 }
 .sidebar-hr {
   border: solid #232323 1px;

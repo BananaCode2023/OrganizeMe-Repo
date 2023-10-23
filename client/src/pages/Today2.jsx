@@ -78,11 +78,11 @@ const Today2 = () => {
     <div className="priorities-page-container">
       <Sidebar userimg={profIcon} username={username.username} />
 
-      <main className="priorities-page">
-        <div className="priorities-heading mb-4">
-          <i className="fa-solid fa-calendar-day priorities-heading-icon"></i>
-          <h1 className="today2">Today</h1>
-        </div>
+    <main className="priorities-page">
+      <div className="priorities-heading mb-4">
+        <i className="fa-solid fa-calendar-day priorities-heading-icon"></i>
+        <h1 className="Today">Today</h1>
+      </div>
 
         {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}
         {tasklist.map((task) => (
