@@ -39,3 +39,7 @@
   font-family: Poppins;
   text-align: center;
 }
+.notif-img{
+  position: relative;
+  z-index: -100;
+}
