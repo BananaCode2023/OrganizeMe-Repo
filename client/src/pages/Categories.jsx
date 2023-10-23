@@ -2,7 +2,6 @@ import Sidebar from "../components/Sidebar";
 import "../css/categories.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
 import profIcon from "../assets/profile-icon.png";
 import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
@@ -233,7 +232,7 @@ const Categories = () => {
                 <div className="col-10 Today_header">
                   <span onClick={() => taskDone(task._id)}>
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="radioNoLabel"
                       id="radioNoLabel1"
@@ -291,7 +290,7 @@ const Categories = () => {
                 <div className="col-10 Today_header">
                   <span onClick={() => taskDone(task._id)}>
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="radioNoLabel"
                       id="radioNoLabel1"

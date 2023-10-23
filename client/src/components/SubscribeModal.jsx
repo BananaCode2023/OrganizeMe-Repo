@@ -5,7 +5,9 @@ import Modal from "react-bootstrap/Modal";
 import Stack from "react-bootstrap/Stack";
 import { Icon } from "@iconify/react";
 
-const Submit_btn = () => {
+const SubscribeModal = () => {
+
+  // Modal Animation
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [isValid, setIsValid] = useState(true);
@@ -16,6 +18,7 @@ const Submit_btn = () => {
   };
   const handleShow = () => setShow(true);
 
+  // Validation process
   const handleSubmit = () => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     const isValidEmail = email.match(emailRegex);
@@ -82,4 +85,4 @@ const Submit_btn = () => {
   );
 };
 
-export default Submit_btn;
+export default SubscribeModal;

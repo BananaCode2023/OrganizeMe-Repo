@@ -1,8 +1,8 @@
 import "../css/searchModal.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { toast } from "react-hot-toast";
-import EditModal from "../components/EditModal";
+// import { toast } from "react-hot-toast";
+// import EditModal from "../components/EditModal";
 
 function SearchModal({ closeSearchModal }) {
 
@@ -34,7 +34,7 @@ function SearchModal({ closeSearchModal }) {
     <div className="search-modal">
       <div className="search-modal-content">
         <div className="search-modal-bar-container">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
           <input
             className="search-modal-bar"
             type="text"
@@ -42,14 +42,14 @@ function SearchModal({ closeSearchModal }) {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <i class="fa-solid fa-xmark" onClick={closeSearchModal}></i>
+          <i className="fa-solid fa-xmark" onClick={closeSearchModal}></i>
         </div>
 
         <ul className="search-ul">
           {filteredTasks.map((taskTitle, index) => (
             <div className="search-list-container">
               <li className="search-info">
-                <i class="fa-solid fa-info"></i>
+                <i className="fa-solid fa-info"></i>
               </li>
               <li key={index}>{taskTitle}</li>
             </div>

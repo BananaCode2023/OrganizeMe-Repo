@@ -1,3 +1,4 @@
+
 .about-container {
   padding-inline: 100px;
   padding-top: 150px;
@@ -37,6 +38,10 @@ p.bold {
   font-weight: bold;
 }
 p.regular {
+  font-family: Poppins;
+  font-size: 20px;
+}
+q.regular {
   font-family: Poppins;
   font-size: 20px;
 }
@@ -112,12 +117,27 @@ p.regular {
   .section-img {
     margin-inline: auto;
   }
+
+  p.medium {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    color: #103d87;
+  }
 }
 @media screen and (max-width: 426px) {
   .about-container {
     padding-inline: 20px;
   }
-  /* .feature-container {
+
+  p.medium {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    color: #103d87;
+  }
+
+  .feature-container {
     padding-inline: 20px;
   } */
   .tag-line h1 {
@@ -132,7 +152,15 @@ p.regular {
   .about-container {
     padding-inline: 20px;
   }
-  /* .feature-container {
+
+  p.medium {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: #103d87;
+  }
+
+  .feature-container {
     padding-inline: 20px;
   } */
   .tag-line h1 {

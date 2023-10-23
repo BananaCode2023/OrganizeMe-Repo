@@ -6,7 +6,6 @@ import '../css/register.css'
 import signupHeroImg from '../assets/signup-hero-img.png'
 import signupLogo from '../assets/newLogo.png'
 import googleLogo from '../assets/google-logo.png'
-import facebookLogo from '../assets/facebook-logo.png'
 
 function Register() {
   const navigate = useNavigate();
@@ -67,13 +66,16 @@ function Register() {
           <a href="/"><img src={signupLogo} alt="organizeMe-logo" id='login-logo' /></a>
           <h2>Create an Account & Get Started</h2>
 
-          <form className="signup-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Username"
-              onChange={(e) => setUsername(e.target.value)}
+          <form className='signup-form' 
+          onSubmit={handleSubmit}
+          >
+
+            <input 
+            type="text" 
+            name="username" 
+            id="username"
+            placeholder='&#x1f464; Username'
+            onChange={(e) => setUsername(e.target.value)} 
             />
             {errors.username && (
               <span className="error">{errors.username}</span>

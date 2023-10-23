@@ -50,13 +50,14 @@ const About = () => {
           {/* Section 2 */}
           <div className="section2">
             <div className="col-md-12">
-              <p className="regular">
-                "Our task manager app is designed to simplify your life by
+              <q className="regular">
+                Our task manager app is designed to simplify your life by
                 helping you organize your tasks, set priorities, and stay on top
                 of your to-do lists with ease. With user-friendly features and a
-                clean interface, we're here to make task management a breeze,
-                ensuring you can focus on what matters most in your life."
-              </p>
+                clean interface, we`re here to make task management a breeze,
+                ensuring you can focus on what matters most in your life.
+              </q>
+              <p className="pt-3 Author">- OrganizeMe</p>
             </div>
           </div>
           {/* About card */}

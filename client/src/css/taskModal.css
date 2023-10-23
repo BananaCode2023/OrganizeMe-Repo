@@ -13,6 +13,7 @@
   margin-bottom: 10px;
 }
 .task-input input {
+  background-color: transparent;
   border: none;
   outline: none;
 }
@@ -23,7 +24,7 @@
   padding: 10px 15px;
   border: 1px solid #888;
   width: 400px;
-  height: auto;
+  height: auto!important;
 }
 .modal-btns {
   display: flex;

@@ -1,21 +1,15 @@
-import "../css/header.css";
-// import {Link} from "react-router-dom"
+import '../css/header.css';
 import { useState } from "react";
-// import { MDBIcon } from "mdb-react-ui-kit";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  // NavbarBrand,
-  Nav,
-  // NavItem,
-  NavLink,
-  // Dropdown,
-  // DropdownToggle,
-  // DropdownItem,
-  // DropdownMenu,
-  // UncontrolledDropdown
-} from "reactstrap";
+    Button,
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    Nav,
+    NavLink,
+  } from 'reactstrap';
+
+
 
 import omWhiteLogo from "../assets/omWhiteLogo.png";
 
@@ -27,7 +21,6 @@ function Header() {
 
   return (
     <>
-      {/* <div className='navbar-container'> */}
       <Navbar expand={deviceWidth} className="navbar-container">
         <a href="/">
           <div className="nav-logo2"></div>
@@ -59,18 +52,15 @@ function Header() {
               <NavLink href="/auth/login" id="login">
                 Login
               </NavLink>
+              <NavLink>
+               <Button type="button" className="btn btn-success mx-auto started-btn1"><a href="/auth/Register">Start for free </a></Button>
+              </NavLink>
             </div>
           </Nav>
         </Collapse>
       </Navbar>
-      {/* </div> */}
-    </>
+      </>
 
-    // <nav>
-    //   <Link to= '/'>Home</Link>
-    //   <Link to= '/register'>Register</Link>
-    //   <Link to= '/login'>Login</Link>
-    // </nav>
   );
 }
 
