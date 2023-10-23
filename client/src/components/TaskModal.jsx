@@ -1,152 +1,117 @@
-import React from 'react';
-import '../css/taskModal.css'
-import orgIcon from '../assets/orgicon.png'
-import starIcon from '../assets/staricon.png'
-import axios from 'axios'
-import { useState } from 'react';
-import {toast} from 'react-hot-toast'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "../css/taskModal.css";
+import orgIcon from "../assets/orgicon.png";
+import starIcon from "../assets/staricon.png";
+import axios from "axios";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 function TaskModal({ closeModal }) {
-
   const [addTask, setAddTask] = useState({
-    task_title: '',
-    task_description: '',
-    userId: window.localStorage.getItem("id")
-  })
-  const [addToday, setAddToday] = useState({today: ''})
-  const [addPriority, setAddPriority] = useState({priority: ''})
-  const [addCategory, setAddCategory] = useState({category: ''})
+    task_title: "",
+    task_description: "",
+    userId: window.localStorage.getItem("id"),
+  });
+  const [addToday, setAddToday] = useState({ today: "" });
+  const [addPriority, setAddPriority] = useState({ priority: "" });
+  const [addCategory, setAddCategory] = useState({ category: "" });
 
   const handleAddTask = (e) => {
-    const {name,value} = e.target
-    setAddTask({...addTask, [name]:value})
-    setAddToday({...addToday, [name]:value})
-    setAddPriority({...addPriority, [name]:value})
-    setAddCategory({...addCategory,[name]:value})
-  }
-
- 
-
- 
+    const { name, value } = e.target;
+    setAddTask({ ...addTask, [name]: value });
+    setAddToday({ ...addToday, [name]: value });
+    setAddPriority({ ...addPriority, [name]: value });
+    setAddCategory({ ...addCategory, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     axios
-      .post('http://localhost:3333/tasklist/create-task', addTask)
-      .then(result => {
-        toast.success('Added Task')
+      .post("http://localhost:3333/tasklist/create-task", addTask)
+      .then((result) => {
+        toast.success("Added Task");
         setTimeout(() => {
           location.reload();
-        }, 1000)
+        }, 1000);
       })
-      .catch(err => console.log(err))
-  }
-
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="modal">
       <form onSubmit={handleSubmit}>
         <div className="modal-content">
-        
-          <div className='task-input'>
-            
-              <input 
-              type="text" 
-              name="task_title" 
-              id="task-title" 
-              placeholder='TASK TITLE'
+          <div className="task-input">
+            <input
+              type="text"
+              name="task_title"
+              id="task-title"
+              placeholder="TASK TITLE"
               onChange={handleAddTask}
-              />
+            />
 
-              <input 
-              type="text" 
-              name="task_description" 
-              id="task-input" 
-              placeholder='Task Description'
+            <input
+              type="text"
+              name="task_description"
+              id="task-input"
+              placeholder="Task Description"
               onChange={handleAddTask}
-              />
-          
+            />
           </div>
-        
-          
-          <div className='modal-btns'>
-            <input 
-            type="button" 
-            className='modal-btn org-when' 
-            name='today' 
-            value='📆today' 
-            onClick={handleAddTask} 
+
+          <div className="modal-btns">
+            <input
+              type="button"
+              className="modal-btn org-when"
+              name="today"
+              value="📆today"
+              onClick={handleAddTask}
             />
 
-            <input 
-            type="button" 
-            className='modal-btn priority-btn'
-            name='priority'
-            value='⭐priority'
-            onClick={handleAddTask}
+            <input
+              type="button"
+              className="modal-btn priority-btn"
+              name="priority"
+              value="⭐priority"
+              onClick={handleAddTask}
             />
-            
-            <select 
-            name="category" 
-            onChange={handleAddTask} 
-            className='modal-btn'
+
+            <select
+              name="category"
+              onChange={handleAddTask}
+              className="modal-btn"
             >
-            
               <option>💭 Categories</option>
-              <option 
-              name='category' 
-              value="🧘🏻‍♀ Personal Care"
-              >
+              <option name="category" value="🧘🏻‍♀ Personal Care">
                 🧘🏻‍♀ Personal Care
               </option>
 
-              <option 
-              name='category' 
-              value="⚕️ Health"
-              >
+              <option name="category" value="⚕️ Health">
                 ⚕️ Health
               </option>
 
-              <option 
-              name='category' 
-              value="👫🏼 Relationship"
-              >
+              <option name="category" value="👫🏼 Relationship">
                 👫🏼 Relationship
               </option>
 
-              <option 
-              name='category' 
-              value="👨🏻‍👩🏻‍👧🏻 Family"
-              >
+              <option name="category" value="👨🏻‍👩🏻‍👧🏻 Family">
                 👨🏻‍👩🏻‍👧🏻 Family
               </option>
 
-              <option 
-              name='category' 
-              value="🎓 Education"
-              >
+              <option name="category" value="🎓 Education">
                 🎓 Education
               </option>
 
-              <option 
-              name='category' 
-              value="🏋🏻‍♂️ Fitness"
-              >
+              <option name="category" value="🏋🏻‍♂️ Fitness">
                 🏋🏻‍♂️ Fitness
               </option>
 
-              <option 
-              name='category' 
-              value="💼 Work"
-              >
+              <option name="category" value="💼 Work">
                 💼 Work
               </option>
 
-              <option 
-              name='category'
-              value="🤔 Others"
-              >
+              <option name="category" value="🤔 Others">
                 🤔 Others
               </option>
             </select>
@@ -154,11 +119,17 @@ function TaskModal({ closeModal }) {
 
           <hr />
 
-          <div className='modal-add-cancel-btns'> 
-            <button className="close-modal modal-cancel-btn" onClick={closeModal}>Cancel</button>
-            <button className="btn btn-success modal-add-btn" type='submit'>Add Task</button>
+          <div className="modal-add-cancel-btns">
+            <button
+              className="close-modal modal-cancel-btn"
+              onClick={closeModal}
+            >
+              Cancel
+            </button>
+            <button className="btn btn-success modal-add-btn" type="submit">
+              Add Task
+            </button>
           </div>
-        
         </div>
       </form>
     </div>

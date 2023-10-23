@@ -5,12 +5,12 @@
   max-width: 1440px;
   margin-inline: auto;
 }
-.feature-container {
+/* .feature-container {
   padding-inline: 100px;
   padding-top: 150px;
   max-width: 1440px;
   margin-inline: auto;
-}
+} */
 .tag-line h1 {
   font-family: Poppins;
   /* font-size: 64px; */
@@ -53,7 +53,7 @@ p.regular {
   padding-top: 100px;
   text-align: center;
 }
-.section3 {
+/* .section3 {
   padding-top: 100px;
   text-align: right;
   display: flex;
@@ -62,7 +62,7 @@ p.regular {
   padding-top: 100px;
   padding-bottom: 100px;
   display: flex;
-}
+} */
 .section-img {
   max-width: 550px;
   width: 100%;
@@ -73,9 +73,9 @@ p.regular {
   justify-content: center;
 }
 /* Feature card */
-.feature {
+/* .feature {
   text-align: center;
-}
+} */
 .card.bg {
   background-color: transparent;
   border: 1px;
@@ -91,7 +91,7 @@ p.regular {
   flex-wrap: wrap;
   padding-top: 100px;
 }
-.card-body-about img{
+.card-body-about img {
   max-width: 300px;
   width: 100%;
   height: auto;
@@ -102,10 +102,10 @@ p.regular {
   .about-container {
     padding-inline: 50px;
   }
-  .feature-container {
+  /* .feature-container {
     padding-inline: 50px;
-  }
-  .section1, .section3, .section4 {
+  } */
+  .section1 {
     text-align: center;
     flex-wrap: wrap;
   }
@@ -117,13 +117,13 @@ p.regular {
   .about-container {
     padding-inline: 20px;
   }
-  .feature-container {
+  /* .feature-container {
     padding-inline: 20px;
-  }
+  } */
   .tag-line h1 {
     font-size: 52px;
   }
-  .section1, .section3, .section4 {
+  .section1 {
     text-align: center;
     flex-wrap: wrap;
   }
@@ -132,9 +132,9 @@ p.regular {
   .about-container {
     padding-inline: 20px;
   }
-  .feature-container {
+  /* .feature-container {
     padding-inline: 20px;
-  }
+  } */
   .tag-line h1 {
     font-size: 42px;
   }

@@ -1,80 +1,71 @@
-
-.modal_container{
-    z-index: 9999;
-    /* background-color: blue; */
+.modal_container {
+  z-index: 9999;
+  /* background-color: blue; */
 }
 
 .modal-dialog {
-    max-width: 100%; /* Adjust the width as needed */
-    height: 80vh; /* Adjust the height as needed */
-    /* background-color: aquamarine; */
+  max-width: 100%; /* Adjust the width as needed */
+  height: 80vh; /* Adjust the height as needed */
+  /* background-color: aquamarine; */
 }
 
-
-.modal-content{
-    /* background-color: blueviolet; */
-    width: 700px;
+.modal-content {
+  /* background-color: blueviolet; */
+  width: 700px;
 }
 
-.modalHeader{
-    display: flex;
-    justify-content: start;
-    gap: 5px;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 500;
-    padding-bottom: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.193);
+.modalHeader {
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.193);
 }
 
-
-.modalTitle{
-    display: flex;
-    align-items: first baseline;
-    gap: 5px;
+.modalTitle {
+  display: flex;
+  align-items: first baseline;
+  gap: 5px;
 }
 
-
-.inputTitle{
-    border: none;
-    font-family: Poppins;
-    font-size: 20px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    width: 100%;
-    height: 90px;
-    
+.inputTitle {
+  border: none;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 90px;
 }
 
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
 
-.inputDesc{
-    border: none;
-    width: 100%;  
-    height: 50px;
+.inputDesc {
+  border: none;
+  width: 100%;
+  height: 50px;
 }
 
-.modal-btn{
-    border: none;
-    display: flex;
-    justify-content: end;
-    gap: 30px;
+.modal-btn {
+  border: none;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
 }
 
-@media (max-width: 320px ){
-
+@media (max-width: 320px) {
 }
 
-@media (max-width: 767px){
-
+@media (max-width: 767px) {
 }
 
-@media (min-width: 768px) and (max-width: 1023px){
-
+@media (min-width: 768px) and (max-width: 1023px) {
 }
 
-@media (min-width: 1024px){
-    
+@media (min-width: 1024px) {
 }

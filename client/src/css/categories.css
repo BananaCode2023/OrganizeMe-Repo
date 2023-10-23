@@ -1,31 +1,30 @@
-.category-title{
-margin-top: 20px;
-font-weight: 700;
+.category-title {
+  margin-top: 20px;
+  font-weight: 700;
 }
-.categories-page{
+.categories-page {
   padding: 50px 100px 0 400px;
 }
-.categories-heading{
+.categories-heading {
   display: flex;
   align-items: center;
   color: #f1511b;
 }
-.categories-heading-icon{
+.categories-heading-icon {
   font-size: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.categories-list li{
+.categories-list li {
   list-style: none;
 }
-.task-desc{
+.task-desc {
   font-size: 14px;
   opacity: 0.7;
   position: relative;
   z-index: -1;
 }
-.task-categ small{
+.task-categ small {
   font-size: 12px;
-  padding-right  : 15px;
+  padding-right: 15px;
 }
-

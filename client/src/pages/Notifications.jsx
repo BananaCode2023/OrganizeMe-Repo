@@ -29,10 +29,6 @@ const Notifications = () => {
           <i class="fa-regular fa-bell notif-bell-icon"></i>
           <h1>Notification</h1>
         </div>
-        <div class="col sort-by">
-            <i class="fa-solid fa-sliders sort-by-icon"></i>
-            <h5>Sort By</h5>
-        </div>
 
         <div className="notif-image">
           <img src={notify} className="rounded mx-auto d-block" />

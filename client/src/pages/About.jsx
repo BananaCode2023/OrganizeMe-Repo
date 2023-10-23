@@ -17,7 +17,11 @@ const About = () => {
         <div className="holder">
           {/* Tag line */}
           <div className="tag-line">
-            <h1 id="about-heading">Get to Know Us<br/>Discover Our Story and Mission</h1>
+            <h1 id="about-heading">
+              Get to Know Us
+              <br />
+              Discover Our Story and Mission
+            </h1>
             <p>
               Meet our team, the people behind our success. Simplifying lives
               through our vision for a better future.

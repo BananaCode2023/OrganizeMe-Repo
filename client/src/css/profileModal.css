@@ -1,18 +1,18 @@
-.profile-modal{
+.profile-modal {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 0px 0px 5px 5px;
 }
-.profile-modal button{
+.profile-modal button {
   padding: 5px;
   border: none;
   background-color: white;
 }
-.profile-modal button:hover{
-  background-color: #C5DCDE;
+.profile-modal button:hover {
+  background-color: #c5dcde;
 }
-.prof-hr{
+.prof-hr {
   position: relative;
   z-index: 1;
   width: 90%;

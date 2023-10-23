@@ -1,64 +1,64 @@
-.navbar-container{
+.navbar-container {
   position: fixed;
   width: 100%;
-  background-color: #103DB7;
+  background-color: #103db7;
   height: 60px;
   padding: 0px 100px;
   transition: 0.6s;
   z-index: 100;
 }
-#nav-logo{
+#nav-logo {
   height: 40px;
 }
-.nav-links{
+.nav-links {
   font-weight: 500;
   display: flex;
-  color: #FFF;
+  color: #fff;
   gap: 40px;
 }
-.nav-link::after{
-  content : '';
-    display: block;   
-    height : 3px;
-    width : 0%;
-    bottom : 0;
-    left : 0;
-    background-color : #F7F8FF;
-    border-radius: 10px;
-    transition : all .7s;
-  }
-  .nav-link:hover::after{
-    width :100%;
-  }
+.nav-link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  background-color: #f7f8ff;
+  border-radius: 10px;
+  transition: all 0.7s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
 
-.navbar-toggler{
+.navbar-toggler {
   display: none;
 }
-.nav-logo2{
+.nav-logo2 {
   display: none;
 }
-.burger-menu-container{
+.burger-menu-container {
   display: none;
   transition: 0.6s;
 }
 @media screen and (max-width: 768px) {
-  .navbar-container{
+  .navbar-container {
     padding: 12px 30px;
   }
-  .nav-links{
+  .nav-links {
     display: none;
   }
-  .navbar-toggler{
+  .navbar-toggler {
     display: block;
     border: none;
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     background-image: url(/src/assets/omWhiteBurgerMenu.png);
   }
-  #nav-logo{
+  #nav-logo {
     display: none;
   }
-  .nav-logo2{
+  .nav-logo2 {
     margin-top: 5px;
     display: block;
     background-image: url(/src/assets/OrganizeMe.png);
@@ -67,7 +67,7 @@
     width: 180px;
     height: 25px;
   }
-  .burger-menu-container{
+  .burger-menu-container {
     position: relative;
     margin-top: 10px;
     z-index: 3;
@@ -77,14 +77,14 @@
     align-items: flex-end;
     background-color: #0e35a2cf;
   }
-  .nav-link{
+  .nav-link {
     margin-left: auto;
     padding-right: 50px;
     text-align: right;
     font-weight: 500;
-    color: #F7F8FF;
+    color: #f7f8ff;
   }
-  .nav-dropdown{
+  .nav-dropdown {
     position: absolute;
     margin-top: 178px;
     margin-left: -42px;

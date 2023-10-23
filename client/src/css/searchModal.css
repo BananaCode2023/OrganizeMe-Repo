@@ -1,4 +1,4 @@
-.search-modal{
+.search-modal {
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -7,27 +7,27 @@
   height: 100%;
   background-color: rgba(16, 0, 79, 0.126);
 }
-.search-modal-content{
+.search-modal-content {
   background-color: #fff;
   margin: 130px 0 0 340px;
   padding: 50px 15px 20px;
   width: 500px;
   max-height: 50%;
   border-radius: 10px;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
   overflow: auto;
 }
-.search-ul{
+.search-ul {
   list-style: none;
 }
-.search-list-container{
+.search-list-container {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
 }
-.search-info{
-  border: 1px solid ;
+.search-info {
+  border: 1px solid;
   height: 15px;
   width: 15px;
   font-size: 8px;
@@ -36,12 +36,12 @@
   align-items: center;
   border-radius: 50%;
 }
-.search-modal-bar{
+.search-modal-bar {
   width: 100%;
   border: none;
 }
-.search-modal-bar-container{
-  background-color: #FFF;
+.search-modal-bar-container {
+  background-color: #fff;
   height: 35px;
   position: relative;
   position: fixed;
@@ -52,12 +52,12 @@
   align-items: center;
   gap: 10px;
 }
-.fa-xmark{
+.fa-xmark {
   cursor: pointer;
   padding: 3px 5px;
   margin-right: 5px;
   border-radius: 5px;
 }
-.fa-xmark:hover{
+.fa-xmark:hover {
   background-color: #4545451b;
 }

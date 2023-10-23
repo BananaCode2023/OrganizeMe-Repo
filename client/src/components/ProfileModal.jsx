@@ -23,11 +23,9 @@ function ProfileModal({ closeProfileModal }) {
       </div>
 
       <div className="profile-modal pb-3">
-        <hr className="prof-hr"/>
+        <hr className="prof-hr" />
         {window.localStorage.length ? (
-          <button onClick={handleLogout}>
-            logout
-          </button>
+          <button onClick={handleLogout}>logout</button>
         ) : (
           <Link to="/auth/register">login/register</Link>
         )}

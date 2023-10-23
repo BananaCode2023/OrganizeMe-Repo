@@ -1,62 +1,59 @@
-import '../css/searchModal.css'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import {toast} from 'react-hot-toast'
+import "../css/searchModal.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
 
+function SearchModal({ closeSearchModal }) {
+  //   const [searchTerm, setSearchTerm] = useState('')
 
+  //   const items = [
+  //     'Apple',
+  //     'Banana',
+  //     'Mango',
+  //     'Orange',
+  //     'Grapes',
+  //     'Lemon',
+  //     'Pizza',
+  //     'Siomai',
+  //     'Lomi',
+  //     'Bulalo',
+  //     'Sisig',
+  //     'Chami',
+  //     'Kape'
+  //   ]
 
-function SearchModal({closeSearchModal}) {
+  //   const handleSearchChange = (e) => {
+  //     setSearchTerm(e.target.value)
+  //   }
 
-//   const [searchTerm, setSearchTerm] = useState('')
+  //   const filteredItems = items.filter((item) =>
+  //     item.toLowerCase().includes(searchTerm.toLowerCase())
+  //   )
 
-//   const items = [
-//     'Apple',
-//     'Banana',
-//     'Mango',
-//     'Orange',
-//     'Grapes',
-//     'Lemon',
-//     'Pizza',
-//     'Siomai',
-//     'Lomi',
-//     'Bulalo',
-//     'Sisig',
-//     'Chami',
-//     'Kape'
-//   ]
+  //   return (
+  //     <div className='search-modal'>
+  //       <div className='search-modal-content'>
+  //         <input
+  //         type="text"
+  //         placeholder="Search...."
+  //         value={searchTerm}
+  //         onChange={handleSearchChange}
+  //         />
+  //         <ul>
+  //           {filteredItems.map((item, index) => (
+  //             <li key={index}>
+  //               {item}
+  //             </li>
+  //           ))}
+  //         </ul>
+  //         <button onClick={closeSearchModal}>close</button>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
-//   const handleSearchChange = (e) => {
-//     setSearchTerm(e.target.value)
-//   }
-
-//   const filteredItems = items.filter((item) => 
-//     item.toLowerCase().includes(searchTerm.toLowerCase())
-//   )
-
-//   return (
-//     <div className='search-modal'>
-//       <div className='search-modal-content'>
-//         <input 
-//         type="text" 
-//         placeholder="Search...."
-//         value={searchTerm}
-//         onChange={handleSearchChange}
-//         />
-//         <ul>
-//           {filteredItems.map((item, index) => (
-//             <li key={index}>
-//               {item}
-//             </li>
-//           ))}
-//         </ul>
-//         <button onClick={closeSearchModal}>close</button>
-//       </div>
-//     </div>
-//   )
-// }
-
-  const userId = window.localStorage.getItem('id');
+  const userId = window.localStorage.getItem("id");
   const [tasklist, setTasklist] = useState([]);
 
   useEffect(() => {
@@ -68,56 +65,46 @@ function SearchModal({closeSearchModal}) {
       .catch((err) => console.log(err));
   }, []);
 
+  const tasks = tasklist.map((task) => task.task_title);
 
-  const tasks = tasklist.map(task => task.task_title)
- 
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState('')
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-    const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value)
-  }
+  const filteredTasks = tasks.filter((task) =>
+    task.toString().toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-    const filteredTasks = tasks.filter(task => task.toString().toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
-  return(
-    <div className='search-modal'>
-      <div className='search-modal-content'>
-        <div className='search-modal-bar-container'>
+  return (
+    <div className="search-modal">
+      <div className="search-modal-content">
+        <div className="search-modal-bar-container">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input 
-            className='search-modal-bar'
-            type="text" 
+          <input
+            className="search-modal-bar"
+            type="text"
             placeholder="Search...."
             value={searchTerm}
             onChange={handleSearchChange}
-            />
-            <i 
-            class="fa-solid fa-xmark" 
-            onClick={closeSearchModal}
-            ></i>
+          />
+          <i class="fa-solid fa-xmark" onClick={closeSearchModal}></i>
         </div>
 
-          <ul className='search-ul'>
-              {filteredTasks.map((taskTitle, index) => (
-                <div className='search-list-container'>
-                  <li className='search-info'>
-                    <i class="fa-solid fa-info"></i>
-                  </li>
-                  <li key={index}>
-                    {taskTitle}
-                  </li>
-                </div>
-            ))}
-              
-          </ul>
-
-          
-       </div>
+        <ul className="search-ul">
+          {filteredTasks.map((taskTitle, index) => (
+            <div className="search-list-container">
+              <li className="search-info">
+                <i class="fa-solid fa-info"></i>
+              </li>
+              <li key={index}>{taskTitle}</li>
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
-
+  );
 }
 
-export default SearchModal
+export default SearchModal;

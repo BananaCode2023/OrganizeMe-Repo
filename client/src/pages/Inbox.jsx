@@ -1,9 +1,9 @@
-import Sidebar from '../components/Sidebar'
-import '../css/inbox.css'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import profIcon from '../assets/profile-icon.png'
-import {toast} from 'react-hot-toast'
+import Sidebar from "../components/Sidebar";
+import "../css/inbox.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import profIcon from "../assets/profile-icon.png";
+import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
 
 //Maglagay ng websocket para autoupdate
@@ -76,12 +76,6 @@ const Inbox = () => {
         <div className="inbox-heading">
           <i class="fa-solid fa-inbox inbox-heading-icon"></i>
           <h1>Inbox</h1>
-        </div>
-        <div class="row justify-content-end">
-          <div class="col-2 sort-by">
-            <i class="fa-solid fa-sliders sort-by-icon"></i>
-            <h5>Sort By</h5>
-          </div>
         </div>
 
         {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}

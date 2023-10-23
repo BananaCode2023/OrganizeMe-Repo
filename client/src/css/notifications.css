@@ -11,17 +11,6 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.sort-by {
-  justify-content: right;
-  display: flex;
-  align-items: right;
-  color: #2323238f;
-}
-.sort-by-icon {
-  font-size: 20px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
 .notif-image {
   padding-top: 10px;
 }

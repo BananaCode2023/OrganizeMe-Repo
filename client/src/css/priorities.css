@@ -1,16 +1,16 @@
-.priorities-page{
+.priorities-page {
   padding: 50px 100px 0 400px;
 }
-.priorities-heading{
+.priorities-heading {
   display: flex;
   align-items: center;
-  color: #FFA500;
+  color: #ffa500;
 }
-.priorities-heading-icon{
+.priorities-heading-icon {
   font-size: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.priorities-list li{
+.priorities-list li {
   list-style: none;
 }

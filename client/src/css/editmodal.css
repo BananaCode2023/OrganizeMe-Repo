@@ -1,4 +1,4 @@
-.editModal-container{
+.editModal-container {
   position: fixed;
   background-color: rgba(16, 0, 79, 0.126);
   height: 100%;
@@ -7,7 +7,7 @@
   left: 0;
   z-index: 1000;
 }
-.editModal-form{
+.editModal-form {
   position: absolute;
   height: 170px;
   width: 100%;
@@ -17,20 +17,20 @@
   right: 0;
   margin: 0 auto;
   top: 100px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   z-index: 1000;
-  box-shadow: 0px 3px 20px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
 }
-.editModal-form-container{
+.editModal-form-container {
   padding: 10px 20px 0 20px;
   width: 100%;
 }
-.edit-input-form{
+.edit-input-form {
   border: none;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -38,23 +38,23 @@
   max-width: 300px;
   min-width: none;
 }
-.edit-modal-hr{
+.edit-modal-hr {
   width: 100%;
   margin: 0 0 8px;
 }
-.edit-modal-btn-container{
+.edit-modal-btn-container {
   display: flex;
   gap: 10px;
   width: 100%;
   justify-content: right;
   padding-right: 20px;
 }
-.editModal-btn{
+.editModal-btn {
   padding: 5px 20px;
   border-radius: 5px;
   border: none;
 }
-.edit-cancel-btn{
+.edit-cancel-btn {
   border: solid 1px #686868;
   background-color: transparent;
 }

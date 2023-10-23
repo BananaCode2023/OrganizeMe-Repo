@@ -1,29 +1,27 @@
-
-
-.Dashboard-Box{
-    padding-top: 70px;
+.Dashboard-Box {
+  padding-top: 70px;
 }
 
-.Today_Header p{
-    color: #298683;
-    font-family: DM Sans;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.32px;
+.Today_Header p {
+  color: #298683;
+  font-family: DM Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
 }
-.Today_Subheader{
-    color: #232323;
-    font-family: DM Sans;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.17px;
+.Today_Subheader {
+  color: #232323;
+  font-family: DM Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.17px;
 }
 
-Icon{
-    max-width: 100%;
-    height: auto;
+Icon {
+  max-width: 100%;
+  height: auto;
 }

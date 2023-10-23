@@ -30,15 +30,15 @@ function Sidebar(props) {
   };
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
-  }
-  
-  const [isSearchModalOpen, setIsSearchModalOpen] =useState(false)
+  };
+
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const openSearchModal = () => {
-    setIsSearchModalOpen(true)
-  }
+    setIsSearchModalOpen(true);
+  };
   const closeSearchModal = () => {
-    setIsSearchModalOpen(false)
-  }
+    setIsSearchModalOpen(false);
+  };
 
   return (
     <>
@@ -80,47 +80,46 @@ function Sidebar(props) {
           <i className="fa-solid fa-plus" id="moveSidebarButton"></i>Add Task
         </button>
         {isModalOpen && <TaskModal closeModal={closeModal} />}
-        
+
         <Stack gap={2} className="pt-2">
-        {isSearchModalOpen && (
-          <SearchModal closeSearchModal={closeSearchModal} />
-        )}
+          {isSearchModalOpen && (
+            <SearchModal closeSearchModal={closeSearchModal} />
+          )}
 
-        <div className="sidebar-btns search-bar" onClick={openSearchModal}>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <h5>Search</h5>
-        </div>
-
-        <a href="/inbox">
-          <div className="sidebar-btns inbox-bar">
-            <i className="fa-solid fa-inbox"></i>
-            <h5>Inbox</h5>
+          <div className="sidebar-btns search-bar" onClick={openSearchModal}>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h5>Search</h5>
           </div>
-        </a>
 
-        <a href="/today2">
-          <div className="sidebar-btns today-bar">
-            <i className="fa-solid fa-calendar-day"></i>
-            <h5>Today</h5>
-          </div>
-        </a>
+          <a href="/inbox">
+            <div className="sidebar-btns inbox-bar">
+              <i className="fa-solid fa-inbox"></i>
+              <h5>Inbox</h5>
+            </div>
+          </a>
 
-        <a href="/priorities">
-          <div className="sidebar-btns upcoming-bar">
-            <i class="fa-solid fa-star"></i>
-            <h5>Priorities</h5>
-          </div>
-        </a>
+          <a href="/today2">
+            <div className="sidebar-btns today-bar">
+              <i className="fa-solid fa-calendar-day"></i>
+              <h5>Today</h5>
+            </div>
+          </a>
 
-        <a href="/categories">
-          <div className="sidebar-btns category-bar">
-            <i className="fa-solid fa-layer-group"></i>
-            <h5>Categories</h5>
-          </div>
-        </a>
+          <a href="/priorities">
+            <div className="sidebar-btns upcoming-bar">
+              <i class="fa-solid fa-star"></i>
+              <h5>Priorities</h5>
+            </div>
+          </a>
 
-        <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
+          <a href="/categories">
+            <div className="sidebar-btns category-bar">
+              <i className="fa-solid fa-layer-group"></i>
+              <h5>Categories</h5>
+            </div>
+          </a>
 
+          <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
         </Stack>
 
         {/* <div className={`sidebar-row2 ${showBar ? 'close' : ''}`}>
