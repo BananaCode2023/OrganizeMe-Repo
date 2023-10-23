@@ -443,7 +443,7 @@ const Categories = () => {
               <div className="col-10 Today_header">
                 <span onClick={() => taskDone(task._id)}>
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="radioNoLabel"
                     id="radioNoLabel1"
