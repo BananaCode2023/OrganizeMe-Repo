@@ -87,7 +87,7 @@ const Today2 = () => {
     <main className="priorities-page">
       <div className="priorities-heading mb-4">
         <i className="fa-solid fa-calendar-day priorities-heading-icon"></i>
-        <h1>Today</h1>
+        <h1 className="Today">Today</h1>
       </div>
 
       {isEditModalOpen && <EditModal closeEditModal={closeEditModal} />}

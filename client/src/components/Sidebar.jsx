@@ -4,6 +4,7 @@ import TaskModal from "./TaskModal";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ProfileModal from "./ProfileModal";
+import Stack from "react-bootstrap/esm/Stack";
 
 function Sidebar(props) {
   const [showBar, hideBar] = useState(false);
@@ -58,19 +59,19 @@ function Sidebar(props) {
                 className="dummy-profIcon"
               />
               {props.username}
-              <i class="fa-solid fa-caret-down"></i>
+              <i className="fa-solid fa-caret-down"></i>
             </button>
           </div>
 
           <a href="/notifications" className="bell-btn">
             <i
-              class={`
+              className={`
           fa-regular 
           fa-bell ${showBar ? "close" : ""}`}
             ></i>
           </a>
           <button onClick={toggleSideBar} id="sidebar-toggle">
-            <i class="fa-regular fa-window-maximize fa-rotate-90 toggle-btn"></i>
+            <i className="fa-regular fa-window-maximize fa-rotate-90 toggle-btn"></i>
           </button>
         </div>
         {isProfileModalOpen && (
@@ -83,33 +84,34 @@ function Sidebar(props) {
           ${showBar ? "close" : ""}`}
           onClick={openModal}
         >
-          <i class="fa-solid fa-plus" id="moveSidebarButton"></i>Add Task
+          <i className="fa-solid fa-plus" id="moveSidebarButton"></i>Add Task
         </button>
         {isModalOpen && <TaskModal closeModal={closeModal} />}
-
-        <div className="sidebar-btns search-bar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <h5>SEARCH</h5>
+        
+        <Stack gap={2} className="pt-2">
+          <div className="sidebar-btns search-bar">
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <h5>Search</h5>
         </div>
 
         <a href="/inbox">
           <div className="sidebar-btns inbox-bar">
-            <i class="fa-solid fa-inbox"></i>
-            <h5>INBOX</h5>
+            <i className="fa-solid fa-inbox"></i>
+            <h5>Inbox</h5>
           </div>
         </a>
 
         <a href="/priorities">
           <div className="sidebar-btns upcoming-bar">
-            <i class="fa-solid fa-star"></i>
-            <h5>PRIORITIES</h5>
+            <i className="fa-solid fa-star"></i>
+            <h5>Priorities</h5>
           </div>
         </a>
 
         <a href="/today2">
           <div className="sidebar-btns today-bar">
-            <i class="fa-solid fa-calendar-day"></i>
-            <h5>TODAY</h5>
+            <i className="fa-solid fa-calendar-day"></i>
+            <h5>Today</h5>
           </div>
         </a>
 
@@ -121,6 +123,8 @@ function Sidebar(props) {
         </a>
 
         <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
+
+        </Stack>
 
         {/* <div className={`sidebar-row2 ${showBar ? 'close' : ''}`}>
           <h5>Projects</h5><i class="fa-solid fa-plus"></i>

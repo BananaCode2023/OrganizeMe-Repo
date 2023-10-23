@@ -182,7 +182,7 @@ const Categories = () => {
             onClick={() => taskDone(task._id)}
             style={{cursor: 'pointer'}}
             >
-              <i class="fa-regular fa-circle"></i>
+              <i className="fa-regular fa-circle"></i>
             </li>
 
             <div>
@@ -196,11 +196,11 @@ const Categories = () => {
 
           
             <li onClick={() => openEditModal(task._id)}>
-              <i class="fa-regular fa-pen-to-square"></i>
+              <i className="fa-regular fa-pen-to-square"></i>
             </li>
 
             <li onClick={() => deleteTask(task._id)}>
-              <i class="fa-regular fa-trash-can"></i>
+              <i className="fa-regular fa-trash-can"></i>
             </li>
           </ul>
               <hr />
@@ -220,7 +220,7 @@ const Categories = () => {
             onClick={() => taskDone(task._id)}
             style={{cursor: 'pointer'}}
             >
-              <i class="fa-regular fa-circle"></i>
+              <i className="fa-regular fa-circle"></i>
             </li>
 
             <div>
