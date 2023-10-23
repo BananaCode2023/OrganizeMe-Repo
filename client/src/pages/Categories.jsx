@@ -115,8 +115,6 @@ const Categories = () => {
         .catch(err => console.log(err))
   },[])
 
-  
-
   const deleteTask = (id) => {
     toast('Deleted Task', {
       icon: '🗑️',

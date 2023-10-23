@@ -4,6 +4,7 @@ import TaskModal from "./TaskModal";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ProfileModal from "./ProfileModal";
+import SearchModal from "./SearchModal";
 
 function Sidebar(props) {
   const [showBar, hideBar] = useState(false);
@@ -29,22 +30,14 @@ function Sidebar(props) {
   const closeProfileModal = () => {
     setIsProfileModalOpen(false);
   }
-
-  // const searchProduct = (event) => {
-  //   let new_filtered_product = []
-
-  //   product_data.map(
-  //     (product) => {
-  //       if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) { 
-  //         new_filtered_product.push(product)
-  //       }
-  //     }
-  //   )
-  //   console.log(new_filtered_product)
-  //   setFilteredProduct(new_filtered_product)
-  // }
-
   
+  const [isSearchModalOpen, setIsSearchModalOpen] =useState(false)
+  const openSearchModal = () => {
+    setIsSearchModalOpen(true)
+  }
+  const closeSearchModal = () => {
+    setIsSearchModalOpen(false)
+  }
 
   return (
     <>
@@ -86,8 +79,11 @@ function Sidebar(props) {
           <i class="fa-solid fa-plus" id="moveSidebarButton"></i>Add Task
         </button>
         {isModalOpen && <TaskModal closeModal={closeModal} />}
+        {isSearchModalOpen && (
+          <SearchModal closeSearchModal={closeSearchModal} />
+        )}
 
-        <div className="sidebar-btns search-bar">
+        <div className="sidebar-btns search-bar" onClick={openSearchModal}>
           <i class="fa-solid fa-magnifying-glass"></i>
           <h5>SEARCH</h5>
         </div>
