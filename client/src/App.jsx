@@ -1,10 +1,10 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom';
-import Navbar from './components/Header';
-import Home from './pages/Index'
+// import Navbar from './components/Header';
+// import Home from './pages/Index'
 import Register from './pages/Register'
 import Login from './pages/Login'
-import axios from 'axios';
+// import axios from 'axios';
 import {Toaster} from 'react-hot-toast'
 import Inbox from './pages/Inbox';
 import About from './pages/About';

@@ -62,7 +62,7 @@ function Register() {
             type="text" 
             name="username" 
             id="username"
-            placeholder='Username'
+            placeholder='&#x1f464; Username'
             onChange={(e) => setUsername(e.target.value)} 
             />
 

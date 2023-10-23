@@ -184,14 +184,30 @@
 }
 
 
-/* section */
+/* For the SECTION  */
+
+
 section{
     background-color: #F7F8FF;
     padding-inline: 100px;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 80px;
 }
 
+.Feature_header q{
+    color: #232323;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+.Feature_header p {
+    font-family: Poppins;
+    font-size: 20px;
+}
 
 /* landingpage_sec2 */
 .landingpage_sec2{
@@ -239,6 +255,15 @@ Icon{
     line-height: normal;
 }
 .landingpage_sec3 p{
+    color: rgba(35, 35, 35, 0.80);
+    font-family: DM Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Author{
     color: rgba(35, 35, 35, 0.80);
     font-family: DM Sans;
     font-size: 25px;
@@ -333,6 +358,21 @@ a{
         padding-inline: 30px !important;
     }
 
+    .Feature_header q{
+        color: #232323;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .Feature_header p {
+        font-family: Poppins;
+        font-size: 15px;
+    }
+
     .rating{
         font-size: 18px !important;
     }
@@ -355,22 +395,25 @@ a{
 
 
     .explore-btn{
-        width: 130px;
+        width: 100px !important;
         height: 37px;
+        font-size: 12px !important;
+        font-weight: 600;
     }
     .explore-btn:hover{
         background-color: #00000042;
     }
     .started-btn{
-        width: 130px;
+        width: 100px !important;
         height: 37px;
-        font-size: small;
-        margin-bottom: 10px !important;
+        font-size: 10.5px !important;
+        font-weight: 600;
+        /* margin-bottom: 10px !important; */
     }
 
-    .whitespace{
+    /* .whitespace{
         display: none;
-    }
+    } */
 
     .testimonial_header{
         padding-left: 20px !important;
@@ -401,7 +444,7 @@ a{
     }
 
     .started-btn{
-        width: 120px !important;
+        width: 120px;
         height: 37px;
         font-size: small;
         /* margin-bottom: 10px !important; */
@@ -497,6 +540,21 @@ a{
         padding-top: 60px;
         padding-inline: 30px;
         padding-bottom: 60px;
+    }
+
+    .Feature_header q{
+        color: #232323;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .Feature_header p {
+        font-family: Poppins;
+        font-size: 16px;
     }
 
     .landingpage_sec1 p{
@@ -664,11 +722,25 @@ a{
         line-height: 20px;
     }
 
-    
 
     section{
         padding-inline: 100px;
         padding-bottom: 100px;
+    }
+
+    .Feature_header q{
+        color: #232323;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .Feature_header p {
+        font-family: Poppins;
+        font-size: 17px;
     }
 
     .landingpage_sec1 p{
@@ -774,6 +846,22 @@ a{
     section{
         padding-inline: 100px;
         padding-bottom: 80px;
+    }
+
+    /* Features page */
+    .Feature_header q{
+        color: #232323;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.64px;
+    }
+    .Feature_header p {
+        font-family: Poppins;
+        font-size: 19px;
     }
 
     .landingpage_sec1 p{

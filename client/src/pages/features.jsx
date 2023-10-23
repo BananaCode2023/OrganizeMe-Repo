@@ -1,131 +1,156 @@
-import React from "react";
+// import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../css/features-about.css";
-import featureImg1 from "../assets/Health-amico.png";
-import featureImg2 from "../assets/Fitness-amico.png";
-import featureImg3 from "../assets/Business-amico.png";
-import featureImg4 from "../assets/Education-amico.png";
-import featureImg5 from "../assets/Personal-Care-amico.png";
-import section4Img from "../assets/Celebration-amico.png";
-import feature1 from "../assets/feature1.png";
-import feature2 from "../assets/feature2.png";
+import '../css/index.css'
+import '../css/features-about.css'
+import Accordion from 'react-bootstrap/Accordion';
+import RoadMap from '../assets/personal goals checklist.gif'
+// icons for iconify
+import {Icon} from '@iconify-icon/react'
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import  { useEffect } from 'react';
+// import '../css/features-about.css'
+// import featureImg1 from "../assets/Health-amico.png";
+// import featureImg2 from "../assets/Fitness-amico.png";
+// import featureImg3 from "../assets/Business-amico.png";
+// import featureImg4 from "../assets/Education-amico.png";
+// import featureImg5 from "../assets/Personal-Care-amico.png";
+// import section4Img from "../assets/Celebration-amico.png";
+// import feature1 from "../assets/feature1.png";
+// import feature2 from "../assets/feature2.png";
+
+
 
 const Features = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+}, []);
+
+  console.log('Component rendered');
+
   return (
+
     <>
       <Header />
+      {/* This section is originally from Landing page and the team decided to placed it here in Features page, Thanks*/}
 
-      <div className="feature-container">
-        <div className="holder">
-          {/* Tag line */}
-          <div className="tag-line">
-            <h1>Supercharge Your Productivity With These Features</h1>
-            <p>
-              Experience a productivity transformation. Discover how these our
-              features will Propel your efficiency.
-            </p>
-          </div>
-          {/* Section 1 */}
-          <div className="section1">
-            <div className="row">
-              <div className="col section-desc">
-                <p className="medium">ADD TASK LISTS EASY & FAST</p>
-                <p className="bold">
-                  Effortless Task List Creation Get Organized Quickly
-                </p>
-                <p className="regular">Start Managing Your Tasks with Ease.</p>
-              </div>
-              {/* <div className="col section-img-container"> */}
-              <img className="section-img" src={feature1} alt="Celebration" />
-              {/* </div> */}
+      <section>
+            <div className="row mb-5 pb-5 pt-5 Feature_header text-center gap-4">
+                <q>Elevate Your Productivity: Explore Our Feature-Packed Experience</q>
+                <p>At OrganizeMe, we are dedicated to providing you with a seamless and efficient experience. Here`s how you can make the most out of our website features:</p>
             </div>
-          </div>
-          {/* Section 2 */}
-          <div className="section2">
-            <div className="col-md-12">
-              <p className="medium">CATEGORIZE YOUR TASKS</p>
-              <p className="bold">
-                Structured Task Management Categorize for Success
-              </p>
-              <p className="regular">
-                Elevate Your Productivity with Task Categories
-              </p>
+            <div className="row mb-5 pb-5 landingpage_sec2">
+                <div className="col" data-aos="fade-up" data-aos-delay='' >
+                    <p className="medium"><Icon icon="foundation:checkbox"/>Easy Task Management:</p>
+                    <p className='main_subtitle'>Stay Organized, Anytime, Anywhere</p>
+                    <p className='main_content'>You can create, edit, and organize tasks seamlessly from any device. Your to-do list stays updated wherever you go, thanks to seamless syncing.</p>
+                </div>
+                <div className="col side-image" data-aos="fade-up" data-aos-delay=''>
+                    <img src="/Images/Flat illustrations/Work time.gif" className='responsive-image' alt="Side-image" />
+                </div>
             </div>
-          </div>
-          {/* Feature card */}
-          <div className="output">
-            <div className="card bg">
-              <div className="card-body">
-                <img src={featureImg1} alt="Health" />
-                <p>Health</p>
-              </div>
+            <div className="row mb-5 pb-5 mt-5 landingpage_sec2">
+            <div className="col" data-aos="fade-up"  data-aos-delay=''>
+                    <p className="medium"><Icon icon="foundation:checkbox"/>Smart Reminders:</p>
+                    <p className='main_subtitle'> Set customizable reminders anytime</p>
+                    <p className='main_content'>You can create, edit, and organize tasks seamlessly from any device. Your to-do list stays updated wherever you go, thanks to seamless syncing.</p>
+                </div>
+                <div className="col side-image" data-aos="fade-up"  data-aos-delay=''>
+                    <img src="/Images/Flat illustrations/Reminders.gif" className='responsive-image' alt="Side-image" />
+                </div>
             </div>
-            <div className="card bg">
-              <div className="card-body">
-                <img src={featureImg2} alt="Fitness" />
-                <p>Fitness</p>
-              </div>
+            <div className="row mb-5 mt-5 landingpage_sec2">
+                <div className="col" data-aos="fade-up"  data-aos-delay='' >
+                    <p className="medium"><Icon icon="foundation:checkbox"/>Prioritize your Tasks</p>
+                    <p className='main_subtitle'>Focused Task Management Made Easy</p>
+                    <p className='main_content'>Prioritize What Matters Most. Our Simple and Intuitive Priority Features Help You Focus on the Essential, Making Task Management Effortless</p>
+                </div>
+                <div className="col side-image" data-aos="fade-up"  data-aos-delay='' >
+                    <img src="/Images/Flat illustrations/Prioritise.gif" className='responsive-image' alt="Side-image" />
+                </div>
             </div>
-            <div className="card bg">
-              <div className="card-body">
-                <img src={featureImg3} alt="Business" />
-                <p>Business</p>
-              </div>
+            <div className="row mb5 pb-5 pt-5 text-center landingpage_sec3" data-aos="fade-up"  data-aos-delay=''>
+                <q className=' mb-3 qoutes'>
+                    Your path to productivity begins here. With our ToDoList app, follow a simple roadmap: Plan, Do, Achieve. Stay organized effortlessly. </q>
+                <p className='author'>- OrganizeMe</p>
             </div>
-            <div className="card bg">
-              <div className="card-body">
-                <img src={featureImg4} alt="Education" />
-                <p>Education</p>
-              </div>
+            <div className="row mb-5">
+                <div className="row" data-aos="fade-up"  data-aos-delay=''>
+                    <div className="col RoadMap">
+                        <img src={RoadMap} className='responsive-image' alt="RoadMap" />
+                    </div>
+                    <div className="col">
+                    <Accordion defaultActiveKey={['0']} alwaysOpen
+
+                    >
+                    <Accordion.Item eventKey="0" className='road_item'>
+                        <Accordion.Header className='road_header'>1. Capture Tasks:</Accordion.Header>
+                        <Accordion.Body className='road_body'>
+                                <ul>
+                                    <li>
+                                    <b> Jot Down Ideas:  </b> <br />Write down tasks as they come to mind, ensuring nothing is forgotten.
+                                    </li>
+                                    <li>
+                                    <b>Be Specific:</b> <br /> Clearly define tasks to avoid confusion later.
+                                    </li>
+                                </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1" className='road_item'>
+                        <Accordion.Header className='road_header'>2. Prioritize Tasks:</Accordion.Header>
+                        <Accordion.Body className='road_body'>
+                                <ul>
+                                    <li>
+                                        <b>Identify Importance:</b> <br /> Determine which tasks are most crucial and need immediate attention.
+                                    </li>
+                                    <li>
+                                        <b>Use Categories: </b> <br />Group tasks into categories (e.g., work, personal, errands) for easy organization.
+                                    </li>
+                                </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2" className='road_item'>
+                        <Accordion.Header className='road_header'>3. Set Achievable Goals:</Accordion.Header>
+                        <Accordion.Body className='road_body'>
+                                <ul>
+                                    <li>
+                                        <b>Break Down Tasks:</b> <br />Divide large tasks into smaller, manageable sub-tasks.
+                                    </li>
+                                    <li>
+                                        <b>Set Realistic Deadlines: </b> <br />Assign deadlines that are achievable and allow some flexibility.
+                                    </li>
+                                </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3" className='road_item'>
+                        <Accordion.Header className='road_header'>4. Regularly Review and Update:</Accordion.Header>
+                        <Accordion.Body className='road_body'>
+                                <ul>
+                                    <li>
+                                        <b>Daily Check-ins:</b> <br />Review your to-do list daily, mark completed tasks, and add new ones.
+                                    </li>
+                                    <li>
+                                        <b>Weekly Reflection:</b> <br />Reflect on your progress weekly. Celebrate achievements and adjust priorities as needed.
+                                    </li>
+                                </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="4" className='road_item'>
+                        <Accordion.Header className='road_header'>Finally!</Accordion.Header>
+                        <Accordion.Body className='road_body'>
+                                    <b>You can create and maintain an organized to-do list, helping youself to stay focused, productive, and on top of your tasks.</b>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    </Accordion>
+                    </div>
+                </div>
             </div>
-            <div className="card bg">
-              <div className="card-body">
-                <img src={featureImg5} alt="Personal-Care" />
-                <p>Personal Care</p>
-              </div>
-            </div>
-          </div>
-          {/* Section3 */}
-          <div className="section3  ">
-            <div className="row">
-              {/* <div className="col section-img-container"> */}
-              <img className="section-img" src={feature2} alt="Celebration" />
-              {/* </div> */}
-              <div className="col section-desc">
-                <p className="medium">ADD TASKS AHEAD OF TIME</p>
-                <p className="bold">
-                  Stay Ahead of the Game Add Tasks in Advance
-                </p>
-                <p className="regular">
-                  Prepare for Success with Advanced Task Scheduling
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* Section 4 */}
-          <div className="section4">
-            <div className="row">
-              <div className="col section-desc">
-                <p className="medium">SEE ACCOMPLISHED TASKS AND BE PROUD</p>
-                <p className="bold">
-                  Celebrate Your Progress View Accomplished Tasks
-                </p>
-                <p className="regular">
-                  Track Your Achievements and Stay Motivated
-                </p>
-              </div>
-              {/* <div className="col section-img-container"> */}
-              <img
-                className="section-img"
-                src={section4Img}
-                alt="Celebration"
-              />
-              {/* </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
+
+      </section>
 
       <Footer />
     </>

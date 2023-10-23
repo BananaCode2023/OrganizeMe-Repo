@@ -1,21 +1,22 @@
-import React from 'react'
+// import React from 'react'
 
 import '../css/footer.css';
-import Submit_btn from '../components/Submit-btn'
+import SubscribeModal from './SubscribeModal';
 
 
 const Footer = () => {
   return (
     <>
       <footer>
-          <div className="row mb-5 pt-5 footer-top">
-            <q>Optimize your day with OrganizeMe! Seamlessly integrate our best productivity app. Your tasks, our technology – organizing made  effortless!</q>
+        {/* This part will not display as suggested by Team Organizers */}
+          {/* <div className="row mb-5 pt-5 footer-top">
             <div className='text-center'>
+              <q>Optimize your day with OrganizeMe! Seamlessly integrate our best productivity app. Your tasks, our technology – organizing made  effortless!</q>
               <button type="button" className="btn btn-success mx-auto free-btn"><a href="">Get started for free</a></button>
             </div>
-          </div>
+          </div> */}
           {/* footer-bottom */}
-          <div className="row mb-5">
+          <div className="row mb-5 pt-5">
             <div className="col">
               <ul>
                 <li><h5>Contact</h5></li>
@@ -48,7 +49,7 @@ const Footer = () => {
                     <form action="">
                       <div className="submit-btn btn-group pt-2" role="group" >
                         <input type="email" className="form-control" id="inputEmail" placeholder='&#9993; Email' />
-                        <Submit_btn />
+                        <SubscribeModal />
                       </div>
                     </form>
                   </li>

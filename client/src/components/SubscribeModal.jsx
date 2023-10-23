@@ -5,8 +5,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Stack from 'react-bootstrap/Stack';
 import { Icon} from '@iconify/react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Submit_btn = () =>{
+
+const SubscribeModal = () =>{
 
             const [show, setShow] = useState(false);
 
@@ -49,4 +51,4 @@ const Submit_btn = () =>{
     )
 }
 
-export default Submit_btn;
+export default SubscribeModal;

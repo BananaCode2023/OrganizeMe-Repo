@@ -1,9 +1,10 @@
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/header.css';
 // import {Link} from "react-router-dom"
 import {useState} from 'react';
 // import { MDBIcon } from "mdb-react-ui-kit";
 import {
+    Button,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -17,6 +18,9 @@ import {
     // DropdownMenu,
     // UncontrolledDropdown
   } from 'reactstrap';
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import omWhiteLogo from '../assets/omWhiteLogo.png'
 
@@ -47,6 +51,10 @@ function Header() {
               <NavLink href='/auth/login' id='login'>
                 Login
               </NavLink>
+              <NavLink>
+               <Button type="button" className="btn btn-success mx-auto started-btn1"><a href="/auth/Register">Start for free </a></Button>
+              </NavLink>
+              
             </div>
 
             <NavbarToggler onClick={toggle}/>
@@ -62,6 +70,9 @@ function Header() {
                 <NavLink href='/auth/login' id='login'>
                   Login
                 </NavLink>
+                <NavLink>
+               <Button type="button" className="btn btn-success mx-auto started-btn1"><a href="/auth/Register">Start for free </a></Button>
+              </NavLink>
                 </div>
               </Nav>
             </Collapse>
