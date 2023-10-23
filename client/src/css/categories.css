@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   color: #f1511b;
+  margin-bottom: 20px;
 }
 .categories-heading-icon {
   font-size: 40px;
@@ -26,5 +27,46 @@
 }
 .task-categ small {
   font-size: 12px;
-  padding-right: 15px;
+  padding-right: 5px;
 }
+.toggle-btns-container{
+  display: flex;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1200px;
+}
+.toggle-btns-container button{
+  border: none;
+  width: 100%;
+  min-width: 68px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  text-align: center;
+}
+.toggle-btns-container button:hover{
+  background-color: #c5dcde;
+}
+.task-count{
+  color: #f06030;
+}
+.categ-btn.toggled{
+  border-bottom: 2px solid #f1511b;
+}
+@media only screen and (max-width: 1024px) {
+  .toggle-btns-container{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 1200px;
+  }
+  .toggle-btns-container button{
+    min-width: 58px;
+    max-width: 60px;
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 1024px) {}

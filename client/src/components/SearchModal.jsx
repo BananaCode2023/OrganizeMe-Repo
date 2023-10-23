@@ -5,53 +5,6 @@ import { toast } from "react-hot-toast";
 import EditModal from "../components/EditModal";
 
 function SearchModal({ closeSearchModal }) {
-  //   const [searchTerm, setSearchTerm] = useState('')
-
-  //   const items = [
-  //     'Apple',
-  //     'Banana',
-  //     'Mango',
-  //     'Orange',
-  //     'Grapes',
-  //     'Lemon',
-  //     'Pizza',
-  //     'Siomai',
-  //     'Lomi',
-  //     'Bulalo',
-  //     'Sisig',
-  //     'Chami',
-  //     'Kape'
-  //   ]
-
-  //   const handleSearchChange = (e) => {
-  //     setSearchTerm(e.target.value)
-  //   }
-
-  //   const filteredItems = items.filter((item) =>
-  //     item.toLowerCase().includes(searchTerm.toLowerCase())
-  //   )
-
-  //   return (
-  //     <div className='search-modal'>
-  //       <div className='search-modal-content'>
-  //         <input
-  //         type="text"
-  //         placeholder="Search...."
-  //         value={searchTerm}
-  //         onChange={handleSearchChange}
-  //         />
-  //         <ul>
-  //           {filteredItems.map((item, index) => (
-  //             <li key={index}>
-  //               {item}
-  //             </li>
-  //           ))}
-  //         </ul>
-  //         <button onClick={closeSearchModal}>close</button>
-  //       </div>
-  //     </div>
-  //   )
-  // }
 
   const userId = window.localStorage.getItem("id");
   const [tasklist, setTasklist] = useState([]);

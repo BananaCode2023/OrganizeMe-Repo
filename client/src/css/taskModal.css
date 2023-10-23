@@ -29,7 +29,23 @@
   display: flex;
   gap: 10px;
 }
-.modal-btns li {
+.modal-btn.pressed1{
+  background-color: #13b3ad39;
+  color: #2b2b2b;
+  border: 1px #298683 solid;
+  opacity: 1;
+}
+.modal-btn.pressed2{
+  background-color: #fafa003f;
+  opacity: 1;
+  color: #2b2b2b;
+  border: 1px #FFA500 solid;
+}
+.modal-btn.pressed3{
+  background-color: #a4a4a420;
+  opacity: 1;
+}
+.modal-btns li{
   list-style: none;
   cursor: pointer;
 }
@@ -43,6 +59,10 @@
   padding: 0 15px;
   border: 1px solid;
   border-radius: 6px;
+  transition: 0.15s;
+}
+.modal-cancel-btn:hover{
+  background-color: #dcdcdc;
 }
 .modal-add-btn {
   padding: 0 15px;
@@ -53,13 +73,17 @@
   justify-content: flex-end;
   gap: 15px;
 }
-.org-when {
+/* .org-when{
   color: #298683;
   border: 1px #298683 solid;
+} */
+.org-when{
+  color: #757575;
+  border: 1px #757575 solid;
 }
-.priority-btn {
-  color: #ffa500;
-  border: 1px #ffa500 solid;
+.priority-btn{
+  color: #757575;
+  border: 1px #757575 solid;
 }
 .modal-btn {
   background-color: #fff;
@@ -67,4 +91,8 @@
 }
 .modal-btn:hover {
   opacity: 1;
+}
+.task-modal-hr{
+  opacity: 0.4;
+  z-index: 1;
 }

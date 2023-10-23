@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import "../css/register.css";
-import signupHeroImg from "../assets/signup-hero-img.png";
-import loginLogo from "../assets/organizeMeLogo.png";
-import googleLogo from "../assets/google-logo.png";
-import facebookLogo from "../assets/facebook-logo.png";
+import { useState } from "react"
+import axios from 'axios'
+import {toast} from 'react-hot-toast'
+import { useNavigate } from "react-router-dom"
+import '../css/register.css'
+import signupHeroImg from '../assets/signup-hero-img.png'
+import signupLogo from '../assets/newLogo.png'
+import googleLogo from '../assets/google-logo.png'
+import facebookLogo from '../assets/facebook-logo.png'
 
 function Register() {
   const navigate = useNavigate();
@@ -14,12 +14,11 @@ function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({}); // State to store validation errors
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate the form
     const validationErrors = {};
 
     if (!username) {
@@ -63,11 +62,9 @@ function Register() {
 
   return (
     <>
-      <main className="signup-page">
-        <div className="signup-col1">
-          <a href="/">
-            <img src={loginLogo} alt="organizeMe-logo" id="login-logo" />
-          </a>
+      <main className='signup-page'>        
+        <div className='signup-col1'>
+          <a href="/"><img src={signupLogo} alt="organizeMe-logo" id='login-logo' /></a>
           <h2>Create an Account & Get Started</h2>
 
           <form className="signup-form" onSubmit={handleSubmit}>

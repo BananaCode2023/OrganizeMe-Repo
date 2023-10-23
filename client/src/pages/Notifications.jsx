@@ -27,11 +27,11 @@ const Notifications = () => {
       <main className="notifications-page">
         <div className="col notifications-heading">
           <i class="fa-regular fa-bell notif-bell-icon"></i>
-          <h1>Notification</h1>
+          <h1>Notifications</h1>
         </div>
 
         <div className="notif-image">
-          <img src={notify} className="rounded mx-auto d-block" />
+          <img src={notify} className="rounded mx-auto d-block notif-img" />
           <p className="noif-bold">Your notification feed is empty</p>
           <p className="notif-reg">
             Your notification feed is empty at the moment. Stay tuned for <br />{" "}

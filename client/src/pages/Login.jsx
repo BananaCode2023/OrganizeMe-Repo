@@ -1,18 +1,16 @@
-import { useState } from "react";
-import axios from "axios";
-import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import "../css/login.css";
-
-import loginHeroImg from "../assets/login-hero-img.png";
-import loginLogo from "../assets/organizeMeLogo.png";
-import googleLogo from "../assets/google-logo.png";
-import facebookLogo from "../assets/facebook-logo.png";
+import { useState } from "react"
+import axios from 'axios'
+import {toast} from 'react-hot-toast'
+import { useNavigate } from "react-router-dom"
+import '../css/login.css'
+import loginHeroImg from '../assets/login-hero-img.png'
+import loginLogo from '../assets/newLogo.png'
+import googleLogo from '../assets/google-logo.png'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({}); // Store validation errors
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   axios.defaults.withCredentials = true;
@@ -44,7 +42,6 @@ function Login() {
           console.log(result);
         })
         .catch((error) => {
-          // Handle login errors
           toast.error("Login failed: " + error.message);
         });
       toast.success("Successfully Logged-In").catch((err) => console.log(err));

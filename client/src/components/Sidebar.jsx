@@ -121,10 +121,17 @@ function Sidebar(props) {
 
           <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
         </Stack>
-
-        {/* <div className={`sidebar-row2 ${showBar ? 'close' : ''}`}>
-          <h5>Projects</h5><i class="fa-solid fa-plus"></i>
-        </div> */}
+        
+        <div className={`premium-container ${showBar ? "close" : ""}`}>
+          <h5>Satisfied? Get More Awesome Features</h5>
+          <button 
+          className="get-premium-btn"
+          >
+            <i class="fa-solid fa-medal"></i>
+            Get Premium!
+          </button>
+        </div>
+        
       </aside>
     </>
   );

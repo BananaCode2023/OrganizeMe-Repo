@@ -4,7 +4,8 @@
 .priorities-heading {
   display: flex;
   align-items: center;
-  color: #ffa500;
+  color: #FFA500;
+  margin-bottom: 30px;
 }
 .priorities-heading-icon {
   font-size: 40px;

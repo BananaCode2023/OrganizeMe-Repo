@@ -106,9 +106,9 @@ const Inbox = () => {
                     </li>
                     <div style={{ display: "flex", gap: "5px" }}>
                       <li className="task-categ">
-                        <small>{task.category}</small>
-                        <small>{task.today}</small>
-                        <small>{task.priority}</small>
+                        <small>{task.today} </small>
+                        <small>{task.priority} </small>
+                        <small>{task.category} </small>
                       </li>
                     </div>
                   </div>
