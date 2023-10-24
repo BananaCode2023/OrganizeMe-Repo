@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   color: #103d87;
+  margin-bottom: 25px;
 }
 .inbox-heading-icon {
   font-size: 40px;
