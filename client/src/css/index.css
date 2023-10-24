@@ -5,7 +5,7 @@
 .main {
   padding-top: 30px;
   padding-inline: 100px;
-  padding-bottom: 400px;
+  padding-bottom: 320px;
   background-image: url("/Images/bg-landingpage_sec1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +133,7 @@
 }
 
 .testimonial_header {
-  padding-left: 100px;
+  padding-left: 90px;
   color: #232323;
   font-family: Poppins;
   font-size: 35px;
@@ -187,7 +187,7 @@
 /* section */
 .explore-more {
   background-color: #f7f8ff;
-  padding-inline: 100px;
+  padding-inline: 50px;
   padding-top: 200px;
   padding-bottom: 80px;
 }
@@ -741,7 +741,7 @@ Icon{
   }
 
   .explore-btn {
-    color: #232323;
+    color: #f7f7fc;
     width: 150px;
     height: 37px;
     /* border-color: #2323238d; */
@@ -1521,3 +1521,20 @@ a{
         font-weight: 550;        
     }
   } 
+  @media only screen and (max-width: 425px) {
+    .landing-page-subheading{
+      color: #232323 !important;
+    }
+    
+    .landingpage_sec1 p {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    .landingpage_main img{
+      width: 400px;
+      margin-inline: auto;
+    }
+  }
+  @media only screen and (max-height: 768px) {
+    
+  }

@@ -10,10 +10,21 @@
   max-width: 1440px;
   margin-inline: auto;
 }
+.Feature_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Feature_header p{
+  width: 800px;
+  margin-top: -20px;
+}
 .Feature_header h1{
   font-size: 45px;
   font-weight: 700;
   font-family: 'Poppins';
+  text-align: center;
+  width: 800px;
 }
 .tag-line h1 {
   font-family: Poppins;

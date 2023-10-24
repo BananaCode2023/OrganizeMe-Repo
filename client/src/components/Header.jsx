@@ -35,13 +35,13 @@ function Header() {
           <NavLink href="/auth/login" id="login">
             Login
           </NavLink>
+          <a href="/auth/register"><button className="start-free-btn">Try for free</button></a>
         </div>
 
         <NavbarToggler onClick={toggle} />
         <Collapse
           isOpen={isOpen}
           navbar
-          // className="nav-dropdown"
         >
           <Nav className="burger-menu" navbar>
             <div className="burger-menu-container">

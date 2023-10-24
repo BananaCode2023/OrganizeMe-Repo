@@ -32,7 +32,7 @@ export default function Index() {
             />
           </div>
           <div className="row mb-3 text-center">
-            <span>
+            <span className="landing-page-subheading">
               Start your journey on having a simple, easy, and organized life.
               <br></br>
               Organize, prioritize, and achieve more every day.
@@ -53,12 +53,14 @@ export default function Index() {
                 </a>
               </button>
               <i className="whitespace">__</i>
+              <a href="/features">
               <button
                 type="button"
                 className="btn btn-bs-light-border-subtle mx-auto explore-btn"
               >
-                <a href="/features">Explore</a>
+                Explore
               </button>
+              </a>
             </div>
           </div>
         </div>
