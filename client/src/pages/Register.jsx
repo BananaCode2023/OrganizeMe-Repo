@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../css/register.css";
 import signupHeroImg from "../assets/signup-hero-img.png";
 import signupLogo from "../assets/newLogo.png";
@@ -63,9 +63,9 @@ function Register() {
     <>
       <main className="signup-page">
         <div className="signup-col1">
-          <a href="/">
+          <Link to="/">
             <img src={signupLogo} alt="organizeMe-logo" id="login-logo" />
-          </a>
+          </Link>
           <h2>Create an Account & Get Started</h2>
 
           <form className="signup-form" onSubmit={handleSubmit}>
@@ -121,7 +121,7 @@ function Register() {
 
           <small>
             <p>
-              Already have an account? <a href="/auth/login">Log in</a>
+              Already have an account? <Link to="/auth/login">Log in</Link>
             </p>
           </small>
 

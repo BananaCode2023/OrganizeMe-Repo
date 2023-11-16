@@ -15,6 +15,7 @@ import Explore2 from "../assets/Around the world-pana (1) 1.png";
 // icons for fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom"
 
 export default function Index() {
   return (
@@ -44,23 +45,23 @@ export default function Index() {
                 type="button"
                 className="btn btn-success mx-auto started-btn"
               >
-                <a href="/auth/Register">
+                <Link to="/auth/Register">
                   Get Started{" "}
                   <FontAwesomeIcon
                     icon={faArrowRight}
                     style={{ color: "#f4f7fa" }}
                   />
-                </a>
+                </Link>
               </button>
               <i className="whitespace">__</i>
-              <a href="/features">
+              <Link to="/features">
               <button
                 type="button"
                 className="btn btn-bs-light-border-subtle mx-auto explore-btn"
               >
                 Explore
               </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -198,7 +199,7 @@ export default function Index() {
           <div className="explore-text">
             <p>
               Unlock more possibilities! Dive into our features now. Click here
-              to explore: <a href="/features">Explore Features</a>.
+              to explore: <Link to="/features">Explore Features</Link>.
             </p>
           </div>
           <div>

@@ -37,9 +37,12 @@
 .login-col1 img {
   width: 80%;
 }
+.login-col1 h2{
+  margin-top: 40px;
+}
 #login-logo {
   width: 184px;
-  margin-bottom: 40px;
+  margin-block: 40px;
 }
 .login-col2 h2 {
   margin-bottom: 20px;

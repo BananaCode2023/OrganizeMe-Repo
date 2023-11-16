@@ -4,7 +4,8 @@ import TaskModal from "./TaskModal";
 import ProfileModal from "./ProfileModal";
 import Stack from "react-bootstrap/esm/Stack";
 import SearchModal from "./SearchModal";
-
+import {Link} from "react-router-dom"
+ 
 function Sidebar(props) {
   const [showBar, hideBar] = useState(false);
 
@@ -54,13 +55,13 @@ function Sidebar(props) {
             </button>
           </div>
 
-          <a href="/notifications" className="bell-btn">
+          <Link to="/notifications" className="bell-btn">
             <i
               className={`
           fa-regular 
           fa-bell ${showBar ? "close" : ""}`}
             ></i>
-          </a>
+          </Link>
           <button onClick={toggleSideBar} id="sidebar-toggle">
             <i className="fa-regular fa-window-maximize fa-rotate-90 toggle-btn"></i>
           </button>
@@ -89,33 +90,33 @@ function Sidebar(props) {
             <h5>Search</h5>
           </div>
 
-          <a href="/inbox">
+          <Link to="/inbox">
             <div className="sidebar-btns inbox-bar">
               <i className="fa-solid fa-inbox"></i>
               <h5>Inbox</h5>
             </div>
-          </a>
+          </Link>
 
-          <a href="/today2">
+          <Link to="/today2">
             <div className="sidebar-btns today-bar">
               <i className="fa-solid fa-calendar-day"></i>
               <h5>Today</h5>
             </div>
-          </a>
+          </Link>
 
-          <a href="/priorities">
+          <Link to="/priorities">
             <div className="sidebar-btns upcoming-bar">
               <i class="fa-solid fa-star"></i>
               <h5>Priorities</h5>
             </div>
-          </a>
+          </Link>
 
-          <a href="/categories">
+          <Link to="/categories">
             <div className="sidebar-btns category-bar">
               <i className="fa-solid fa-layer-group"></i>
               <h5>Categories</h5>
             </div>
-          </a>
+          </Link>
 
           <hr className={`sidebar-hr ${showBar ? "close" : ""}`} />
         </Stack>

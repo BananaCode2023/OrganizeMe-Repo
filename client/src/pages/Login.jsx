@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../css/login.css";
 import loginHeroImg from "../assets/login-hero-img.png";
 import loginLogo from "../assets/newLogo.png";
@@ -62,9 +62,9 @@ function Login() {
         </div>
 
         <div className="login-col2">
-          <a href="/">
+          <Link to="/">
             <img src={loginLogo} alt="organizeMe-logo" id="login-logo" />
-          </a>
+          </Link>
           <h2>Login to your Account</h2>
           <p className="login-heading-text">
             Welcome back! Select method to log in:
@@ -119,7 +119,7 @@ function Login() {
 
           <small>
             <p>
-              Don't have an account? <a href="/auth/register">Sign-up now!</a>
+              Don't have an account? <Link to="/auth/register">Sign-up now!</Link>
             </p>
           </small>
 

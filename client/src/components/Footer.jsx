@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "../css/footer.css";
 import SubscribeModal from "./SubscribeModal";
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ const Footer = () => {
         {/* <div className="row mb-5 pt-5 footer-top">
             <div className='text-center'>
               <q>Optimize your day with OrganizeMe! Seamlessly integrate our best productivity app. Your tasks, our technology – organizing made  effortless!</q>
-              <button type="button" className="btn btn-success mx-auto free-btn"><a href="">Get started for free</a></button>
+              <button type="button" className="btn btn-success mx-auto free-btn"><Link to="">Get started for free</Link></button>
             </div>
           </div> */}
         {/* footer-bottom */}
@@ -46,13 +47,13 @@ const Footer = () => {
                 <h5>Quick Links</h5>
               </li>
               <li>
-                <a href="/features">Features</a>
+                <Link to="/features">Features</Link>
               </li>
               <li>
-                <a href="/about">About Us</a>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <a href="/auth/register">Sign Up</a>
+                <Link to="/auth/register">Sign Up</Link>
               </li>
             </ul>
           </div>
@@ -60,19 +61,19 @@ const Footer = () => {
             <h5>Social Media</h5>
             <ul className="social-icons">
               <li>
-                <a href="https://www.facebook.com/">
+                <Link to="https://www.facebook.com/">
                   <img src="/Images/Icons/facebook.svg" alt="Facebook" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://twitter.com/">
+                <Link to="https://twitter.com/">
                   <img src="/Images/Icons/twitter.svg" alt="XTwitter" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <Link to="https://www.instagram.com/">
                   <img src="/Images/Icons/instagram.svg" alt="Instagram" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

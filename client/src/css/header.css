@@ -18,7 +18,7 @@
   gap: 40px;
   align-items: center;
 }
-.nav-link::after {
+.nav-links a::after {
   content: "";
   display: block;
   height: 3px;
@@ -29,7 +29,10 @@
   border-radius: 10px;
   transition: all 0.7s;
 }
-.nav-link:hover::after {
+.nav-links a{
+  color: #f7f8ff;
+}
+.nav-links a:hover::after {
   width: 100%;
 }
 

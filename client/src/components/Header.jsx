@@ -8,7 +8,7 @@ import {
   Nav,
   NavLink,
 } from "reactstrap";
-
+import {Link} from "react-router-dom"
 import omWhiteLogo from "../assets/omWhiteLogo.png";
 
 function Header() {
@@ -20,22 +20,22 @@ function Header() {
   return (
     <>
       <Navbar expand={deviceWidth} className="navbar-container">
-        <a href="/">
+        <Link to="/">
           <div className="nav-logo2"></div>
           <img src={omWhiteLogo} alt="OrganizeMe-Logo" id="nav-logo" />
-        </a>
+        </Link>
 
         <div className="nav-links">
-          <NavLink href="/features" id="feat">
+          <Link to="/features" id="feat">
             Features
-          </NavLink>
-          <NavLink href="/about" id="about">
+          </Link>
+          <Link to="/about" id="about">
             About
-          </NavLink>
-          <NavLink href="/auth/login" id="login">
+          </Link>
+          <Link to="/auth/login" id="login">
             Login
-          </NavLink>
-          <a href="/auth/register"><button className="start-free-btn">Try for free</button></a>
+          </Link>
+          <Link to="/auth/register"><button className="start-free-btn">Try for free</button></Link>
         </div>
 
         <NavbarToggler onClick={toggle} />
@@ -45,23 +45,23 @@ function Header() {
         >
           <Nav className="burger-menu" navbar>
             <div className="burger-menu-container">
-              <NavLink href="/features" id="feat">
+              <Link to="/features" id="feat">
                 Features
-              </NavLink>
-              <NavLink href="/about" id="about">
+              </Link>
+              <Link to="/about" id="about">
                 About
-              </NavLink>
-              <NavLink href="/auth/login" id="login">
+              </Link>
+              <Link to="/auth/login" id="login">
                 Login
-              </NavLink>
-              <NavLink>
+              </Link>
+              <Link>
                 <Button
                   type="button"
                   className="btn btn-success mx-auto started-btn1"
                 >
-                  <a href="/auth/Register">Start for free </a>
+                  <Link to="/auth/Register">Start for free </Link>
                 </Button>
-              </NavLink>
+              </Link>
             </div>
           </Nav>
         </Collapse>
