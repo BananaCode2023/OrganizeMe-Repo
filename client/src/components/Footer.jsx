@@ -3,6 +3,9 @@ import { useState } from "react";
 import "../css/footer.css";
 import SubscribeModal from "./SubscribeModal";
 import {Link} from 'react-router-dom'
+import facebook from "../assets/Icons/facebook.svg"
+import twitter from "../assets/Icons/twitter.svg"
+import instagram from "../assets/Icons/instagram.svg"
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -62,17 +65,17 @@ const Footer = () => {
             <ul className="social-icons">
               <li>
                 <Link to="https://www.facebook.com/">
-                  <img src="/Images/Icons/facebook.svg" alt="Facebook" />
+                  <img src={facebook} alt="Facebook" />
                 </Link>
               </li>
               <li>
                 <Link to="https://twitter.com/">
-                  <img src="/Images/Icons/twitter.svg" alt="XTwitter" />
+                  <img src={twitter} alt="XTwitter" />
                 </Link>
               </li>
               <li>
                 <Link to="https://www.instagram.com/">
-                  <img src="/Images/Icons/instagram.svg" alt="Instagram" />
+                  <img src={instagram} alt="Instagram" />
                 </Link>
               </li>
             </ul>

@@ -11,11 +11,12 @@ import Google from "../assets/Google.png";
 import Youtube from "../assets/Youtube.png";
 import Explore1 from "../assets/Around the world-pana 1.png";
 import Explore2 from "../assets/Around the world-pana (1) 1.png";
+import OrganizeMeFlatIllustration from "../assets/Flat illustrations/landingpage_sec1.png"
 
 // icons for fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -27,10 +28,7 @@ export default function Index() {
             <p>Simplifying Life One Task at a Time</p>
           </div>
           <div className="row mb-3 landingpage_main">
-            <img
-              src="Images/Flat illustrations/landingpage_sec1.png"
-              alt="landingpage-image"
-            />
+            <img src={OrganizeMeFlatIllustration} alt="Flat Illustration" />
           </div>
           <div className="row mb-3 text-center">
             <span className="landing-page-subheading">
@@ -55,12 +53,12 @@ export default function Index() {
               </button>
               <i className="whitespace">__</i>
               <Link to="/features">
-              <button
-                type="button"
-                className="btn btn-bs-light-border-subtle mx-auto explore-btn"
-              >
-                Explore
-              </button>
+                <button
+                  type="button"
+                  className="btn btn-bs-light-border-subtle mx-auto explore-btn"
+                >
+                  Explore
+                </button>
               </Link>
             </div>
           </div>

@@ -3,6 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/index.css";
 import "../css/features-about.css";
+import WorkTime from "../assets/Flat illustrations/Work time.gif"
+import Reminders from "../assets/Flat illustrations/Reminders.gif"
+import Priorities from "../assets/Flat illustrations/Prioritise.gif"
 import Accordion from "react-bootstrap/Accordion";
 import RoadMap from "../assets/personal goals checklist.gif";
 // icons for iconify
@@ -51,7 +54,7 @@ const Features = () => {
           </div>
           <div className="col side-image" data-aos="fade-up" data-aos-delay="">
             <img
-              src="/Images/Flat illustrations/Work time.gif"
+              src={WorkTime}
               className="responsive-image"
               alt="Side-image"
             />
@@ -72,7 +75,7 @@ const Features = () => {
           </div>
           <div className="col side-image" data-aos="fade-up" data-aos-delay="">
             <img
-              src="/Images/Flat illustrations/Reminders.gif"
+              src={Reminders}
               className="responsive-image"
               alt="Side-image"
             />
@@ -93,7 +96,7 @@ const Features = () => {
           </div>
           <div className="col side-image" data-aos="fade-up" data-aos-delay="">
             <img
-              src="/Images/Flat illustrations/Prioritise.gif"
+              src={Priorities}
               className="responsive-image"
               alt="Side-image"
             />

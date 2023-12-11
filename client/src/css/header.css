@@ -17,7 +17,7 @@
   color: #fff;
   gap: 40px;
   align-items: center;
-}
+} 
 .nav-links a::after {
   content: "";
   display: block;
