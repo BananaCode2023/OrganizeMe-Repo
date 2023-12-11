@@ -24,6 +24,8 @@ const TaskSchema = new mongoose.Schema({
   }
 })
 
+/* `const TasklistModel = mongoose.model("tasklists", TaskSchema)` is creating a model for the
+"tasklists" collection in the MongoDB database using the `mongoose.model` method. */
 const TasklistModel = mongoose.model("tasklists", TaskSchema)
 
 module.exports = TasklistModel
